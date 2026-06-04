@@ -1,0 +1,130 @@
+version: "2026-03-26"
+profile: dreamcatcher_local_data_lab_2026
+bundle_label: DreamCatcher Local Data Lab Runtime Bundle
+bundle_notes:
+  - Export only compact artifacts into seed_bundle/runtime_priors.
+  - Keep raw corpora, full checkpoints, and long-running experiment outputs under local_data_lab only.
+
+artifacts:
+  - artifact_id: edit_evaluator_rules
+    label: Edit Evaluator Rules
+    kind: evaluator_rules
+    source_relpath: local_data_lab/starter_artifacts/edit_evaluator_rules.default.json
+    destination_relpath: evaluator/edit_evaluator_rules.default.json
+    tool_scopes:
+      - replaceBg
+      - relight
+      - replaceObject
+      - retouch
+      - enhance
+      - compare
+    source_datasets:
+      - edithf_1m
+      - dear
+      - editbench
+    training_tracks:
+      - edit_evaluator_bootstrap
+    notes: Public-bootstrap compare and evaluator dimensions before local ranking data accumulates.
+    active: true
+    required: true
+
+  - artifact_id: reference_bank_seed
+    label: Reference Bank Seed
+    kind: reference_bank
+    source_relpath: local_data_lab/starter_artifacts/reference_bank.seed.json
+    destination_relpath: reference_bank/reference_bank.seed.json
+    tool_scopes:
+      - replaceBg
+      - relight
+      - replaceObject
+      - retouch
+      - enhance
+      - finish
+      - compare
+    source_datasets:
+      - fivek
+      - ppr10k
+      - mmart_ppr10k
+    training_tracks:
+      - retouch_reference_bank_seed
+    notes: Small public exemplar bank for early retrieval and style anchoring.
+    active: true
+    required: true
+
+  - artifact_id: mmart_bench_seed
+    label: MMArt-Bench Seed
+    kind: benchmark_pack
+    source_relpath: local_data_lab/starter_artifacts/mmart_bench.seed.json
+    destination_relpath: benchmarks/mmart_bench.seed.json
+    tool_scopes:
+      - compare
+      - retouch
+      - replaceBg
+      - replaceObject
+      - relight
+      - finish
+    source_datasets:
+      - mmart_bench
+      - editbench
+    training_tracks:
+      - benchmark_seed_bootstrap
+    notes: Compact public benchmark seed for compare-mode regression and evaluator coverage.
+    active: true
+    required: true
+
+  - artifact_id: mmart_ppr10k_reference_pack
+    label: MMArt-PPR10k Reference Pack
+    kind: reference_bank
+    source_relpath: local_data_lab/starter_artifacts/mmart_ppr10k.reference_pack.json
+    destination_relpath: reference_bank/mmart_ppr10k.reference_pack.json
+    tool_scopes:
+      - retouch
+      - replaceBg
+      - replaceObject
+      - relight
+      - compare
+      - finish
+    source_datasets:
+      - mmart_ppr10k
+    training_tracks:
+      - mmart_ppr10k_reference_pack
+    notes: Compact Lightroom-style retouch reference pack built from the staged MMArt-PPR10k subset.
+    active: true
+    required: true
+
+  - artifact_id: dear_rendering_seed
+    label: DEAR Rendering Seed
+    kind: evaluator_rules
+    source_relpath: local_data_lab/starter_artifacts/dear_rendering.seed.json
+    destination_relpath: evaluator/dear_rendering.seed.json
+    tool_scopes:
+      - retouch
+      - enhance
+      - finish
+      - compare
+    source_datasets:
+      - dear
+      - fivek
+    training_tracks:
+      - dear_rendering_seed
+    notes: Compact global rendering and tonal guardrail seed built from the staged DEAR subset.
+    active: true
+    required: true
+
+  - artifact_id: local_compare_learning_seed
+    label: Local Compare Learning Seed
+    kind: evaluator_rules
+    source_relpath: local_data_lab/starter_artifacts/local_compare_learning.seed.json
+    destination_relpath: evaluator/local_compare_learning.seed.json
+    tool_scopes:
+      - retouch
+      - enhance
+      - compare
+      - finish
+    source_datasets:
+      - personal_compare_winners
+    training_tracks:
+      - local_compare_learning_seed
+    notes: Compact local reranker prior built from accepted compare winners.
+    active: true
+    required: true

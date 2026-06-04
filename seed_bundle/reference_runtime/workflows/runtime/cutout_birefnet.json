@@ -1,0 +1,40 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "INPUT_IMAGE_PLACEHOLDER"
+    },
+    "_comment": "Replace path/asset upload strategy in runtime.",
+    "_dc_meta": {
+      "logical_name": "LOAD_IMAGE",
+      "resolution_strategy": "exact"
+    }
+  },
+  "2": {
+    "class_type": "BiRefNetRMBG",
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "_dc_meta": {
+      "logical_name": "BIREFNET_INFER",
+      "resolution_strategy": "exact"
+    }
+  },
+  "3": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ],
+      "filename_prefix": "dreamcatcher/cutout"
+    },
+    "_dc_meta": {
+      "logical_name": "SAVE_IMAGE",
+      "resolution_strategy": "exact"
+    }
+  }
+}

@@ -1,0 +1,354 @@
+model_strategy:
+  default_profile: frontier
+  summary: Single aggressive Frontier Studio stack with no alternate product profiles.
+  bootstrap_scope: Full Frontier downloads executable Comfy/model sets by default; research data and unverified adapters stay explicit.
+  min_vram_class: 48GB
+  runpod_gpu_server: RTX PRO 6000
+  runpod_gpu_vram: 96GB
+  container_disk_gb: 80
+  volume_disk_default_gb: 400
+  volume_disk_full_frontier_qwen_gb: 500
+  network_volume_baseline: false
+  persistent_model_cache: false
+  raw_research_vram_class: 80GB
+  requires_hf_token: true
+  license_note: HF token must have accepted upstream gated licenses, especially BFL FLUX paths.
+
+quality_automation:
+  version: quality_automation_v2
+  tuning_version: quality_tuning_loop_v1
+  qwen_judge_schema_version: qwen_judge_signal_v2
+  qwen_judge_schema_path: seed_bundle/runtime_priors/evaluator/qwen_judge_signal_v2.schema.json
+  judge_evidence_packet_version: judge_evidence_packet_v1
+  judge_evidence_packet_schema_path: seed_bundle/runtime_priors/evaluator/judge_evidence_packet_v1.schema.json
+  golden_calibration_version: golden_calibration_v1
+  golden_calibration_schema_path: seed_bundle/runtime_priors/evaluator/golden_calibration_v1.schema.json
+  golden_calibration_seed_path: seed_bundle/runtime_priors/evaluator/golden_quality_calibration.seed.json
+  primary_local_model: Qwen3.6-35B-A3B-FP8
+  primary_local_repo: Qwen/Qwen3.6-35B-A3B-FP8
+  primary_local_revision: 61a5771f218894aaacf97551e24a25b866750fc2
+  primary_local_path: models/qwen_judge/Qwen3.6-35B-A3B-FP8
+  serving: local_openai_compatible_vllm
+  cloud_fallback_enabled: false
+  verdicts: [fail, suspicious, pass]
+  layers:
+    - qwen_vlm_judge
+    - metric_checker_layer
+    - judge_evidence_packet
+    - golden_session_runner
+    - golden_score_calibration
+    - human_approval_memory
+  qwen_input_evidence:
+    required:
+      - deterministic_metrics
+      - golden_context
+    optional_task_specific:
+      - operation_context
+      - mask_evidence
+      - raw_evidence
+      - workflow_evidence
+      - user_preference_evidence
+  qwen_response_contract:
+    required_keys:
+      - schema_version
+      - verdict
+      - confidence
+      - axis_scores
+      - failure_tags
+      - localized_issues
+      - correction_plan
+      - rationale
+      - retry_instruction
+      - work_instruction
+    axis_scores:
+      - intent_match
+      - technical_quality
+      - aesthetic_quality
+      - subject_preservation
+      - mask_boundary
+      - color_naturalness
+    correction_plan_fields:
+      - exposure_delta
+      - contrast_delta
+      - shadow_delta
+      - highlight_delta
+      - temperature_delta
+      - tint_delta
+      - saturation_delta
+      - denoise_strength
+      - edit_strength
+      - crop_box_norm
+      - notes
+  code_tuning_policy: proposal_only_human_approval_required
+  blocked_automatic_actions:
+    - auto_apply_code_change
+    - auto_replace_workflow
+    - auto_change_metric_threshold
+    - auto_release_after_tuning
+
+frontier_model_sets:
+  - name: BiRefNet-DIS5K
+    task_tags: [cutout, mask]
+    frontier_default: true
+    bootstrap_supported: true
+    integration_status: ready
+    min_vram_class: 16GB
+    requires_hf_token: false
+    kind: huggingface
+    repo_id: ZhengPeng7/BiRefNet-DIS5K
+    revision: 8d0803f8dee999ceb31c20092bb53b6021aeec13
+    files:
+      - model.safetensors
+    target_subdir: models/BiRefNet
+    license_note: Public Hugging Face model; keep upstream license in release notes.
+
+  - name: Qwen-Image-Edit-2511
+    task_tags: [precision_edit, retouch, text_edit]
+    frontier_default: true
+    bootstrap_supported: true
+    integration_status: ready
+    min_vram_class: 24GB
+    requires_hf_token: true
+    kind: huggingface
+    repo_id: Comfy-Org/Qwen-Image-Edit_ComfyUI
+    revision: 83ae44f23af827155718b906c7dcc195a37c60b4
+    files:
+      - split_files/diffusion_models/qwen_image_edit_2511_bf16.safetensors
+    target_subdir: models/diffusion_models
+    research_refs:
+      - https://docs.comfy.org/tutorials/image/qwen/qwen-image-edit-2511
+
+  - name: Qwen-Image-Edit-2511-Lightning-LoRA
+    task_tags: [precision_edit, acceleration]
+    frontier_default: true
+    bootstrap_supported: true
+    integration_status: ready
+    min_vram_class: 24GB
+    requires_hf_token: true
+    kind: huggingface
+    repo_id: lightx2v/Qwen-Image-Edit-2511-Lightning
+    revision: d74eba145674fd7e31b949324e148e21e7118abd
+    files:
+      - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+    target_subdir: models/loras
+
+  - name: Qwen-Image-2512
+    task_tags: [text_to_image, text_rendering, synthesis]
+    frontier_default: true
+    bootstrap_supported: true
+    integration_status: ready
+    min_vram_class: 32GB
+    requires_hf_token: true
+    kind: huggingface
+    repo_id: Comfy-Org/Qwen-Image_ComfyUI
+    revision: c232bcb51c1523899c62d6dcaa960b2627668de5
+    files:
+      - split_files/diffusion_models/qwen_image_2512_fp8_e4m3fn.safetensors
+      - split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors
+      - split_files/vae/qwen_image_vae.safetensors
+    target_subdir: models
+    research_refs:
+      - https://docs.comfy.org/tutorials/image/qwen/qwen-image-2512
+
+  - name: Qwen-Image-2512-Lightning-LoRA
+    task_tags: [text_to_image, acceleration]
+    frontier_default: true
+    bootstrap_supported: true
+    integration_status: ready
+    min_vram_class: 32GB
+    requires_hf_token: true
+    kind: huggingface
+    repo_id: lightx2v/Qwen-Image-2512-Lightning
+    revision: a52649c9d0f6e1a248bff13f0df33bb8a2abdb52
+    files:
+      - Qwen-Image-2512-Lightning-4steps-V1.0-bf16.safetensors
+    target_subdir: models/loras
+
+  - name: Qwen3.6-35B-A3B-FP8-Judge
+    task_tags: [quality_judge, vlm, automation, code_tuning]
+    frontier_default: true
+    bootstrap_supported: true
+    integration_status: ready
+    min_vram_class: 48GB
+    requires_hf_token: false
+    kind: huggingface_snapshot
+    repo_id: Qwen/Qwen3.6-35B-A3B-FP8
+    revision: 61a5771f218894aaacf97551e24a25b866750fc2
+    files:
+      - snapshot
+    target_subdir: models/qwen_judge/Qwen3.6-35B-A3B-FP8
+    license_note: Apache-2.0. Serve locally through vLLM or SGLang; no cloud fallback.
+    research_refs:
+      - https://huggingface.co/Qwen/Qwen3.6-35B-A3B-FP8
+
+  - name: FLUX.2-Dev-FP8
+    task_tags: [composition, reference, generation]
+    frontier_default: true
+    bootstrap_supported: true
+    integration_status: ready
+    min_vram_class: 48GB
+    requires_hf_token: true
+    kind: huggingface
+    repo_id: Comfy-Org/flux2-dev
+    revision: 03d6521e6f6a47396b3f951cbea50f7e6c2f482e
+    files:
+      - split_files/diffusion_models/flux2_dev_fp8mixed.safetensors
+      - split_files/text_encoders/mistral_3_small_flux2_fp8.safetensors
+      - split_files/vae/flux2-vae.safetensors
+      - split_files/loras/Flux2TurboComfyv2.safetensors
+    target_subdir: models
+    license_note: BFL gated license acceptance may be required.
+    research_refs:
+      - https://docs.comfy.org/tutorials/flux/flux-2-dev
+
+  - name: FLUX.2-Klein-9B-FP8
+    task_tags: [preview, relight, fast_edit]
+    frontier_default: true
+    bootstrap_supported: true
+    integration_status: ready
+    min_vram_class: 24GB
+    requires_hf_token: true
+    kind: manual_hf
+    repo_id: black-forest-labs/FLUX.2-klein-9b-fp8
+    revision: 902d9d510b51533e07729f19211414a3648b77d2
+    files:
+      - flux-2-klein-9b-fp8.safetensors
+    target_subdir: models/diffusion_models
+    license_note: Gated BFL repo; HF_TOKEN must have accepted terms.
+    research_refs:
+      - https://docs.comfy.org/tutorials/flux/flux-2-klein
+
+  - name: FLUX.1-Fill-dev
+    task_tags: [fill, inpaint, outpaint]
+    frontier_default: true
+    bootstrap_supported: true
+    integration_status: ready
+    min_vram_class: 24GB
+    requires_hf_token: true
+    kind: manual_hf
+    repo_id: black-forest-labs/FLUX.1-Fill-dev
+    revision: 358293da0354175698b67ec8299acf928313a78a
+    files:
+      - flux1-fill-dev.safetensors
+      - clip_l.safetensors
+      - t5xxl_fp16.safetensors
+      - ae.safetensors
+    target_subdir: models
+    license_note: Gated BFL repo; HF_TOKEN must have accepted terms.
+
+  - name: Qwen-Image-Layered
+    task_tags: [layered_edit, mask, object_isolation]
+    frontier_default: true
+    bootstrap_supported: true
+    integration_status: ready
+    min_vram_class: 48GB
+    requires_hf_token: true
+    kind: huggingface
+    repo_id: Comfy-Org/Qwen-Image-Layered_ComfyUI
+    revision: 5d93d59c0e34488b94dee03ad33337f7ee997f97
+    files:
+      - split_files/diffusion_models/qwen_image_layered_fp8mixed.safetensors
+      - split_files/vae/qwen_image_layered_vae.safetensors
+    target_subdir: models
+    research_refs:
+      - https://docs.comfy.org/tutorials/image/qwen/qwen-image-layered
+      - https://arxiv.org/abs/2512.15603
+
+  - name: Z-Image-Turbo
+    task_tags: [fast_generation, text_rendering, low_vram]
+    frontier_default: true
+    bootstrap_supported: true
+    integration_status: ready
+    min_vram_class: 24GB
+    requires_hf_token: true
+    kind: huggingface
+    repo_id: Comfy-Org/z_image_turbo
+    revision: 2f862278568d3f0a83167a16e5f11094da6dee72
+    files:
+      - split_files/diffusion_models/z_image_turbo_nvfp4.safetensors
+      - split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors
+      - split_files/vae/ae.safetensors
+      - split_files/loras/z_image_turbo_distill_patch_lora_bf16.safetensors
+    target_subdir: models
+    research_refs:
+      - https://docs.comfy.org/tutorials/image/z-image/z-image-turbo
+      - https://arxiv.org/abs/2511.22699
+
+  - name: OmniGen2
+    task_tags: [multimodal, image_edit, composition]
+    frontier_default: true
+    bootstrap_supported: true
+    integration_status: ready
+    min_vram_class: 48GB
+    requires_hf_token: true
+    kind: huggingface
+    repo_id: Comfy-Org/Omnigen2_ComfyUI_repackaged
+    revision: a81dac8cc06b983eb865d1c345fa12c00616fb7d
+    files:
+      - split_files/diffusion_models/omnigen2_fp16.safetensors
+      - split_files/text_encoders/qwen_2.5_vl_fp16.safetensors
+      - split_files/vae/ae.safetensors
+    target_subdir: models
+    research_refs:
+      - https://docs.comfy.org/tutorials/image/omnigen/omnigen2
+
+frontier_research_tracks:
+  - name: LongCat-Image-Edit-Turbo
+    task_tags: [fast_edit, research]
+    frontier_default: false
+    bootstrap_supported: false
+    integration_status: workflow_needed
+    min_vram_class: 48GB
+    requires_hf_token: true
+    repo_id: meituan-longcat/LongCat-Image-Edit-Turbo
+    revision: 6a7262de5549f0bf0ec54c08ef7d283ef41f3214
+    license_note: Diffusers-style artifact; wait for a verified Comfy packaging path before default bootstrap.
+
+  - name: FLUX.1-Kontext-dev
+    task_tags: [reference_edit, research]
+    frontier_default: false
+    bootstrap_supported: false
+    integration_status: license_review
+    min_vram_class: 48GB
+    requires_hf_token: true
+    repo_id: black-forest-labs/FLUX.1-Kontext-dev
+    license_note: Keep in Frontier tracking, but smoke the gated license and workflow before enabling bootstrap.
+
+raw_frontier:
+  contract_id: tri_raw_frontier_v1
+  baseline_backend: tri_raw_baseline_v1
+  studio_official_inputs: [single_raw, three_raw_bracket]
+  accepted_frame_counts: [3, 9]
+  nine_frame_status: research_api_benchmark_path
+  restoration_goals:
+    default: truth_preserving
+    options:
+      - id: truth_preserving
+        label: 진실 보존
+        summary: 실제 프레임 근거를 우선해 고스팅과 과한 질감 생성을 낮춥니다.
+        approval: default_delivery_path
+      - id: aggressive_restore
+        label: 공격적 복원 후보
+        summary: 고스트와 노이즈 근거를 보며 더 강한 디테일 후보를 만듭니다. 최종 채택 전 검수가 필요합니다.
+        approval: qwen_metric_golden_human_review_required
+        risk: hallucinated_detail_or_over_sharpened_texture
+  min_vram_class: 80GB
+  integration_status: research_spike
+  research_refs:
+    - https://arxiv.org/abs/2505.12089
+    - https://openaccess.thecvf.com/content/CVPR2025W/NTIRE/html/Qiu_Recursive_Multi-Exposure_Alignment_with_Spatiotemporal_Decoupling_for_Efficient_Burst_HDR_CVPRW_2025_paper.html
+    - https://github.com/Eve-ctr/RawFusion
+    - https://arxiv.org/abs/2404.10358
+  data_refs:
+    - name: NTIRE 2025 Efficient Burst HDR and Restoration
+      use: eval_and_future_training
+      access: challenge_dataset
+      status: manifest_only
+    - name: RAWIR / NTIRE RAW Image Restoration
+      use: denoise_restoration_eval
+      access: public_hf_dataset
+      status: manifest_only
+    - name: BracketIRE
+      use: three_frame_bracket_eval
+      access: paper_dataset
+      status: manifest_only

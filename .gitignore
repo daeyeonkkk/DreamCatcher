@@ -1,0 +1,52 @@
+.git
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.codex_tmp/
+.codex_tmp_testdeps/
+codex_pytest_temp*/
+
+# Python
+.venv/
+app/backend/.venv/
+app/backend/.tmp_pytest*/
+.pydeps/
+.pip-cache/
+.tmp/
+.pytest_tmp/
+
+# Frontend
+app/frontend/node_modules/
+app/frontend/dist/
+app/frontend/mock_comfy/
+.npm-cache/
+
+# Runtime / generated outputs
+# Public repository default:
+# keep dependency caches, runtime secrets, local outputs, and generated bundles
+# out of git unless a maintainer intentionally promotes a sanitized artifact.
+outputs/
+archives/
+seed_bundle/staging_templates/
+local_data_lab/cache/
+local_data_lab/runs/
+local_data_lab/exports/
+local_data_lab/logs/
+app/runtime/
+app/logs/
+app/workflows/runtime/
+benchmarks/
+# Large packaged archives still stay ignored
+DreamCatcher_seeded.zip
+DreamCatcher.zip
+Product/DreamCatcher.zip
+Product/*.zip
+Product/preflight_report*.json
+
+# OS / editor
+.DS_Store
+Thumbs.db

@@ -1,0 +1,71 @@
+# syntax=docker/dockerfile:1.7
+
+ARG BASE_IMAGE=runpod/comfyui:1.4.1-cuda12.8
+FROM ${BASE_IMAGE}
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+ARG NODE_MAJOR=24
+ARG PREWARM_CUSTOM_NODES=0
+
+ENV DC_PREWARMED_IMAGE=runtime-v1 \
+    DC_MODEL_PROFILE=frontier \
+    DC_SERVE_FRONTEND=1 \
+    DC_COMFY_PUBLIC=0 \
+    HF_HOME=/workspace/.cache/huggingface \
+    PIP_CACHE_DIR=/opt/dreamcatcher-cache/pip \
+    UV_CACHE_DIR=/opt/dreamcatcher-cache/uv \
+    npm_config_cache=/opt/dreamcatcher-cache/npm \
+    UV_LINK_MODE=copy \
+    PIP_ROOT_USER_ACTION=ignore
+
+WORKDIR /opt/dreamcatcher-prewarm
+
+RUN set -eux; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends ca-certificates curl gnupg git unzip rsync; \
+    install -d -m 0755 /etc/apt/keyrings; \
+    curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key \
+      | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg; \
+    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_${NODE_MAJOR}.x nodistro main" \
+      > /etc/apt/sources.list.d/nodesource.list; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends nodejs; \
+    python3 -m pip install --upgrade pip uv; \
+    rm -rf /var/lib/apt/lists/*
+
+COPY app/backend/pyproject.toml app/backend/uv.lock app/backend/requirements.txt app/backend/requirements-lock.txt ./app/backend/
+COPY app/frontend/package.json app/frontend/package-lock.json ./app/frontend/
+COPY app/backend/app/__init__.py ./app/backend/app/__init__.py
+COPY app/backend/app/core/custom_node_installer.py ./app/backend/app/core/custom_node_installer.py
+COPY app/custom_nodes/custom_node_manifest.yaml ./app/custom_nodes/custom_node_manifest.yaml
+
+RUN set -eux; \
+    uv sync --project app/backend --no-dev --frozen; \
+    npm ci --prefix app/frontend; \
+    npm cache verify; \
+    mkdir -p /opt/dreamcatcher-prewarm/evidence \
+      /opt/dreamcatcher-cache \
+      /workspace/DreamCatcher \
+      /workspace/.cache/huggingface \
+      /workspace/runpod-slim/ComfyUI/models; \
+    chmod -R a+rX /opt/dreamcatcher-prewarm; \
+    chmod -R a+rwX /opt/dreamcatcher-cache /workspace/.cache/huggingface
+
+RUN set -eux; \
+    if [[ "${PREWARM_CUSTOM_NODES}" == "1" ]]; then \
+      PYTHONPATH="/opt/dreamcatcher-prewarm/app:/opt/dreamcatcher-prewarm/app/backend" \
+        /opt/dreamcatcher-prewarm/app/backend/.venv/bin/python \
+        -m backend.app.core.custom_node_installer \
+        --manifest /opt/dreamcatcher-prewarm/app/custom_nodes/custom_node_manifest.yaml \
+        --comfy-root /workspace/runpod-slim/ComfyUI \
+        --python-bin /opt/dreamcatcher-prewarm/app/backend/.venv/bin/python; \
+    fi
+
+RUN set -eux; \
+    printf '{\n  "kind": "dreamcatcher_runtime_prewarm",\n  "version": "runtime-v1",\n  "base_image": "%s",\n  "model_weights_baked": false,\n  "source_of_truth": "DreamCatcher.zip"\n}\n' "${BASE_IMAGE}" \
+      > /opt/dreamcatcher-prewarm/evidence/runtime-prewarm.json
+
+LABEL org.opencontainers.image.title="DreamCatcher Runtime Prewarm" \
+      org.opencontainers.image.description="Runtime dependency prewarm for DreamCatcher Ephemeral RunPod sessions. Model weights are not baked by default." \
+      org.opencontainers.image.source="https://github.com/daeyeonkkk/DreamCatcher"

@@ -1,0 +1,165 @@
+{
+  "plan_version": "2026-04-09",
+  "source_root_hint": "C:/my_project/DCIM",
+  "notes": [
+    "This plan describes read-only source files that are copied into benchmark/samples for local benchmark population.",
+    "The original DCIM tree must remain untouched.",
+    "Curated sample media stays local under benchmark/samples and is intentionally ignored from git."
+  ],
+  "single_raw": [
+    {
+      "sample_id": "bloom_walkway_daylight_001",
+      "label": "Walkway blossoms daylight baseline",
+      "source_paths": [
+        "102_PANA/IMG_9701.CR3"
+      ],
+      "companion_paths": [
+        "102_PANA/IMG_9701.JPG"
+      ],
+      "selection_reason": "Daylight baseline sample for general detail, color, and timing checks."
+    },
+    {
+      "sample_id": "bloom_branch_midtone_001",
+      "label": "Midtone blossom branch closeup",
+      "source_paths": [
+        "102_PANA/IMG_9781.CR3"
+      ],
+      "companion_paths": [
+        "102_PANA/IMG_9781.JPG"
+      ],
+      "selection_reason": "Branch detail sample for midtone texture and edge retention."
+    },
+    {
+      "sample_id": "bloom_closeup_shade_001",
+      "label": "Shaded blossom closeup",
+      "source_paths": [
+        "102_PANA/IMG_9863.CR3"
+      ],
+      "companion_paths": [
+        "102_PANA/IMG_9863.JPG"
+      ],
+      "selection_reason": "Lower-light closeup sample for denoise and detail preservation checks."
+    },
+    {
+      "sample_id": "street_backlight_rw2_001",
+      "label": "Street candid backlight RW2",
+      "source_paths": [
+        "102_PANA/P1029958.RW2"
+      ],
+      "companion_paths": [
+        "102_PANA/P1029958.JPG"
+      ],
+      "selection_reason": "RW2 daylight sample with harder tonal contrast."
+    },
+    {
+      "sample_id": "blossom_macro_rw2_001",
+      "label": "Macro blossom RW2",
+      "source_paths": [
+        "103_PANA/P1030045.RW2"
+      ],
+      "companion_paths": [
+        "103_PANA/P1030045.JPG"
+      ],
+      "selection_reason": "RW2 close-focus sample for optical correction and fine detail checks."
+    },
+    {
+      "sample_id": "night_portrait_blossom_001",
+      "label": "Night portrait with blossoms",
+      "source_paths": [
+        "104CANON/IMG_0014.CR3"
+      ],
+      "companion_paths": [
+        "104CANON/IMG_0014.JPG"
+      ],
+      "selection_reason": "Night portrait sample for low-light recovery and color stability."
+    },
+    {
+      "sample_id": "day_portrait_blossom_001",
+      "label": "Day portrait with blossoms",
+      "source_paths": [
+        "104CANON/IMG_0094.CR3"
+      ],
+      "companion_paths": [
+        "104CANON/IMG_0094.JPG"
+      ],
+      "selection_reason": "Balanced daylight portrait sample for skin-tone and highlight checks."
+    },
+    {
+      "sample_id": "campus_walk_detail_001",
+      "label": "Campus walk detail sample",
+      "source_paths": [
+        "105_PANA/IMG_0161.CR3"
+      ],
+      "companion_paths": [
+        "105_PANA/IMG_0161.JPG"
+      ],
+      "selection_reason": "Additional daylight detail sample to broaden the local gold set."
+    }
+  ],
+  "tri_raw": [
+    {
+      "bucket_id": "static_hdr",
+      "sample_id": "window_blossom_hdr_001",
+      "label": "Apartment window blossom HDR",
+      "source_paths": [
+        "102_PANA/P1029984.RW2",
+        "102_PANA/P1029985.RW2",
+        "102_PANA/P1029986.RW2"
+      ],
+      "companion_paths": [
+        "102_PANA/P1029984.JPG",
+        "102_PANA/P1029985.JPG",
+        "102_PANA/P1029986.JPG"
+      ],
+      "selection_reason": "Static scene with a wide exposure spread for highlight and shadow recovery."
+    },
+    {
+      "bucket_id": "high_iso_hdr",
+      "sample_id": "night_walk_hdr_001",
+      "label": "Night walkway HDR",
+      "source_paths": [
+        "104CANON/IMG_0002.CR3",
+        "104CANON/IMG_0003.CR3",
+        "104CANON/IMG_0004.CR3"
+      ],
+      "companion_paths": [
+        "104CANON/IMG_0002.JPG",
+        "104CANON/IMG_0003.JPG",
+        "104CANON/IMG_0004.JPG"
+      ],
+      "selection_reason": "Night scene under strong lamps for low-light HDR and noise pressure."
+    },
+    {
+      "bucket_id": "motion_heavy",
+      "sample_id": "night_selfie_motion_001",
+      "label": "Night selfie motion bracket",
+      "source_paths": [
+        "104CANON/IMG_0021.CR3",
+        "104CANON/IMG_0022.CR3",
+        "104CANON/IMG_0023.CR3"
+      ],
+      "companion_paths": [
+        "104CANON/IMG_0021.JPG",
+        "104CANON/IMG_0022.JPG",
+        "104CANON/IMG_0023.JPG"
+      ],
+      "selection_reason": "Handheld selfie sequence with clear subject movement for deghost and fallback checks."
+    },
+    {
+      "bucket_id": "narrow_bracket",
+      "sample_id": "night_path_narrow_001",
+      "label": "Night path narrow bracket",
+      "source_paths": [
+        "104CANON/IMG_0017.CR3",
+        "104CANON/IMG_0018.CR3",
+        "104CANON/IMG_0019.CR3"
+      ],
+      "companion_paths": [
+        "104CANON/IMG_0017.JPG",
+        "104CANON/IMG_0018.JPG",
+        "104CANON/IMG_0019.JPG"
+      ],
+      "selection_reason": "Night scene with a narrow EV span for limited HDR-gain and fallback pressure."
+    }
+  ]
+}

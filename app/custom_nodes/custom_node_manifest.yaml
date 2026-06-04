@@ -1,0 +1,39 @@
+comfy_core:
+  repo: https://github.com/comfyanonymous/ComfyUI.git
+  ref: ''
+  required_for:
+  - all
+  notes: Use the ComfyUI version already bundled in the official RunPod ComfyUI
+    image. Pin later only if DreamCatcher starts managing core explicitly.
+custom_nodes:
+- name: ComfyUI-Manager
+  repo: https://github.com/ltdrdata/ComfyUI-Manager.git
+  ref: ''
+  required_for:
+  - all
+  install: git+pip
+  notes: Needed for snapshot / restore workflows and dependency recovery.
+- name: ComfyUI-RMBG
+  repo: https://github.com/1038lab/ComfyUI-RMBG.git
+  ref: ''
+  required_for:
+  - 배경 제거
+  install: git+pip
+  notes: 'Validated in the reference runtime snapshot: BiRefNetRMBG and RMBG nodes
+    present.'
+- name: ComfyUI-IC-Light
+  repo: https://github.com/kijai/ComfyUI-IC-Light.git
+  ref: ''
+  required_for:
+  - 조명 맞추기
+  install: git+pip
+  notes: 'Validated in the reference runtime snapshot: LoadAndApplyICLightUnet and
+    ICLightConditioning present.'
+- name: ComfyUI-SUPIR
+  repo: https://github.com/kijai/ComfyUI-SUPIR.git
+  ref: ''
+  required_for:
+  - 최종 출력
+  install: git+pip
+  notes: 'Validated in the reference runtime snapshot: SUPIR_model_loader_v2 and
+    SUPIR_sample present.'

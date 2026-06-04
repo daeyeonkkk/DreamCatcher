@@ -1,0 +1,303 @@
+version: "2026-03-26"
+active_profile: dreamcatcher_local_open_2026
+
+profiles:
+  dreamcatcher_local_open_2026:
+    label: DreamCatcher Local Open 2026
+    description: >
+      Best current local-open stack for a single-user RunPod studio. It prioritizes
+      fidelity, edit consistency, and low ops overhead over chasing every new demo.
+    defaults:
+      removeBg: removebg_birefnet
+      replaceBg: replacebg_flux2_dev
+      relight: relight_flux2_klein_iclight
+      replaceObject: replaceobject_flux_fill
+      expandCanvas: expandcanvas_flux_fill
+      retouch: retouch_qwen_edit
+      enhance: enhance_supir_finish
+      finish: finish_studio_export
+      compare: compare_studio_review
+      qualityAutomation: quality_automation_qwen_metric_runner
+      qualityTuning: quality_tuning_loop_proposal
+
+recipes:
+  removebg_birefnet:
+    tool: removeBg
+    execution_engine: comfy-workflow
+    workflow_mode: runtime-fallback
+    workflow_file: cutout_birefnet.json
+    model_family: BiRefNet
+    maturity: stable
+    license: open-source
+    warm_models:
+      - BiRefNet-DIS5K
+    cold_models: []
+    watch_models:
+      - BiRefNet_dynamic
+      - BiRefNet_HR
+      - BiRefNet_HR-matting
+    rationale: >
+      BiRefNet remains the best low-ops open model for local cutout quality in a
+      Comfy-driven photo workflow. DreamCatcher should keep the current runtime path
+      and only add explicit dynamic or HR model selection later.
+    references:
+      - label: BiRefNet repository
+        url: https://github.com/ZhengPeng7/BiRefNet
+      - label: BiRefNet paper
+        url: https://arxiv.org/abs/2401.03407
+
+  replacebg_flux2_dev:
+    tool: replaceBg
+    execution_engine: comfy-workflow
+    workflow_mode: api-export
+    workflow_file: flux2_dev_compose.api.json
+    model_family: FLUX.2 Dev
+    maturity: stable
+    license: source-available
+    warm_models: []
+    cold_models:
+      - FLUX.2-Dev
+      - FLUX.2-Dev-TextEncoder
+      - FLUX.2-VAE
+    watch_models:
+      - FLUX.1-Kontext-dev
+      - Z-Image-Edit
+      - HiDream-E1
+    rationale: >
+      FLUX.2 Dev is still the best current fit for high-fidelity local background
+      replacement inside DreamCatcher because it already has a working Comfy export and
+      strong composition quality. FLUX Kontext and Z-Image are the main next candidates,
+      but they should land as a separate iterative editing branch instead of replacing
+      this stable path blindly.
+    references:
+      - label: ComfyUI FLUX.2 Dev tutorial
+        url: https://docs.comfy.org/tutorials/flux/flux-2-dev
+      - label: FLUX.1 Kontext paper
+        url: https://arxiv.org/abs/2506.15742
+      - label: Z-Image paper
+        url: https://arxiv.org/abs/2511.22699
+
+  relight_flux2_klein_iclight:
+    tool: relight
+    execution_engine: comfy-workflow
+    workflow_mode: api-export
+    workflow_file: flux2_klein_preview.api.json
+    model_family: FLUX.2 Klein + IC-Light
+    maturity: stable
+    license: mixed-open
+    warm_models:
+      - IC-Light
+      - FLUX.2-Klein-9B-Distilled
+      - Depth-Anything-V2-Small
+    cold_models: []
+    watch_models:
+      - FLUX.1-Kontext-dev
+      - HiDream-E1
+    rationale: >
+      IC-Light still gives DreamCatcher the most direct lighting control, and pairing it
+      with FLUX.2 Klein keeps preview latency reasonable on the RTX PRO 6000 Pod.
+      This should remain the default relight stack until a better open relighting model
+      ships with mature local tooling.
+    references:
+      - label: IC-Light repository
+        url: https://github.com/lllyasviel/IC-Light
+      - label: ComfyUI FLUX.2 Klein tutorial
+        url: https://docs.comfy.org/tutorials/flux/flux-2-klein
+      - label: FLUX.1 Kontext paper
+        url: https://arxiv.org/abs/2506.15742
+
+  replaceobject_flux_fill:
+    tool: replaceObject
+    execution_engine: comfy-workflow
+    workflow_mode: api-export
+    workflow_file: flux_fill_replace.api.json
+    model_family: FLUX.1 Fill dev
+    maturity: stable
+    license: source-available
+    warm_models: []
+    cold_models:
+      - FLUX.1-Fill-dev
+    watch_models:
+      - Qwen-Image-Layered
+      - Step1X-Edit-v1p2
+      - FLUX.1-Kontext-dev
+    rationale: >
+      FLUX Fill remains the safest currently-integrated local path for object replacement.
+      However, this is the place where DreamCatcher should eventually pivot first:
+      layered editing and reasoning-enhanced editors are now mature enough to justify a
+      second engine path.
+    references:
+      - label: ComfyUI FLUX.1 Fill tutorial
+        url: https://docs.comfy.org/tutorials/flux/flux-1-fill-dev
+      - label: Qwen-Image-Layered paper
+        url: https://arxiv.org/abs/2512.15603
+      - label: ReasonEdit paper
+        url: https://arxiv.org/abs/2511.22625
+
+  expandcanvas_flux_fill:
+    tool: expandCanvas
+    execution_engine: comfy-workflow
+    workflow_mode: api-export
+    workflow_file: flux_fill_replace.api.json
+    model_family: FLUX.1 Fill dev
+    maturity: stable
+    license: source-available
+    warm_models: []
+    cold_models:
+      - FLUX.1-Fill-dev
+    watch_models:
+      - Qwen-Image-Layered
+      - Step1X-Edit-v1p2
+      - FLUX.1-Kontext-dev
+    rationale: >
+      FLUX Fill can already extend a frame safely when DreamCatcher prepares a larger
+      transparent canvas and uses the padded border as the inpaint mask. This keeps
+      화면 확장 on the same low-ops local path as object fill while reserving room for
+      a future dedicated outpaint branch.
+    references:
+      - label: ComfyUI FLUX.1 Fill tutorial
+        url: https://docs.comfy.org/tutorials/flux/flux-1-fill-dev
+      - label: Qwen-Image-Layered paper
+        url: https://arxiv.org/abs/2512.15603
+      - label: ReasonEdit paper
+        url: https://arxiv.org/abs/2511.22625
+
+  retouch_qwen_edit:
+    tool: retouch
+    execution_engine: comfy-workflow
+    workflow_mode: api-export
+    workflow_file: qwen_precision_edit.api.json
+    model_family: Qwen Image Edit 2511
+    maturity: stable
+    license: apache-2.0
+    warm_models: []
+    cold_models:
+      - Qwen-Image-Edit-2511
+      - Qwen-Image-Edit-2511-TextEncoder
+      - Qwen-Image-VAE
+    watch_models:
+      - Qwen-Image-Layered
+      - Step1X-Edit-v1p2
+      - ReasonEdit-Q
+      - FLUX.1-Kontext-dev
+    rationale: >
+      Qwen Image Edit stays the best current default for precise local retouch because it
+      balances instruction following and edit containment while already fitting the
+      DreamCatcher Comfy stack. The strongest next upgrade is not another monolithic
+      raster editor but Qwen-Image-Layered, which can break object edits out into
+      explicit layers.
+    references:
+      - label: ComfyUI Qwen Image Edit tutorial
+        url: https://docs.comfy.org/tutorials/image/qwen/qwen-image-edit-2511
+      - label: Qwen-Image-Layered paper
+        url: https://arxiv.org/abs/2512.15603
+      - label: ReasonEdit paper
+        url: https://arxiv.org/abs/2511.22625
+
+  enhance_supir_finish:
+    tool: enhance
+    execution_engine: comfy-workflow
+    workflow_mode: runtime-fallback
+    workflow_file: finish_supir.json
+    model_family: SUPIR
+    maturity: optional
+    license: non-commercial
+    warm_models: []
+    cold_models:
+      - SUPIR
+      - CodeFormer
+    watch_models:
+      - UniRestore
+      - InstantIR
+      - GFPGAN
+      - Real-ESRGAN
+    rationale: >
+      SUPIR remains a high-end finish option, but it is no longer the only serious open
+      restoration path. DreamCatcher should keep SUPIR as an optional quality branch
+      while preparing a future split between blind restoration (UniRestore, InstantIR)
+      and face-specific cleanup (GFPGAN, CodeFormer).
+    references:
+      - label: SUPIR repository
+        url: https://github.com/Fanghua-Yu/SUPIR
+      - label: SUPIR paper
+        url: https://arxiv.org/abs/2401.13627
+      - label: UniRestore paper
+        url: https://arxiv.org/abs/2501.13134
+      - label: InstantIR repository
+        url: https://github.com/instantX-research/InstantIR
+
+  finish_studio_export:
+    tool: finish
+    execution_engine: studio-export
+    workflow_mode: studio-export
+    workflow_file: studio_finish_export.json
+    model_family: Export Automation
+    maturity: stable
+    license: internal
+    warm_models: []
+    cold_models: []
+    watch_models: []
+    rationale: >
+      Finish is an internal export branch, not an AI workflow. Keep it outside the model
+      race and continue treating delivery packaging as a deterministic backend concern.
+    references:
+      - label: DreamCatcher BUILD_MANUAL
+        url: https://github.com/daeyeonkkk/DreamCatcher/blob/main/Product/BUILD_MANUAL.md
+
+  compare_studio_review:
+    tool: compare
+    execution_engine: studio-compare
+    workflow_mode: studio-compare
+    workflow_file: studio_compare_review.json
+    model_family: Review Mode
+    maturity: stable
+    license: internal
+    warm_models: []
+    cold_models: []
+    watch_models: []
+    rationale: >
+      Compare is a studio review surface, not a generation path. Keep it lightweight and
+      deterministic so DreamCatcher stays useful even when the pod is offline.
+    references:
+      - label: DreamCatcher user manual
+        url: https://github.com/daeyeonkkk/DreamCatcher/blob/main/Product/USER_MANUAL.md
+
+  quality_automation_qwen_metric_runner:
+    tool: qualityAutomation
+    execution_engine: studio-quality-automation
+    workflow_mode: quality_automation_v2
+    workflow_file: studio_quality_automation.json
+    model_family: Qwen3.6-35B-A3B-FP8 + evidence packet + metric/checker layer
+    maturity: contract-ready
+    license: mixed-open
+    warm_models:
+      - Qwen3.6-35B-A3B-FP8
+    cold_models: []
+    watch_models:
+      - mask-checker-sam2
+      - lpips-or-dreamsim
+      - musiq-or-nr-iqa
+    rationale: >
+      DreamCatcher quality automation uses a local Qwen judge plus deterministic
+      metrics/checkers and a judge evidence packet to classify outputs as fail,
+      suspicious, or pass. Golden calibration adjusts confidence/verdict before
+      acceptance. Suspicious and failed outputs require human approval.
+
+  quality_tuning_loop_proposal:
+    tool: qualityTuning
+    execution_engine: studio-quality-tuning
+    workflow_mode: quality_tuning_loop_v1
+    workflow_file: studio_quality_tuning_proposal.json
+    model_family: Qwen3.6-35B-A3B-FP8 + golden calibration + golden session runner
+    maturity: contract-ready
+    license: internal
+    warm_models: []
+    cold_models: []
+    watch_models:
+      - golden-session-runner
+      - human-approval-memory
+    rationale: >
+      Quality tuning uses accumulated quality assessments and human decisions to
+      draft proposal-only workflow, prompt, preset, metric, rubric, or code-level
+      changes. Automatic application is blocked until human approval, golden
+      score calibration review, and golden regression pass.

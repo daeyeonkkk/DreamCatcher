@@ -1,0 +1,134 @@
+version: "2026-05-08"
+lab_profile: dreamcatcher_local_data_lab_2026
+
+tracks:
+  - track_id: raw_frontier_research_plan
+    label: RAW Frontier Research Plan
+    status: planned
+    local_output: local_data_lab/runs/frontier_dataset_plans/raw_frontier_plan.json
+    runtime_destination: seed_bundle/frontier_dataset_manifest.yaml
+    source_datasets:
+      - ntire_burst_hdr_2025
+      - rasd_burst_hdr_2025
+      - rawfusion_burst_hdr
+      - bracketire_ireanet
+      - rawir
+      - sidd
+      - sid
+    local_inputs:
+      - 3-frame TriRaw diagnostics
+      - 9-frame burst HDR research data
+      - RAW denoise and restoration benchmarks
+    notes:
+      - Starts as an evidence and evaluation track for tri_raw_frontier_v1.
+      - No dataset is downloaded during normal RunPod bootstrap.
+
+  - track_id: background_frontier_research_plan
+    label: Background Removal And Generation Frontier Plan
+    status: planned
+    local_output: local_data_lab/runs/frontier_dataset_plans/background_frontier_plan.json
+    runtime_destination: seed_bundle/frontier_dataset_manifest.yaml
+    source_datasets:
+      - dis5k
+      - birefnet_dis5k
+      - sa1b
+      - coco_stuff_164k
+      - ade20k
+      - imgedit
+      - editbench
+      - magicbrush
+      - places2
+      - lama_places_openimages_masks
+    local_inputs:
+      - subject masks and alpha evidence
+      - localized edit pairs
+      - scene segmentation and inpainting masks
+    notes:
+      - Covers cutout, matting, replacement, inpaint, and outpaint regression packs.
+      - License-gated or manual datasets remain explicit local-data-lab actions.
+
+  - track_id: edit_evaluator_bootstrap
+    label: Edit Evaluator Bootstrap
+    status: starter
+    local_output: local_data_lab/starter_artifacts/edit_evaluator_rules.default.json
+    runtime_destination: evaluator/edit_evaluator_rules.default.json
+    source_datasets:
+      - edithf_1m
+      - dear
+      - editbench
+    local_inputs:
+      - public preference dimensions
+      - pairwise aesthetic signals
+    notes:
+      - Starts as a rule bundle, then can later become a learned local evaluator.
+
+  - track_id: retouch_reference_bank_seed
+    label: Retouch Reference Bank Seed
+    status: starter
+    local_output: local_data_lab/starter_artifacts/reference_bank.seed.json
+    runtime_destination: reference_bank/reference_bank.seed.json
+    source_datasets:
+      - fivek
+      - ppr10k
+      - mmart_ppr10k
+    local_inputs:
+      - public exemplar families
+      - Lightroom-style edit metadata
+    notes:
+      - Starts as metadata only and later graduates into a local embedding/retrieval index.
+
+  - track_id: benchmark_seed_bootstrap
+    label: Benchmark Seed Bootstrap
+    status: starter
+    local_output: local_data_lab/starter_artifacts/mmart_bench.seed.json
+    runtime_destination: benchmarks/mmart_bench.seed.json
+    source_datasets:
+      - mmart_bench
+      - editbench
+    local_inputs:
+      - public benchmark instructions
+      - localized edit coverage
+    notes:
+      - Starts from downloaded benchmark metadata and later expands into a broader local regression pack.
+
+  - track_id: mmart_ppr10k_reference_pack
+    label: MMArt-PPR10k Reference Pack
+    status: starter
+    local_output: local_data_lab/starter_artifacts/mmart_ppr10k.reference_pack.json
+    runtime_destination: reference_bank/mmart_ppr10k.reference_pack.json
+    source_datasets:
+      - mmart_ppr10k
+    local_inputs:
+      - Lightroom sidecars
+      - instruction variants
+      - camera and lens metadata
+    notes:
+      - Converts the staged MMArt-PPR10k subset into a compact retouch and instruction reference pack.
+
+  - track_id: dear_rendering_seed
+    label: DEAR Rendering Seed
+    status: starter
+    local_output: local_data_lab/starter_artifacts/dear_rendering.seed.json
+    runtime_destination: evaluator/dear_rendering.seed.json
+    source_datasets:
+      - dear
+      - fivek
+    local_inputs:
+      - pairwise rendering metadata
+      - Lightroom rendering settings
+    notes:
+      - Converts the staged DEAR subset into compact rendering parameter bands for compare and finish work.
+
+  - track_id: local_compare_learning_seed
+    label: Local Compare Learning Seed
+    status: active
+    local_output: local_data_lab/starter_artifacts/local_compare_learning.seed.json
+    runtime_destination: evaluator/local_compare_learning.seed.json
+    source_datasets:
+      - personal_compare_winners
+    local_inputs:
+      - accepted compare decisions
+      - select/candidate metric deltas
+    notes:
+      - Learns from your own accepted compare winners first, without needing a heavyweight model.
+      - Starts as a compact reranker prior and can later graduate into a stronger local evaluator.

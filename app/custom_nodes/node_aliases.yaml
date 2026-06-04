@@ -1,0 +1,33 @@
+logical_nodes:
+  BIREFNET_INFER:
+    candidates:
+    - BiRefNetRMBG
+    - BiRefNet
+    - RMBG_BiRefNet_HR
+    - RembgByBiRefNet
+    notes: Cutout node aliases from custom wrappers.
+  ICLIGHT_APPLY:
+    candidates:
+    - LoadAndApplyICLightUnet
+    - ICLightConditioning
+    - ICLightApplyLighting
+  SUPIR_LOAD:
+    candidates:
+    - SUPIR_model_loader_v2
+    - SUPIR_model_loader
+    - SUPIR Model Loader
+  SUPIR_SAMPLER:
+    candidates:
+    - SUPIR_sample
+    - SUPIR_sampler
+    - SUPIR Sampler
+  LOAD_IMAGE:
+    candidates:
+    - LoadImage
+  SAVE_IMAGE:
+    candidates:
+    - SaveImage
+    - PreviewImage
+  QWEN_TEXT_ENCODE_EDIT:
+    candidates:
+    - TextEncodeQwenImageEdit

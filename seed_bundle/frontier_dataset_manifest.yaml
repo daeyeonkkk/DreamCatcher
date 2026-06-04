@@ -1,0 +1,600 @@
+version: "2026-05-11"
+reviewed_at: "2026-05-11"
+strategy: frontier
+
+policy:
+  default_mode: manifest_only
+  runpod_default_downloads_datasets: false
+  runpod_note: >
+    Frontier model bootstrap may download model weights, but training datasets and
+    paper corpora are never downloaded on a normal ephemeral Pod. Dataset pulls are
+    explicit local-data-lab actions and must be planned before execution.
+  local_cache_root: local_data_lab/cache/frontier_datasets
+  planner_output_root: local_data_lab/runs/frontier_dataset_plans
+  allow_dataset_download: explicit_only
+  license_gate_required: true
+  network_volume_baseline: false
+  runpod_gpu_server: RTX PRO 6000
+  runpod_gpu_vram: 96GB
+  container_disk_gb: 80
+  volume_disk_default_gb: 400
+  volume_disk_full_frontier_qwen_gb: 500
+  persistent_model_cache: false
+  long_term_outputs: external_or_local_only
+
+tasks:
+  raw_merge_denoise:
+    label: RAW burst merge, HDR, denoise, restoration
+    acceptance_focus:
+      - 3-frame RAW baseline must keep a better diagnostic trail than the old TriRaw preview path.
+      - 9-frame burst/HDR planning stays open for NTIRE-style research candidates.
+      - Export merged HDR, denoised result, confidence map, ghost map, and alignment evidence.
+      - Keep truth-preserving restoration as the default delivery target.
+      - Treat aggressive denoise/deblur/detail reconstruction as a reviewed candidate because it can hallucinate texture.
+  photo_correction_retouch:
+    label: Photo correction, retouch, finish, preference scoring
+    acceptance_focus:
+      - Prefer human-region and XMP/style metadata when available.
+      - Preserve pairwise compare signals for Studio winner selection.
+  background_removal_matting:
+    label: Background removal, matting, subject masks
+    acceptance_focus:
+      - Track mask boundary quality separately from coarse object IoU.
+      - Keep license-gated and generated-mask corpora out of automatic bootstrap.
+  background_generation_replace:
+    label: Background generation, replacement, composition
+    acceptance_focus:
+      - Evaluate subject preservation, instruction adherence, lighting consistency, and collateral edits.
+      - Prefer datasets with masks, edit pairs, or scene labels that map to Studio operations.
+  inpaint_outpaint:
+    label: Inpaint, outpaint, object removal, hole filling
+    acceptance_focus:
+      - Track mask distributions and large-hole behavior.
+      - Combine edit benchmarks with scene-background corpora for regression prompts.
+
+task_defaults:
+  raw_merge_denoise:
+    - ntire_burst_hdr_2025
+    - rasd_burst_hdr_2025
+    - rawfusion_burst_hdr
+    - bracketire_ireanet
+    - rawir
+    - sidd
+    - sid
+  photo_correction_retouch:
+    - fivek
+    - acceptable_adjustments
+    - ppr10k
+    - mmart_ppr10k
+    - dear
+    - edithf_1m
+  background_removal_matting:
+    - dis5k
+    - birefnet_dis5k
+    - sa1b
+    - coco_stuff_164k
+    - ade20k
+    - bria_rmbg_model_card
+  background_generation_replace:
+    - imgedit
+    - editbench
+    - magicbrush
+    - coco_stuff_164k
+    - ade20k
+    - places2
+  inpaint_outpaint:
+    - lama_places_openimages_masks
+    - places2
+    - coco_stuff_164k
+    - editbench
+    - imgedit
+
+datasets:
+  ntire_burst_hdr_2025:
+    label: NTIRE 2025 Efficient Burst HDR and Restoration
+    tasks:
+      - raw_merge_denoise
+    kind: raw_burst_hdr_challenge
+    readiness: frontier_eval_default
+    integration_status: workflow_needed
+    availability: paper_challenge
+    download_mode: challenge_registration
+    runpod_default_download: false
+    local_cache_subdir: raw/ntire_burst_hdr_2025
+    license_note: Challenge dataset terms and access path must be checked before download or training.
+    use_in_dreamcatcher: >
+      Main research anchor for tri_raw_frontier_v1 9-frame RAW burst HDR, denoise,
+      alignment, ghost evidence, and efficiency constraints.
+    scale_note: Nine noisy, misaligned RAW frames with varied exposures per scene.
+    references:
+      - https://arxiv.org/abs/2505.12089
+
+  rasd_burst_hdr_2025:
+    label: RASD - Recursive Multi-Exposure Alignment with Spatiotemporal Decoupling
+    tasks:
+      - raw_merge_denoise
+    kind: raw_burst_hdr_method
+    readiness: training_candidate
+    integration_status: workflow_needed
+    availability: cvprw_paper
+    download_mode: metadata_only
+    runpod_default_download: false
+    local_cache_subdir: raw/rasd_burst_hdr_2025
+    license_note: Paper/code availability must be reviewed before weights or training assets are used.
+    use_in_dreamcatcher: >
+      Tracks flow-guided multi-exposure alignment and staged alignment/restoration
+      training as the first serious upgrade path beyond tri_raw_baseline_v1.
+    references:
+      - https://openaccess.thecvf.com/content/CVPR2025W/NTIRE/html/Qiu_Recursive_Multi-Exposure_Alignment_with_Spatiotemporal_Decoupling_for_Efficient_Burst_HDR_CVPRW_2025_paper.html
+
+  rawfusion_burst_hdr:
+    label: RawFusion / Efficient Burst HDR and Restoration repo
+    tasks:
+      - raw_merge_denoise
+    kind: raw_burst_hdr_research_repo
+    readiness: training_candidate
+    integration_status: workflow_needed
+    availability: public_repo
+    download_mode: git_clone
+    runpod_default_download: false
+    local_cache_subdir: raw/rawfusion
+    license_note: Review repository license and competition factsheet before importing code or model outputs.
+    use_in_dreamcatcher: >
+      Candidate implementation reference for loaders, evaluation scripts, and burst HDR
+      scoring around 9-frame RAW input.
+    adapter_contract:
+      adapter_id: rawfusion_unet_external_v1
+      enable_env: DC_TRIRAW_LEARNED_ADAPTER=rawfusion
+      required_env:
+        - DC_RAWFUSION_REPO
+        - DC_RAWFUSION_CKPT
+      supported_input: 9 TIFF RAW frames
+      release_bundle_policy: external_code_and_checkpoint_not_vendored
+    download:
+      git_url: https://github.com/Eve-ctr/RawFusion.git
+    references:
+      - https://github.com/Eve-ctr/RawFusion
+
+  bracketire_ireanet:
+    label: BracketIRE / IREANet
+    tasks:
+      - raw_merge_denoise
+    kind: bracket_raw_restoration
+    readiness: training_candidate
+    integration_status: workflow_needed
+    availability: paper
+    download_mode: metadata_only
+    runpod_default_download: false
+    local_cache_subdir: raw/bracketire_ireanet
+    license_note: Dataset and code access must be checked from the paper/project release before use.
+    use_in_dreamcatcher: >
+      Tracks 3-frame or bracketed RAW restoration where exposure differences, blur,
+      denoise, and HDR reconstruction are solved together.
+    references:
+      - https://arxiv.org/abs/2404.10358
+
+  rawir:
+    label: RAWIR / NTIRE RAW Image Restoration
+    tasks:
+      - raw_merge_denoise
+    kind: raw_restoration_dataset
+    readiness: frontier_eval_default
+    integration_status: ready
+    availability: public_hf_dataset
+    download_mode: hf_dataset
+    runpod_default_download: false
+    local_cache_subdir: raw/rawir
+    license_note: Follow the Hugging Face dataset card and upstream image terms.
+    use_in_dreamcatcher: >
+      Practical RAW restoration and denoise evaluation corpus with RGGB crops,
+      metadata, and paired RGB targets for future fine-tune experiments.
+    download:
+      hf_dataset_id: marcosv/rawir
+    references:
+      - https://huggingface.co/datasets/marcosv/rawir
+
+  sidd:
+    label: Smartphone Image Denoising Dataset
+    tasks:
+      - raw_merge_denoise
+    kind: real_raw_denoise_pairs
+    readiness: benchmark
+    integration_status: ready
+    availability: public_project
+    download_mode: manual
+    runpod_default_download: false
+    local_cache_subdir: raw/sidd
+    license_note: Dataset and associated code are listed under MIT on the official site; verify mirror terms before mirroring.
+    use_in_dreamcatcher: >
+      RAW/sRGB denoise benchmark with noisy/ground-truth pairs and camera metadata,
+      useful for sensor-noise sanity checks even though it is not burst HDR.
+    references:
+      - https://abdokamel.github.io/sidd/index.html
+
+  sid:
+    label: See-in-the-Dark
+    tasks:
+      - raw_merge_denoise
+    kind: extreme_low_light_raw_pairs
+    readiness: benchmark
+    integration_status: ready
+    availability: public_project
+    download_mode: manual
+    runpod_default_download: false
+    local_cache_subdir: raw/sid
+    license_note: Follow project/GitHub dataset instructions before local caching.
+    use_in_dreamcatcher: >
+      Low-light RAW restoration baseline for denoise/detail hallucination risk and
+      single-frame RAW restoration stress tests.
+    references:
+      - https://cchen156.github.io/SID.html
+
+  fivek:
+    label: MIT-Adobe FiveK
+    tasks:
+      - photo_correction_retouch
+    kind: raw_to_retouched_pairs
+    readiness: foundational
+    integration_status: ready
+    availability: public_project_wrappers
+    download_mode: manual
+    runpod_default_download: false
+    local_cache_subdir: retouch/fivek
+    license_note: Mixed research-oriented image terms; do not redistribute full image cache in release bundles.
+    use_in_dreamcatcher: Global tone, color, white balance, and finish-stage acceptance priors.
+    references:
+      - https://data.csail.mit.edu/graphics/fivek/
+      - https://huggingface.co/datasets/logasja/mit-adobe-fivek/viewer
+
+  acceptable_adjustments:
+    label: Acceptable Photographic Tonal Adjustments
+    tasks:
+      - photo_correction_retouch
+    kind: retouch_acceptance_band
+    readiness: foundational
+    integration_status: ready
+    availability: public_project
+    download_mode: manual
+    runpod_default_download: false
+    local_cache_subdir: retouch/acceptable_adjustments
+    license_note: Research terms; underlying FiveK images keep their own restrictions.
+    use_in_dreamcatcher: Tone and contrast tolerance bands for compare/evaluator scoring.
+    references:
+      - https://projects.csail.mit.edu/acceptable-adj/data.html
+
+  ppr10k:
+    label: PPR10K
+    tasks:
+      - photo_correction_retouch
+    kind: portrait_retouch_pairs
+    readiness: frontier_eval_default
+    integration_status: ready
+    availability: public_repo
+    download_mode: git_clone
+    runpod_default_download: false
+    local_cache_subdir: retouch/ppr10k
+    license_note: Non-commercial research image/data terms.
+    use_in_dreamcatcher: Portrait retouch priors, human-region masks, XMP targets, and group consistency checks.
+    download:
+      git_url: https://github.com/csjliang/PPR10K.git
+    references:
+      - https://github.com/csjliang/PPR10K
+
+  mmart_ppr10k:
+    label: MMArt-PPR10K
+    tasks:
+      - photo_correction_retouch
+    kind: instruction_retouch_pairs
+    readiness: frontier_eval_default
+    integration_status: ready
+    availability: public_hf_dataset
+    download_mode: hf_dataset
+    runpod_default_download: false
+    local_cache_subdir: retouch/mmart_ppr10k
+    license_note: Follow Hugging Face dataset card and inherited PPR10K restrictions.
+    use_in_dreamcatcher: Natural-language retouch instructions and Lightroom-style tool sequencing priors.
+    download:
+      hf_dataset_id: JarvisArt/MMArt-PPR10k
+    references:
+      - https://huggingface.co/datasets/JarvisArt/MMArt-PPR10k
+
+  dear:
+    label: DEAR
+    tasks:
+      - photo_correction_retouch
+    kind: aesthetic_preference_pairs
+    readiness: frontier_eval_default
+    integration_status: ready
+    availability: public_sample
+    download_mode: hf_dataset
+    runpod_default_download: false
+    local_cache_subdir: retouch/dear
+    license_note: Annotation/sample terms plus inherited FiveK restrictions.
+    use_in_dreamcatcher: Pairwise rendering preference priors for compare-mode winner selection.
+    download:
+      hf_dataset_id: vsevolodpl/DEAR
+    references:
+      - https://huggingface.co/datasets/vsevolodpl/DEAR
+
+  edithf_1m:
+    label: EditHF-1M
+    tasks:
+      - photo_correction_retouch
+      - background_generation_replace
+      - inpaint_outpaint
+    kind: image_edit_preference_pairs
+    readiness: frontier_eval_default
+    integration_status: weights_pending
+    availability: paper_repo
+    download_mode: metadata_only
+    runpod_default_download: false
+    local_cache_subdir: edit/edithf_1m
+    license_note: Check dataset artifact terms before any training/eval cache is built.
+    use_in_dreamcatcher: Preference dimensions for edit quality, instruction alignment, and preservation scoring.
+    references:
+      - https://github.com/IntMeGroup/EditHF
+
+  dis5k:
+    label: DIS5K
+    tasks:
+      - background_removal_matting
+    kind: dichotomous_segmentation_dataset
+    readiness: frontier_eval_default
+    integration_status: ready
+    availability: public_repo
+    download_mode: git_clone
+    runpod_default_download: false
+    local_cache_subdir: matting/dis5k
+    license_note: DIS5K terms of use are separate from repository code license; review before training.
+    use_in_dreamcatcher: Primary high-resolution subject cutout/mask training and boundary evaluation corpus.
+    download:
+      git_url: https://github.com/xuebinqin/DIS.git
+    references:
+      - https://github.com/xuebinqin/DIS
+
+  birefnet_dis5k:
+    label: BiRefNet-DIS5K model card
+    tasks:
+      - background_removal_matting
+    kind: cutout_model_weights
+    readiness: executable_model
+    integration_status: ready
+    availability: public_hf_model
+    download_mode: hf_model
+    runpod_default_download: false
+    local_cache_subdir: matting/birefnet_dis5k
+    license_note: Model weights and DIS5K training data terms must both be respected.
+    use_in_dreamcatcher: Confirms the default cutout model is trained on DIS5K-TR and anchors model/data evidence.
+    download:
+      hf_model_id: ZhengPeng7/BiRefNet-DIS5K
+    references:
+      - https://huggingface.co/ZhengPeng7/BiRefNet-DIS5K
+
+  sa1b:
+    label: Segment Anything SA-1B
+    tasks:
+      - background_removal_matting
+      - background_generation_replace
+    kind: large_mask_dataset
+    readiness: training_candidate
+    integration_status: license_review
+    availability: public_dataset
+    download_mode: manual
+    runpod_default_download: false
+    local_cache_subdir: matting/sa1b
+    license_note: Limited license; use only after explicit license review.
+    use_in_dreamcatcher: Broad object/part mask prior for subject selection, background separation, and mask stress tests.
+    references:
+      - https://ai.meta.com/datasets/segment-anything/
+
+  coco_stuff_164k:
+    label: COCO-Stuff 164K
+    tasks:
+      - background_removal_matting
+      - background_generation_replace
+      - inpaint_outpaint
+    kind: semantic_scene_segmentation
+    readiness: frontier_eval_default
+    integration_status: ready
+    availability: public_repo
+    download_mode: manual
+    runpod_default_download: false
+    local_cache_subdir: scene/coco_stuff_164k
+    license_note: Follows COCO image terms plus COCO-Stuff annotations.
+    use_in_dreamcatcher: Stuff/thing masks for background containment, semantic context, and replacement regression cases.
+    references:
+      - https://github.com/nightrome/cocostuff
+
+  ade20k:
+    label: ADE20K
+    tasks:
+      - background_removal_matting
+      - background_generation_replace
+    kind: scene_parsing_dataset
+    readiness: frontier_eval_default
+    integration_status: ready
+    availability: public_registration
+    download_mode: manual
+    runpod_default_download: false
+    local_cache_subdir: scene/ade20k
+    license_note: Requires registration and agreement to terms of use before download.
+    use_in_dreamcatcher: Object/part scene parsing prior for room, outdoor, and structured background replacement checks.
+    references:
+      - https://ade20k.csail.mit.edu/
+
+  bria_rmbg_model_card:
+    label: BRIA RMBG-2.0 model card
+    tasks:
+      - background_removal_matting
+    kind: cutout_model_reference
+    readiness: model_reference
+    integration_status: license_review
+    availability: public_hf_model
+    download_mode: metadata_only
+    runpod_default_download: false
+    local_cache_subdir: matting/bria_rmbg_2_0
+    license_note: Model license and training-data disclosures must be reviewed before adoption.
+    use_in_dreamcatcher: Competitive cutout reference and model-card evidence; not a default training dataset.
+    references:
+      - https://huggingface.co/briaai/RMBG-2.0
+
+  imgedit:
+    label: ImgEdit / ImgEdit-Bench
+    tasks:
+      - background_generation_replace
+      - inpaint_outpaint
+      - photo_correction_retouch
+    kind: image_edit_pairs_benchmark
+    readiness: frontier_eval_default
+    integration_status: ready
+    availability: public_repo
+    download_mode: git_clone
+    runpod_default_download: false
+    local_cache_subdir: edit/imgedit
+    license_note: Follow project release terms for dataset, benchmark, masks, and generated data.
+    use_in_dreamcatcher: Main broad edit-pair and benchmark source for replace, add, remove, multi-turn, and preservation tests.
+    download:
+      git_url: https://github.com/PKU-YuanGroup/ImgEdit.git
+    references:
+      - https://github.com/PKU-YuanGroup/ImgEdit
+
+  editbench:
+    label: EditBench
+    tasks:
+      - background_generation_replace
+      - inpaint_outpaint
+      - photo_correction_retouch
+    kind: localized_edit_benchmark
+    readiness: frontier_eval_default
+    integration_status: ready
+    availability: public_hf_dataset
+    download_mode: hf_dataset
+    runpod_default_download: false
+    local_cache_subdir: edit/editbench
+    license_note: Hugging Face dataset card lists CDLA-Permissive-2.0; verify inherited image terms.
+    use_in_dreamcatcher: Localized edit containment, mask-aware replacement, and collateral-damage benchmark prompts.
+    download:
+      hf_dataset_id: LonelVino/EditBench
+    references:
+      - https://huggingface.co/datasets/LonelVino/EditBench
+
+  magicbrush:
+    label: MagicBrush
+    tasks:
+      - background_generation_replace
+      - inpaint_outpaint
+    kind: instruction_guided_edit_pairs
+    readiness: training_candidate
+    integration_status: ready
+    availability: public_project_hf
+    download_mode: hf_dataset
+    runpod_default_download: false
+    local_cache_subdir: edit/magicbrush
+    license_note: Follow dataset/project terms; website code license is not a blanket image-data license.
+    use_in_dreamcatcher: Manual instruction-guided single-turn/multi-turn edit pairs including object removal/replacement and mask-free edits.
+    download:
+      hf_dataset_id: osunlp/MagicBrush
+    references:
+      - https://osu-nlp-group.github.io/MagicBrush/
+
+  places2:
+    label: Places2
+    tasks:
+      - background_generation_replace
+      - inpaint_outpaint
+    kind: scene_background_corpus
+    readiness: foundational
+    integration_status: ready
+    availability: public_project
+    download_mode: manual
+    runpod_default_download: false
+    local_cache_subdir: scene/places2
+    license_note: Review official Places terms before mirroring or training.
+    use_in_dreamcatcher: Scene/background distribution and large-hole inpainting regression prior.
+    references:
+      - http://places2.csail.mit.edu/
+
+  lama_places_openimages_masks:
+    label: LaMa inpainting masks and Places/OpenImages training recipe
+    tasks:
+      - inpaint_outpaint
+      - background_generation_replace
+    kind: inpainting_research_recipe
+    readiness: training_candidate
+    integration_status: ready
+    availability: public_repo
+    download_mode: git_clone
+    runpod_default_download: false
+    local_cache_subdir: inpaint/lama
+    license_note: Review LaMa code license and upstream Places/OpenImages image terms separately.
+    use_in_dreamcatcher: Large-mask inpainting baseline, mask generation recipe, and high-resolution hole-fill regression plan.
+    download:
+      git_url: https://github.com/advimman/lama.git
+    references:
+      - https://github.com/advimman/lama
+
+eval_tracks:
+  raw_frontier_smoke:
+    tasks:
+      - raw_merge_denoise
+    required_evidence:
+      - merged_hdr_path
+      - denoised_result_path
+      - confidence_map_path
+      - ghost_map_path
+      - alignment_evidence_path
+      - model_or_research_ref
+    metrics:
+      - raw_alignment_confidence
+      - ghost_area_ratio
+      - noise_reduction_vs_detail_hold
+      - highlight_recovery_delta
+      - export_contract_complete
+      - frontier_total_score
+      - frontier_score_delta_vs_baseline
+      - frontier_eval_decision
+
+  background_removal_smoke:
+    tasks:
+      - background_removal_matting
+    required_evidence:
+      - input_image
+      - alpha_or_mask
+      - boundary_overlay
+      - cutout_preview
+      - license_gate_status
+    metrics:
+      - mask_iou
+      - boundary_f_score
+      - subject_hole_rate
+      - hair_or_fine_detail_flag
+
+  background_generation_smoke:
+    tasks:
+      - background_generation_replace
+      - inpaint_outpaint
+    required_evidence:
+      - source_image
+      - source_mask
+      - prompt
+      - generated_result
+      - subject_preservation_compare
+    metrics:
+      - instruction_adherence
+      - subject_identity_preservation
+      - lighting_consistency
+      - collateral_edit_area
+
+  photo_correction_smoke:
+    tasks:
+      - photo_correction_retouch
+    required_evidence:
+      - before_image
+      - after_image
+      - compare_decision
+      - retouch_metadata_or_prompt
+    metrics:
+      - exposure_delta_reasonable
+      - color_cast_delta
+      - human_region_preservation
+      - preference_score

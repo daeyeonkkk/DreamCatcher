@@ -1,0 +1,63 @@
+{
+  "version": "2026-03-26",
+  "label": "DreamCatcher Public Reference Bank Seed",
+  "seed_sets": [
+    {
+      "seed_id": "fivek_global_rendering",
+      "label": "FiveK Global Rendering",
+      "tool_scopes": [
+        "retouch",
+        "enhance",
+        "finish",
+        "compare"
+      ],
+      "dataset": "fivek",
+      "anchor_traits": [
+        "natural finish",
+        "global tone balance",
+        "highlight restraint",
+        "color rendering sanity"
+      ],
+      "notes": "Use as the first general-purpose finish anchor before personal house style exists."
+    },
+    {
+      "seed_id": "ppr10k_portrait_consistency",
+      "label": "PPR10K Portrait Consistency",
+      "tool_scopes": [
+        "retouch",
+        "enhance",
+        "compare"
+      ],
+      "dataset": "ppr10k",
+      "anchor_traits": [
+        "skin-safe retouch",
+        "human-region priority",
+        "set consistency",
+        "portrait realism"
+      ],
+      "notes": "Use when DreamCatcher needs a portrait-safe prior with group consistency pressure."
+    },
+    {
+      "seed_id": "mmart_instruction_sequences",
+      "label": "MMArt Instruction Sequences",
+      "tool_scopes": [
+        "replaceBg",
+        "relight",
+        "replaceObject",
+        "retouch",
+        "compare"
+      ],
+      "dataset": "mmart_ppr10k",
+      "anchor_traits": [
+        "instruction-rich edit chains",
+        "Lightroom-style operation order",
+        "before-after-reference triples"
+      ],
+      "notes": "Use as the first public instruction/reference seed before local session exemplars take over."
+    }
+  ],
+  "notes": [
+    "This is metadata only. It does not embed public images into the runtime bundle.",
+    "Once local accepted outputs accumulate, replace these public seeds with personal anchors and retrieval indices."
+  ]
+}

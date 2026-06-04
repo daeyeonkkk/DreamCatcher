@@ -1,0 +1,26 @@
+comfyui:
+  repo: https://github.com/comfyanonymous/ComfyUI.git
+  ref: ''
+  required_min_version_note: 'Validated on official RunPod ComfyUI runtime: ComfyUI
+    0.16.4 / Python 3.12 / Torch 2.10.0 with CUDA 12.8-class wheels'
+custom_nodes:
+- id: ComfyUI-Manager
+  repo: https://github.com/ltdrdata/ComfyUI-Manager.git
+  ref: ''
+  required: true
+  purpose: snapshot restore, headless node management
+- id: ComfyUI-RMBG
+  repo: https://github.com/1038lab/ComfyUI-RMBG.git
+  ref: ''
+  required: true
+  purpose: BiRefNetRMBG node for high quality background removal
+- id: ComfyUI-IC-Light
+  repo: https://github.com/kijai/ComfyUI-IC-Light.git
+  ref: ''
+  required: true
+  purpose: IC-Light relighting via LoadAndApplyICLightUnet
+- id: ComfyUI-SUPIR
+  repo: https://github.com/kijai/ComfyUI-SUPIR.git
+  ref: ''
+  required: false
+  purpose: SUPIR_model_loader_v2 / SUPIR_sample path

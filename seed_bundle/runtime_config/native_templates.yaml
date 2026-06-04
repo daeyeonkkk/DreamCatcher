@@ -1,0 +1,26 @@
+native_templates:
+- name: Qwen-Image-Edit-2511
+  tool: 부분 보정
+  official_doc: https://docs.comfy.org/tutorials/image/qwen/qwen-image-edit-2511
+  ui_workflow_url: https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_qwen_image_edit_2511.json
+  capture_as: seed_bundle/api_workflows/qwen_precision_edit.api.json
+  notes: Use official native subgraph template, then export API format from the UI.
+- name: FLUX.2 Dev
+  tool: 배경 바꾸기
+  official_doc: https://docs.comfy.org/tutorials/flux/flux-2-dev
+  ui_workflow_url: https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_flux2.json
+  capture_as: seed_bundle/api_workflows/flux2_dev_compose.api.json
+  notes: Prefer the multi-image reference version if your composition needs multiple
+    refs.
+- name: FLUX.2 Klein 9B Distilled Image Edit
+  tool: 조명 맞추기
+  official_doc: https://docs.comfy.org/tutorials/flux/flux-2-klein
+  ui_workflow_url: https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_flux2_klein_image_edit_9b_distilled.json
+  capture_as: seed_bundle/api_workflows/flux2_klein_preview.api.json
+  notes: Use 4B distilled instead if you decide speed > preview fidelity.
+- name: FLUX.1 Fill dev
+  tool: 대상 바꾸기
+  official_doc: https://docs.comfy.org/tutorials/flux/flux-1-fill-dev
+  ui_workflow_url: https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/image_flux_fill_inpaint.json
+  capture_as: seed_bundle/api_workflows/flux_fill_replace.api.json
+  notes: If the exact template path differs upstream, update the registry and restage the API export.

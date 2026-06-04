@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dreamcatcher.golden_calibration_v1",
+  "title": "DreamCatcher Golden Calibration v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "applied",
+    "calibration_source",
+    "profile_id",
+    "sample_count",
+    "calibrated_verdict",
+    "calibrated_confidence",
+    "calibrated_axis_scores",
+    "added_failure_tags",
+    "adjustments",
+    "replay_required",
+    "replay_case_ids",
+    "notes"
+  ],
+  "properties": {
+    "schema_version": { "const": "golden_calibration_v1" },
+    "applied": { "type": "boolean" },
+    "calibration_source": { "type": ["string", "null"] },
+    "profile_id": { "type": "string", "minLength": 1 },
+    "sample_count": { "type": "integer", "minimum": 0 },
+    "calibrated_verdict": {
+      "type": ["string", "null"],
+      "enum": ["fail", "suspicious", "pass", null]
+    },
+    "calibrated_confidence": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "calibrated_axis_scores": { "type": "object" },
+    "added_failure_tags": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9_]+$" }
+    },
+    "adjustments": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "replay_required": { "type": "boolean" },
+    "replay_case_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dreamcatcher.judge_evidence_packet_v1",
+  "title": "DreamCatcher Judge Evidence Packet v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "tool",
+    "task_intent",
+    "result_path",
+    "reference_path",
+    "result_metrics",
+    "reference_metrics",
+    "metric_delta",
+    "metric_units",
+    "operation_context",
+    "mask_evidence",
+    "raw_evidence",
+    "workflow_evidence",
+    "user_preference_evidence",
+    "golden_context",
+    "available_evidence",
+    "missing_evidence",
+    "cautions"
+  ],
+  "properties": {
+    "schema_version": { "const": "judge_evidence_packet_v1" },
+    "tool": { "type": "string", "minLength": 1 },
+    "task_intent": { "type": "string", "minLength": 1 },
+    "result_path": { "type": "string", "minLength": 1 },
+    "reference_path": { "type": ["string", "null"] },
+    "result_metrics": {
+      "type": "object",
+      "additionalProperties": { "type": "number" }
+    },
+    "reference_metrics": {
+      "type": ["object", "null"],
+      "additionalProperties": { "type": "number" }
+    },
+    "metric_delta": {
+      "type": "object",
+      "additionalProperties": { "type": "number" }
+    },
+    "metric_units": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "operation_context": { "type": "object" },
+    "mask_evidence": { "type": "object" },
+    "raw_evidence": { "type": "object" },
+    "workflow_evidence": { "type": "object" },
+    "user_preference_evidence": { "type": "object" },
+    "golden_context": { "type": "object" },
+    "available_evidence": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "missing_evidence": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "cautions": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+version: "2026-05-08"
+plan_label: DreamCatcher Public Dataset Access Plan
+frontier_catalog: seed_bundle/frontier_dataset_manifest.yaml
+frontier_planner: app/scripts/frontier_dataset_plan.py
+frontier_policy:
+  runpod_default_downloads_datasets: false
+  local_cache_root: local_data_lab/cache/frontier_datasets
+  notes:
+    - 2026-05 Frontier collection is planned from the seed bundle manifest, not from normal RunPod bootstrap.
+    - Manual, gated, or license-review datasets must be approved before local cache creation.
+
+datasets:
+  fivek:
+    access_mode: metadata_and_selective_wrapper
+    official_urls:
+      - https://data.csail.mit.edu/graphics/fivek/
+      - https://people.csail.mit.edu/sparis/publi/2011/cvpr_auto/Bychkovsky_11_Learning_Photo_Adjustment.pdf
+    huggingface_datasets:
+      - repo_id: logasja/mit-adobe-fivek
+        role: converted_wrapper
+    manual_download_required: true
+    auto_download_candidate: false
+    bulk_download_notes:
+      - Original FiveK access and license mapping come from the MIT/Adobe site.
+      - The Hugging Face wrapper is useful for selective local experiments, not for treating the full corpus as a tiny download.
+
+  acceptable_adjustments:
+    access_mode: metadata_only
+    official_urls:
+      - https://projects.csail.mit.edu/acceptable-adj/data.html
+    manual_download_required: false
+    auto_download_candidate: false
+    bulk_download_notes:
+      - Use the public data page and paper as a reference source for acceptance bands.
+
+  ppr10k:
+    access_mode: github_plus_manual_bulk
+    official_urls:
+      - https://github.com/csjliang/PPR10K
+      - https://openaccess.thecvf.com/content/CVPR2021/papers/Liang_PPR10K_A_Large-Scale_Portrait_Photo_Retouching_Dataset_With_Human-Region_Mask_CVPR_2021_paper.pdf
+    github_repo:
+      owner: csjliang
+      repo: PPR10K
+      branch: master
+    manual_download_required: true
+    auto_download_candidate: false
+    bulk_download_notes:
+      - Official bulk data is hosted through links exposed in the GitHub README.
+      - This is a large local-only cache target, not something to mirror into RunPod.
+
+  mmart_ppr10k:
+    access_mode: huggingface_dataset
+    official_urls:
+      - https://github.com/LYL1015/JarvisArt
+      - https://arxiv.org/abs/2506.17612
+    huggingface_datasets:
+      - repo_id: JarvisArt/MMArt-PPR10k
+        role: primary_dataset
+    manual_download_required: false
+    auto_download_candidate: true
+    bulk_download_notes:
+      - Public Apache-2.0 dataset on Hugging Face.
+      - Good candidate for later local selective download and instruction mining.
+
+  mmart_bench:
+    access_mode: huggingface_dataset
+    official_urls:
+      - https://github.com/LYL1015/JarvisArt
+      - https://arxiv.org/abs/2506.17612
+    huggingface_datasets:
+      - repo_id: JarvisArt/MMArt-Bench
+        role: benchmark_dataset
+    manual_download_required: false
+    auto_download_candidate: true
+    bulk_download_notes:
+      - Small enough to be a strong later candidate for local benchmark download.
+    starter_asset_downloads:
+      - label: mmart_bench_readme
+        source: huggingface_dataset
+        repo_id: JarvisArt/MMArt-Bench
+        path: README.md
+        target_subpath: readme/README.md
+      - label: mmart_bench_archive
+        source: huggingface_dataset
+        repo_id: JarvisArt/MMArt-Bench
+        path: MMart-Bench.zip
+        target_subpath: archives/MMArt-Bench.zip
+        inspect_zip: true
+        extract_members:
+          - MMart-Bench/dataInfo.json
+
+  dear:
+    access_mode: huggingface_dataset
+    official_urls:
+      - https://arxiv.org/abs/2512.05209
+    huggingface_datasets:
+      - repo_id: vsevolodpl/REPID
+        role: primary_dataset
+        alias: DEAR
+    manual_download_required: false
+    auto_download_candidate: true
+    bulk_download_notes:
+      - The public dataset page currently resolves to REPID, which packages the pairwise rendering preference annotations.
+      - Good first real download target because the public package is relatively small.
+
+  edithf_1m:
+    access_mode: github_plus_model_links
+    official_urls:
+      - https://github.com/IntMeGroup/EditHF
+      - https://arxiv.org/abs/2603.14916
+    github_repo:
+      owner: IntMeGroup
+      repo: EditHF
+      branch: main
+    manual_download_required: false
+    auto_download_candidate: true
+    bulk_download_notes:
+      - Start from the released evaluator code and LoRA/model links before chasing the full dataset packaging.
+
+  editbench:
+    access_mode: huggingface_dataset
+    official_urls:
+      - https://arxiv.org/abs/2410.18756
+    huggingface_datasets:
+      - repo_id: LonelVino/EditBench
+        role: primary_dataset
+    manual_download_required: false
+    auto_download_candidate: true
+    bulk_download_notes:
+      - Use as a regression and containment benchmark before considering any larger automatic download.
+
+  imgedit:
+    access_mode: github_plus_hf_bulk
+    official_urls:
+      - https://github.com/PKU-YuanGroup/ImgEdit
+      - https://arxiv.org/abs/2505.20275
+    github_repo:
+      owner: PKU-YuanGroup
+      repo: ImgEdit
+      branch: main
+    huggingface_datasets:
+      - repo_id: sysuyy/ImgEdit
+        role: primary_dataset
+      - repo_id: sysuyy/ImgEdit_recap_mask
+        role: preprocessing_dataset
+    manual_download_required: false
+    auto_download_candidate: true
+    bulk_download_notes:
+      - Official repo recommends huggingface-cli download for both dataset repos.
+      - Treat this as a second-wave local cache target because the full dataset is large.

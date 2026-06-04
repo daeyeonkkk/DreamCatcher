@@ -1,0 +1,162 @@
+{
+  "catalog_version": "2026-04-07",
+  "single_raw": {
+    "gold_set": {
+      "defined": true,
+      "status": "spec_only",
+      "manifest_path": "benchmark/SINGLE_RAW_GOLD_SET_MANIFEST.json",
+      "sample_count": 0,
+      "evaluation_axes": [
+        "noise_reduction",
+        "detail_preservation",
+        "color_stability",
+        "processing_time"
+      ],
+      "required_report_sections": [
+        "dataset_overview",
+        "noise_reduction",
+        "detail_preservation",
+        "color_stability",
+        "processing_time",
+        "operator_notes"
+      ],
+      "notes": [
+        "SingleRaw gold set schema is defined, but sample population is still pending.",
+        "These axes map directly to checklist 9.1 and Phase 9 quality gates."
+      ]
+    }
+  },
+  "tri_raw": {
+    "sample_manifest_path": "benchmark/TRI_RAW_BUCKET_SAMPLE_MANIFEST.json",
+    "bucket_definitions": [
+      {
+        "bucket_id": "static_hdr",
+        "label": "Static HDR",
+        "defined": true,
+        "status": "spec_only",
+        "sample_count": 0,
+        "hard_case": false,
+        "traits": [
+          "static_scene",
+          "highlight_recovery",
+          "shadow_recovery"
+        ],
+        "required_report_sections": [
+          "hdr_gain",
+          "highlight_recovery",
+          "shadow_recovery",
+          "fallback_behavior"
+        ]
+      },
+      {
+        "bucket_id": "high_iso_hdr",
+        "label": "High-ISO HDR",
+        "defined": true,
+        "status": "spec_only",
+        "sample_count": 0,
+        "hard_case": true,
+        "traits": [
+          "high_iso",
+          "noise_pressure",
+          "hdr_headroom"
+        ],
+        "required_report_sections": [
+          "joint_denoise",
+          "hdr_gain",
+          "noise_suppression",
+          "fallback_behavior"
+        ]
+      },
+      {
+        "bucket_id": "motion_heavy",
+        "label": "Motion-heavy",
+        "defined": true,
+        "status": "spec_only",
+        "sample_count": 0,
+        "hard_case": true,
+        "traits": [
+          "subject_motion",
+          "ghost_risk",
+          "reference_holdout"
+        ],
+        "required_report_sections": [
+          "alignment",
+          "deghost",
+          "confidence",
+          "fallback_behavior"
+        ]
+      },
+      {
+        "bucket_id": "narrow_bracket",
+        "label": "Narrow Bracket",
+        "defined": true,
+        "status": "spec_only",
+        "sample_count": 0,
+        "hard_case": true,
+        "traits": [
+          "narrow_ev_span",
+          "limited_hdr_gain",
+          "fallback_pressure"
+        ],
+        "required_report_sections": [
+          "capture_spacing",
+          "hdr_gain",
+          "confidence",
+          "fallback_behavior"
+        ]
+      }
+    ],
+    "hard_case_bucket": {
+      "bucket_id": "hard_case",
+      "label": "Hard Case",
+      "defined": true,
+      "status": "spec_only",
+      "sample_count": 0,
+      "member_bucket_ids": [
+        "high_iso_hdr",
+        "motion_heavy",
+        "narrow_bracket"
+      ],
+      "notes": [
+        "Hard-case review emphasizes fallback clarity, confidence behavior, and operator readability.",
+        "This umbrella bucket is a governance definition first; sample population is still pending."
+      ]
+    }
+  },
+  "report_template": {
+    "defined": true,
+    "status": "documented",
+    "sections": [
+      "dataset_overview",
+      "single_raw_summary",
+      "tri_raw_summary",
+      "bucket_findings",
+      "fallback_behavior",
+      "timing",
+      "open_risks",
+      "operator_notes"
+    ],
+    "notes": [
+      "Benchmark reports must state whether the record is spec-only, partially populated, or measured.",
+      "A populated report still requires real sample manifests before it can support release decisions."
+    ]
+  },
+  "product_metrics": {
+    "compare_decision_logging": {
+      "defined": true,
+      "status": "implemented",
+      "storage": [
+        "04_compare/decisions/compare_decision_*.json",
+        "_compare_learning/compare_decisions.jsonl"
+      ],
+      "summary_fields": [
+        "tool_counts",
+        "winner_role_counts"
+      ],
+      "notes": [
+        "Keep Select / Accept Candidate decisions are stored per session and also accumulated for compare learning.",
+        "Benchmark records should surface how many operator compare decisions are currently available for release review."
+      ]
+    }
+  }
+}

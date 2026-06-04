@@ -1,0 +1,5 @@
+DreamCatcher.zip
+*.zip
+*.tmp
+*.log
+preflight_report*.json

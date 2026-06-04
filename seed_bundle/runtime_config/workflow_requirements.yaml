@@ -1,0 +1,21 @@
+workflows:
+  precision_edit_qwen.template.json:
+    required_aliases:
+    - load_image
+    - qwen_text_encode
+    - save_image
+  cutout_birefnet.template.json:
+    required_aliases:
+    - load_image
+    - birefnet_cutout
+    - save_image
+  relight_preview_iclight.template.json:
+    required_aliases:
+    - load_image
+    - ic_light_conditioning
+    - save_image
+  finish_supir.template.json:
+    required_aliases:
+    - load_image
+    - supir_upscale
+    - save_image

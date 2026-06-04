@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dreamcatcher.qwen_judge_signal_v2",
+  "title": "DreamCatcher Qwen Judge Signal v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "verdict",
+    "confidence",
+    "axis_scores",
+    "failure_tags",
+    "localized_issues",
+    "correction_plan",
+    "rationale",
+    "retry_instruction",
+    "work_instruction"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "qwen_judge_signal_v2"
+    },
+    "verdict": {
+      "enum": ["fail", "suspicious", "pass"]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "axis_scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "intent_match",
+        "technical_quality",
+        "aesthetic_quality",
+        "subject_preservation",
+        "mask_boundary",
+        "color_naturalness"
+      ],
+      "properties": {
+        "intent_match": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "technical_quality": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "aesthetic_quality": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "subject_preservation": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "mask_boundary": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "color_naturalness": { "type": ["number", "null"], "minimum": 0, "maximum": 1 }
+      }
+    },
+    "failure_tags": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9_]+$" }
+    },
+    "localized_issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["area", "issue_type", "severity", "description", "confidence", "bbox_norm", "suggested_action"],
+        "properties": {
+          "area": { "type": "string", "minLength": 1 },
+          "issue_type": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "severity": { "enum": ["info", "warning", "critical"] },
+          "description": { "type": "string" },
+          "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+          "bbox_norm": {
+            "type": ["array", "null"],
+            "minItems": 4,
+            "maxItems": 4,
+            "items": { "type": "number", "minimum": 0, "maximum": 1 }
+          },
+          "suggested_action": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "correction_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exposure_delta",
+        "contrast_delta",
+        "shadow_delta",
+        "highlight_delta",
+        "temperature_delta",
+        "tint_delta",
+        "saturation_delta",
+        "denoise_strength",
+        "edit_strength",
+        "crop_box_norm",
+        "notes"
+      ],
+      "properties": {
+        "exposure_delta": { "type": ["number", "null"], "minimum": -3, "maximum": 3 },
+        "contrast_delta": { "type": ["number", "null"], "minimum": -100, "maximum": 100 },
+        "shadow_delta": { "type": ["number", "null"], "minimum": -100, "maximum": 100 },
+        "highlight_delta": { "type": ["number", "null"], "minimum": -100, "maximum": 100 },
+        "temperature_delta": { "type": ["number", "null"], "minimum": -100, "maximum": 100 },
+        "tint_delta": { "type": ["number", "null"], "minimum": -100, "maximum": 100 },
+        "saturation_delta": { "type": ["number", "null"], "minimum": -100, "maximum": 100 },
+        "denoise_strength": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "edit_strength": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "crop_box_norm": {
+          "type": ["array", "null"],
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "type": "number", "minimum": 0, "maximum": 1 }
+        },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "rationale": {
+      "type": ["string", "null"]
+    },
+    "retry_instruction": {
+      "type": ["string", "null"]
+    },
+    "work_instruction": {
+      "type": ["string", "null"]
+    }
+  }
+}

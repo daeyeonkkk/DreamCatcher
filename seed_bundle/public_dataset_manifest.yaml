@@ -1,0 +1,250 @@
+version: "2026-03-26"
+reviewed_at: "2026-03-26"
+active_profile: dreamcatcher_local_open_2026
+
+profiles:
+  dreamcatcher_local_open_2026:
+    label: DreamCatcher Public Bootstrap 2026
+    description: >
+      Public dataset priors that DreamCatcher can lean on immediately before enough
+      personal session history, accepted compares, and style exemplars accumulate.
+    bootstrap_rules:
+      - Start from public priors for evaluator dimensions and acceptance bands, then let local accepted outputs override them once a repeatable house style appears.
+      - Prefer openly accessible data with practical metadata such as XMP, masks, or preference pairs over giant synthetic corpora that are not yet downloadable.
+      - Treat announced-but-not-yet-released datasets as watchlist signals, not active defaults.
+    defaults:
+      replaceBg:
+        - editbench
+        - imgedit
+        - edithf_1m
+      relight:
+        - editbench
+        - imgedit
+        - edithf_1m
+      replaceObject:
+        - editbench
+        - imgedit
+        - edithf_1m
+      retouch:
+        - fivek
+        - acceptable_adjustments
+        - ppr10k
+        - mmart_ppr10k
+        - dear
+        - edithf_1m
+      enhance:
+        - fivek
+        - acceptable_adjustments
+        - ppr10k
+        - dear
+        - edithf_1m
+      finish:
+        - fivek
+        - acceptable_adjustments
+        - dear
+      compare:
+        - dear
+        - edithf_1m
+        - mmart_bench
+    community_takeaways:
+      replaceBg:
+        - Captured on 2026-03-26 from r/StableDiffusion: local users currently trust FLUX.2 Dev and Klein for practical edit consistency more than older Kontext-only flows.
+        - Captured on 2026-03-26 from r/comfyui: users still reach for LoRA, references, and candidate filtering when identity or composition must survive multiple runs.
+      relight:
+        - Captured on 2026-03-26 from r/StableDiffusion: heavier edit models are still preferred when fidelity matters, even if lightweight models win on convenience.
+      replaceObject:
+        - Captured on 2026-03-26 from r/StableDiffusion: layered or tightly contained editors are favored because users still complain about angle drift and collateral color shifts.
+      retouch:
+        - Captured on 2026-03-26 from r/StableDiffusion: Qwen remains strong for instruction following, but users still report angle and color drift; Klein is repeatedly praised for steadier realism.
+        - Captured on 2026-03-26 from r/comfyui: practical consistency still comes from anchor -> generate -> evaluate -> keep, not from assuming a single run will stay stable forever.
+      enhance:
+        - Captured on 2026-03-26 from r/comfyui: validation layers are valued as a safety net, but users reject brute-force filtering if the candidate distribution is too wide.
+      compare:
+        - Captured on 2026-03-26 from r/comfyui: the strongest workflow advice is still to save anchors, compare candidates, and continue only from winners.
+
+datasets:
+  fivek:
+    label: MIT-Adobe FiveK
+    kind: raw_to_retouched_pairs
+    readiness: foundational
+    availability: public_wrappers_available
+    scale: 5000 RAW scenes with five expert renditions each
+    license: mixed / research-oriented source image terms
+    bootstraps:
+      - global tone and exposure priors
+      - white balance and color rendering anchors
+      - finish-stage baseline taste before personal style takes over
+    notes: >
+      Still the most important public baseline for photographic rendering. DreamCatcher
+      should treat it as the default global-retouch prior for non-portrait scenes.
+    references:
+      - https://people.csail.mit.edu/sparis/publi/2011/cvpr_auto/Bychkovsky_11_Learning_Photo_Adjustment.pdf
+      - https://huggingface.co/datasets/logasja/mit-adobe-fivek/viewer
+
+  acceptable_adjustments:
+    label: Acceptable Photographic Tonal Adjustments
+    kind: retouch_acceptance_band
+    readiness: practical
+    availability: public
+    scale: FiveK-derived acceptance bands for brightness and contrast style tolerance
+    license: research
+    bootstraps:
+      - acceptance ranges instead of single-target scoring
+      - finish review guardrails for not overcorrecting tone
+      - evaluator tolerance bands for compare decisions
+    notes: >
+      Useful because it models ranges of acceptable adjustments instead of pretending
+      there is only one correct rendering for every image.
+    references:
+      - https://projects.csail.mit.edu/acceptable-adj/data.html
+
+  ppr10k:
+    label: PPR10K
+    kind: portrait_retouch_pairs
+    readiness: production_useful
+    availability: public_download
+    scale: 11161 portrait RAWs, three expert retouches, human masks, and XMP targets
+    license: non-commercial research for the images and derived data
+    bootstraps:
+      - portrait skin and face retouch priors
+      - human-region priority
+      - group-level consistency for a photo set
+      - Lightroom/XMP-aligned edit metadata
+    notes: >
+      High-value prior for DreamCatcher because it reflects real portrait post workflows
+      and exposes both masks and retouch intent in a way that maps well to studio review.
+    references:
+      - https://github.com/csjliang/PPR10K
+      - https://openaccess.thecvf.com/content/CVPR2021/papers/Liang_PPR10K_A_Large-Scale_Portrait_Photo_Retouching_Dataset_With_Human-Region_Mask_CVPR_2021_paper.pdf
+
+  mmart_ppr10k:
+    label: MMArt-PPR10k
+    kind: retouch_agent_pairs
+    readiness: high_leverage
+    availability: public_hf_dataset
+    scale: PPR10K-derived retouch instruction data with Lightroom Lua/XMP and edited outputs
+    license: apache-2.0 for the released dataset package
+    bootstraps:
+      - natural-language retouch instructions
+      - Lightroom-style tool sequencing priors
+      - before/after/reference triples for later retrieval memory
+    notes: >
+      This is one of the cleanest bridges from public data into a private studio because
+      it packages images, instructions, and Lightroom-style metadata together.
+    references:
+      - https://huggingface.co/datasets/JarvisArt/MMArt-PPR10k
+      - https://github.com/LYL1015/JarvisArt
+
+  mmart_bench:
+    label: MMArt-Bench
+    kind: retouch_benchmark
+    readiness: benchmark
+    availability: public_hf_dataset
+    scale: real-world user edit benchmark for retouch agents
+    license: follow dataset card terms
+    bootstraps:
+      - benchmark prompts for compare mode
+      - instruction richness for future evaluator prompts
+    notes: >
+      DreamCatcher can use the benchmark language and failure cases as compare/evaluator
+      priors even if it does not train on the full benchmark.
+    references:
+      - https://huggingface.co/datasets/JarvisArt/MMArt-Bench
+      - https://arxiv.org/abs/2506.17612
+
+  dear:
+    label: DEAR
+    kind: aesthetic_preference_pairs
+    readiness: emerging_practical
+    availability: public_sample_available
+    scale: 100-scene public sample with pairwise rendering preferences built on FiveK
+    license: mixed; annotations are CC BY 4.0 but underlying FiveK image terms still apply
+    bootstraps:
+      - pairwise rendering preference signals
+      - compare-mode winner selection
+      - finish-stage aesthetic scoring priors
+    notes: >
+      Small but very important because it turns rendering taste into pairwise preference
+      data instead of raw distortion metrics.
+    references:
+      - https://arxiv.org/abs/2512.05209
+      - https://huggingface.co/datasets/vsevolodpl/DEAR
+
+  edithf_1m:
+    label: EditHF-1M
+    kind: image_edit_preference_pairs
+    readiness: newest_high_signal
+    availability: public_repo_and_model
+    scale: 29M human preference pairs plus 148K MOS across visual, alignment, and preservation
+    license: MIT repository license; dataset release terms should be checked per release artifact
+    bootstraps:
+      - evaluator dimensions for edit quality
+      - instruction alignment scoring priors
+      - attribute preservation scoring priors
+    notes: >
+      This is the strongest current public prior for a DreamCatcher evaluator loop because
+      it directly targets image editing preference, not just generic IQA.
+    references:
+      - https://arxiv.org/abs/2603.14916
+      - https://github.com/IntMeGroup/EditHF
+
+  editbench:
+    label: EditBench
+    kind: localized_edit_benchmark
+    readiness: stable
+    availability: public
+    scale: manually curated masked text-guided edit benchmark
+    license: benchmark terms per original release
+    bootstraps:
+      - localized change containment
+      - inpaint / object-edit evaluation prompts
+      - failure cases for collateral damage checks
+    notes: >
+      Good active prior for replace-object and relight style tools because it focuses on
+      whether the edit stayed in the intended region.
+    references:
+      - https://arxiv.org/abs/2212.06909
+      - https://huggingface.co/datasets/LonelVino/EditBench
+
+  imgedit:
+    label: ImgEdit
+    kind: large_edit_pairs
+    readiness: strong
+    availability: public_repo
+    scale: 1.2M curated edit pairs spanning single-turn and multi-turn tasks
+    license: follow project release terms
+    bootstraps:
+      - task coverage for replacement and composition edits
+      - multi-turn edit trajectory priors
+      - future workflow regression cases
+    notes: >
+      Broad instruction-edit data for replacement and composition tasks. Useful as a
+      public prior even before DreamCatcher grows a large local compare archive.
+    references:
+      - https://arxiv.org/abs/2505.20275
+      - https://github.com/PKU-YuanGroup/ImgEdit
+
+watchlist:
+  - label: ScaleEdit-12M
+    released_or_announced: 2026-03-21
+    status: announced_open_source
+    why_it_matters: >
+      Fresh 7-day signal: a 12M-scale fully open image-edit dataset pipeline that could
+      materially improve DreamCatcher's future evaluator or synthetic warm-start path.
+    references:
+      - https://arxiv.org/abs/2603.20644
+  - label: FRPref-10K
+    released_or_announced: 2026-03-01
+    status: paper_only_signal
+    why_it_matters: >
+      Fine-grained face-retouch preference data is exactly what DreamCatcher will want
+      once it separates portrait polishing from generic editing.
+    references:
+      - https://arxiv.org/abs/2603.01163
+  - label: Omni IIE Bench
+    released_or_announced: 2026-03-16
+    status: benchmark_signal
+    why_it_matters: >
+      Good pressure test for edit consistency across semantic scales and multi-turn edits.
+    references:
+      - https://arxiv.org/abs/2603.16944

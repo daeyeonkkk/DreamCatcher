@@ -1,0 +1,46 @@
+{
+  "manifest_version": "2026-04-09",
+  "status": "partially_populated",
+  "samples": [
+    {
+      "sample_id": "static_hdr__window_blossom_hdr_001",
+      "bucket_id": "static_hdr",
+      "source_paths": [
+        "benchmark/samples/tri_raw/static_hdr/window_blossom_hdr_001/P1029984.RW2",
+        "benchmark/samples/tri_raw/static_hdr/window_blossom_hdr_001/P1029985.RW2",
+        "benchmark/samples/tri_raw/static_hdr/window_blossom_hdr_001/P1029986.RW2"
+      ],
+      "benchmark_result_path": "outputs/_benchmark_results_staging/tri_raw/static_hdr/static_hdr__window_blossom_hdr_001.json"
+    },
+    {
+      "sample_id": "high_iso_hdr__night_walk_hdr_001",
+      "bucket_id": "high_iso_hdr",
+      "source_paths": [
+        "benchmark/samples/tri_raw/high_iso_hdr/night_walk_hdr_001/IMG_0002.CR3",
+        "benchmark/samples/tri_raw/high_iso_hdr/night_walk_hdr_001/IMG_0003.CR3",
+        "benchmark/samples/tri_raw/high_iso_hdr/night_walk_hdr_001/IMG_0004.CR3"
+      ],
+      "benchmark_result_path": "outputs/_benchmark_results_staging/tri_raw/high_iso_hdr/high_iso_hdr__night_walk_hdr_001.json"
+    },
+    {
+      "sample_id": "motion_heavy__night_selfie_motion_001",
+      "bucket_id": "motion_heavy",
+      "source_paths": [
+        "benchmark/samples/tri_raw/motion_heavy/night_selfie_motion_001/IMG_0021.CR3",
+        "benchmark/samples/tri_raw/motion_heavy/night_selfie_motion_001/IMG_0022.CR3",
+        "benchmark/samples/tri_raw/motion_heavy/night_selfie_motion_001/IMG_0023.CR3"
+      ],
+      "benchmark_result_path": "outputs/_benchmark_results_staging/tri_raw/motion_heavy/motion_heavy__night_selfie_motion_001.json"
+    },
+    {
+      "sample_id": "narrow_bracket__night_path_narrow_001",
+      "bucket_id": "narrow_bracket",
+      "source_paths": [
+        "benchmark/samples/tri_raw/narrow_bracket/night_path_narrow_001/IMG_0017.CR3",
+        "benchmark/samples/tri_raw/narrow_bracket/night_path_narrow_001/IMG_0018.CR3",
+        "benchmark/samples/tri_raw/narrow_bracket/night_path_narrow_001/IMG_0019.CR3"
+      ],
+      "benchmark_result_path": "outputs/_benchmark_results_staging/tri_raw/narrow_bracket/narrow_bracket__night_path_narrow_001.json"
+    }
+  ]
+}

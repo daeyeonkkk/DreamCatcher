@@ -1,0 +1,145 @@
+version: "2026-05-08"
+lab_profile: dreamcatcher_local_data_lab_2026
+cache_root: local_data_lab/cache
+notes:
+  - DreamCatcher keeps the heavy corpora on the local PC, not inside the RunPod runtime.
+  - Large downloads and long-running experiments belong under local_data_lab/cache and local_data_lab/runs.
+  - Only compact outputs such as threshold profiles, evaluator rules, adapters, or reference indices should be exported into seed_bundle/runtime_priors.
+  - The expanded Frontier catalog for RAW merge/denoise, matting, background generation, and inpainting lives in seed_bundle/frontier_dataset_manifest.yaml.
+  - Use app/scripts/frontier_dataset_plan.py for 2026-05 Frontier collection planning instead of adding large corpora to the release bundle.
+
+datasets:
+  - dataset_id: fivek
+    label: MIT-Adobe FiveK
+    local_cache_subdir: fivek
+    download_priority: high
+    readiness: foundational
+    intended_uses:
+      - finish rendering priors
+      - tone and exposure bootstrap
+      - evaluator sanity checks
+    expected_local_work:
+      - derive acceptable rendering bands
+      - build style-safe finish exemplars
+    source_urls:
+      - https://people.csail.mit.edu/sparis/publi/2011/cvpr_auto/Bychkovsky_11_Learning_Photo_Adjustment.pdf
+      - https://huggingface.co/datasets/logasja/mit-adobe-fivek/viewer
+
+  - dataset_id: acceptable_adjustments
+    label: Acceptable Photographic Tonal Adjustments
+    local_cache_subdir: acceptable_adjustments
+    download_priority: medium
+    readiness: practical
+    intended_uses:
+      - evaluator tolerance bands
+      - finish-stage overcorrection guards
+    expected_local_work:
+      - derive acceptance ranges
+    source_urls:
+      - https://projects.csail.mit.edu/acceptable-adj/data.html
+
+  - dataset_id: ppr10k
+    label: PPR10K
+    local_cache_subdir: ppr10k
+    download_priority: high
+    readiness: production_useful
+    intended_uses:
+      - portrait retouch priors
+      - group consistency priors
+      - mask-aware human-region weighting
+    expected_local_work:
+      - extract portrait exemplar sets
+      - derive portrait-safe evaluator bands
+    source_urls:
+      - https://github.com/csjliang/PPR10K
+      - https://openaccess.thecvf.com/content/CVPR2021/papers/Liang_PPR10K_A_Large-Scale_Portrait_Photo_Retouching_Dataset_With_Human-Region_Mask_CVPR_2021_paper.pdf
+
+  - dataset_id: mmart_ppr10k
+    label: MMArt-PPR10k
+    local_cache_subdir: mmart_ppr10k
+    download_priority: high
+    readiness: high_leverage
+    intended_uses:
+      - retouch instruction priors
+      - Lightroom-style tool-chain priors
+      - reference bank seed generation
+    expected_local_work:
+      - derive instruction templates
+      - build public reference bank seeds
+    source_urls:
+      - https://huggingface.co/datasets/JarvisArt/MMArt-PPR10k
+      - https://github.com/LYL1015/JarvisArt
+
+  - dataset_id: mmart_bench
+    label: MMArt-Bench
+    local_cache_subdir: mmart_bench
+    download_priority: medium
+    readiness: benchmark
+    intended_uses:
+      - benchmark prompts for compare mode
+      - evaluator prompt coverage
+      - regression checks for retouch agents
+    expected_local_work:
+      - build compare benchmark packs
+      - keep a small local holdout for evaluator validation
+    source_urls:
+      - https://huggingface.co/datasets/JarvisArt/MMArt-Bench
+      - https://github.com/LYL1015/JarvisArt
+
+  - dataset_id: dear
+    label: DEAR
+    local_cache_subdir: dear
+    download_priority: medium
+    readiness: emerging_practical
+    intended_uses:
+      - compare-mode winner preference
+      - aesthetic rendering pairs
+    expected_local_work:
+      - pairwise evaluator tuning
+    source_urls:
+      - https://arxiv.org/abs/2512.05209
+      - https://huggingface.co/datasets/vsevolodpl/DEAR
+
+  - dataset_id: edithf_1m
+    label: EditHF-1M
+    local_cache_subdir: edithf_1m
+    download_priority: high
+    readiness: newest_high_signal
+    intended_uses:
+      - edit evaluator initialization
+      - alignment/preservation scoring
+    expected_local_work:
+      - build local evaluator adapters
+      - validate compare ranking quality
+    source_urls:
+      - https://arxiv.org/abs/2603.14916
+      - https://github.com/IntMeGroup/EditHF
+
+  - dataset_id: editbench
+    label: EditBench
+    local_cache_subdir: editbench
+    download_priority: medium
+    readiness: stable
+    intended_uses:
+      - localized change containment
+      - replace-object regression checks
+    expected_local_work:
+      - build collateral-damage regression sets
+    source_urls:
+      - https://arxiv.org/abs/2212.06909
+      - https://huggingface.co/datasets/LonelVino/EditBench
+
+  - dataset_id: imgedit
+    label: ImgEdit
+    local_cache_subdir: imgedit
+    download_priority: medium
+    readiness: strong
+    intended_uses:
+      - multi-turn edit coverage
+      - replacement and composition trajectory priors
+    expected_local_work:
+      - derive failure suites
+      - build richer compare prompts
+    source_urls:
+      - https://arxiv.org/abs/2505.20275
+      - https://github.com/PKU-YuanGroup/ImgEdit

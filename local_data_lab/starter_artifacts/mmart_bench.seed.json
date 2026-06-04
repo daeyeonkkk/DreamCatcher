@@ -1,0 +1,2808 @@
+{
+  "artifact_id": "mmart_bench_seed",
+  "dataset_id": "mmart_bench",
+  "label": "MMArt-Bench Seed",
+  "generated_at": "2026-03-26T08:04:19.409356+00:00",
+  "source_data_info": "C:\\my_project\\DreamCatcher\\local_data_lab\\cache\\mmart_bench\\bulk_wave1\\archives\\MMArt-Bench.selected_extracts\\MMart-Bench\\dataInfo.json",
+  "entry_count": 253,
+  "category_counts": {
+    "food": 50,
+    "landscape": 58,
+    "portrait": 102,
+    "street": 43
+  },
+  "crop_mode_counts": {
+    "center": 211,
+    "left": 8,
+    "right": 6,
+    "rightd": 28
+  },
+  "localized_edit_count": 51,
+  "entries": [
+    {
+      "benchmark_id": "food_fg_0aada929-ba08-4c61-8a0c-0180d15acefa_0aada929-ba08-4c61-8a0c-0180d15acefa",
+      "category": "food",
+      "instruction": "I want a warm, cozy feel with enhanced textures and colors for a rustic food vibe, like a vintage style.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_0aada929-ba08-4c61-8a0c-0180d15acefa_0aada929-ba08-4c61-8a0c-0180d15acefa.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_0aada929-ba08-4c61-8a0c-0180d15acefa_0aada929-ba08-4c61-8a0c-0180d15acefa.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_0fecc6e0-179e-4195-a040-19dd9a57b47a_3f37d209-77cd-4e6b-b36c-f1b4215febdc",
+      "category": "food",
+      "instruction": "I want a cozy, warm Hamada Hideki style with soft, inviting tones for my homemade cookies.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_0fecc6e0-179e-4195-a040-19dd9a57b47a_3f37d209-77cd-4e6b-b36c-f1b4215febdc.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_0fecc6e0-179e-4195-a040-19dd9a57b47a_3f37d209-77cd-4e6b-b36c-f1b4215febdc.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_1c315b05-9494-4ae4-8408-0594ce99719d_1c315b05-9494-4ae4-8408-0594ce99719d",
+      "category": "food",
+      "instruction": "I want a vibrant, fresh look with enhanced colors and crisp details for a lively food presentation.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_1c315b05-9494-4ae4-8408-0594ce99719d_1c315b05-9494-4ae4-8408-0594ce99719d.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_1c315b05-9494-4ae4-8408-0594ce99719d_1c315b05-9494-4ae4-8408-0594ce99719d.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_0bb2a784-075a-4666-a2f0-51b2ddec6f3b_8adc38f9-a27e-42b0-bf5d-96625f4deb87",
+      "category": "food",
+      "instruction": "I want a moody, cinematic look with deep reds and cool shadows for a dramatic dessert vibe.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_0bb2a784-075a-4666-a2f0-51b2ddec6f3b_8adc38f9-a27e-42b0-bf5d-96625f4deb87.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_0bb2a784-075a-4666-a2f0-51b2ddec6f3b_8adc38f9-a27e-42b0-bf5d-96625f4deb87.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_3e7b04a6-d848-4e4d-92e7-0d05ebbfec9e_5b4a78cf-6808-45a0-8def-4ef3a920fa85",
+      "category": "food",
+      "instruction": "I want a warm, inviting Hamada Hideki style with soft, natural tones and gentle highlights.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_3e7b04a6-d848-4e4d-92e7-0d05ebbfec9e_5b4a78cf-6808-45a0-8def-4ef3a920fa85.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_3e7b04a6-d848-4e4d-92e7-0d05ebbfec9e_5b4a78cf-6808-45a0-8def-4ef3a920fa85.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_0cc383c1-b8e9-4b0f-80ac-512324825dd9_2abf164d-c59f-4cd7-8bad-f3e4566f70a3",
+      "category": "food",
+      "instruction": "I aim for a vintage fantasy style with faded yellow hues and grainy texture to evoke nostalgia and charm.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_0cc383c1-b8e9-4b0f-80ac-512324825dd9_2abf164d-c59f-4cd7-8bad-f3e4566f70a3.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_0cc383c1-b8e9-4b0f-80ac-512324825dd9_2abf164d-c59f-4cd7-8bad-f3e4566f70a3.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_0ffe1725-3450-43ae-82e1-aa809f27145e_0ffe1725-3450-43ae-82e1-aa809f27145e",
+      "category": "food",
+      "instruction": "Make it bright and cheerful with vivid sprinkles popping out, aiming for a fun, pop art style vibe.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_0ffe1725-3450-43ae-82e1-aa809f27145e_0ffe1725-3450-43ae-82e1-aa809f27145e.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_0ffe1725-3450-43ae-82e1-aa809f27145e_0ffe1725-3450-43ae-82e1-aa809f27145e.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_1add996f-7a2e-48a0-b0c4-d025000d6429_0dc1c677-16c7-475b-ac32-590a3bb02811",
+      "category": "food",
+      "instruction": "I aim for a vibrant, eye-catching style that emphasizes the lemon's freshness and spices' richness for a lively appeal.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_1add996f-7a2e-48a0-b0c4-d025000d6429_0dc1c677-16c7-475b-ac32-590a3bb02811.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_1add996f-7a2e-48a0-b0c4-d025000d6429_0dc1c677-16c7-475b-ac32-590a3bb02811.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_02d09716-751f-40a5-aa03-b04da290946a_02d09716-751f-40a5-aa03-b04da290946a",
+      "category": "food",
+      "instruction": "I aim for a vintage fantasy style, adding a nostalgic touch with faded tones and grainy texture for charm.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_02d09716-751f-40a5-aa03-b04da290946a_02d09716-751f-40a5-aa03-b04da290946a.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_02d09716-751f-40a5-aa03-b04da290946a_02d09716-751f-40a5-aa03-b04da290946a.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_2de40c9e-d4d5-425d-83ce-60ebb3228edc_354a7787-4bf7-41f1-b960-2e8f144a9e84",
+      "category": "food",
+      "instruction": "I aim for a vibrant, modern look with bold colors. The bread should pop, perfect for social media sharing.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_2de40c9e-d4d5-425d-83ce-60ebb3228edc_354a7787-4bf7-41f1-b960-2e8f144a9e84.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_2de40c9e-d4d5-425d-83ce-60ebb3228edc_354a7787-4bf7-41f1-b960-2e8f144a9e84.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_4c1717ad-3519-49ef-88ca-f13c28de37d6_2cdcce95-f0d0-4c14-a499-45498560ae2b",
+      "category": "food",
+      "instruction": "I aim for a vintage fantasy style, adding graininess and faded tones to evoke nostalgia and charm.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_4c1717ad-3519-49ef-88ca-f13c28de37d6_2cdcce95-f0d0-4c14-a499-45498560ae2b.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_4c1717ad-3519-49ef-88ca-f13c28de37d6_2cdcce95-f0d0-4c14-a499-45498560ae2b.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_8b8a23c4-e44e-456e-b8a2-4a92ae3c6b53_11e7279c-f4ee-479b-a1ea-57003671847e",
+      "category": "food",
+      "instruction": "Make the food pop with vibrant colors and crisp details, emphasizing freshness and appeal, aiming for a pop art style.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_8b8a23c4-e44e-456e-b8a2-4a92ae3c6b53_11e7279c-f4ee-479b-a1ea-57003671847e.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_8b8a23c4-e44e-456e-b8a2-4a92ae3c6b53_11e7279c-f4ee-479b-a1ea-57003671847e.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_4ab3fb14-2c6a-4b6f-995d-d31142862640_d9a969ce-afbc-4b24-9e92-39dea376b88d",
+      "category": "food",
+      "instruction": "I want a vibrant, summery feel with enhanced colors and crisp details for a refreshing drink vibe.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_4ab3fb14-2c6a-4b6f-995d-d31142862640_d9a969ce-afbc-4b24-9e92-39dea376b88d.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_4ab3fb14-2c6a-4b6f-995d-d31142862640_d9a969ce-afbc-4b24-9e92-39dea376b88d.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_6c7d1aef-d7ec-4e8d-ab13-0a28b0dfdee1_1af29c74-20fe-456c-b19c-21ecf9613712",
+      "category": "food",
+      "instruction": "I want a dreamy haze style, making the donuts look soft and inviting with a gentle glow.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_6c7d1aef-d7ec-4e8d-ab13-0a28b0dfdee1_1af29c74-20fe-456c-b19c-21ecf9613712.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_6c7d1aef-d7ec-4e8d-ab13-0a28b0dfdee1_1af29c74-20fe-456c-b19c-21ecf9613712.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_6c30a075-2209-4b27-9918-036af00b6e28_6c30a075-2209-4b27-9918-036af00b6e28",
+      "category": "food",
+      "instruction": "I want a dreamy, soft look with gentle highlights and shadows to make the cake appear more inviting and romantic.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_6c30a075-2209-4b27-9918-036af00b6e28_6c30a075-2209-4b27-9918-036af00b6e28.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_6c30a075-2209-4b27-9918-036af00b6e28_6c30a075-2209-4b27-9918-036af00b6e28.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_8b2b5c61-808c-4576-be6e-0a78ef189cd1_30a4addb-aed7-46af-beb5-1555ff0f451a",
+      "category": "food",
+      "instruction": "I want a cozy, warm feel with soft shadows and rich colors for a relaxed vibe, like a vintage style.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_8b2b5c61-808c-4576-be6e-0a78ef189cd1_30a4addb-aed7-46af-beb5-1555ff0f451a.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_8b2b5c61-808c-4576-be6e-0a78ef189cd1_30a4addb-aed7-46af-beb5-1555ff0f451a.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00198",
+      "category": "food",
+      "instruction": "I desire a soft, dreamy haze style to create a gentle, ethereal feel around the buns.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00198.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00198.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00199",
+      "category": "food",
+      "instruction": "I desire a melancholy blues style, using cold light and shadows to evoke an emotional, urban street photography vibe.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00199.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00199.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00253",
+      "category": "food",
+      "instruction": "I desire a soft, natural Japanese style to enhance the food's delicate textures and create a serene dining ambiance.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00253.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00253.png",
+      "crop_mode": "left",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00400",
+      "category": "food",
+      "instruction": "Make the image pop with brighter highlights and deeper shadows for a dramatic, high-contrast vintage style.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00400.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00400.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_02612",
+      "category": "food",
+      "instruction": "I desire a minimal ethereal style, emphasizing simplicity with soft filters and tranquil vibes for a calming breakfast scene.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_02612.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_02612.png",
+      "crop_mode": "left",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_1c4ce462-f948-43b4-b678-f7dc10ad48f7_c4055583-082b-4798-88e3-8609a33c7ec5",
+      "category": "food",
+      "instruction": "I want a vibrant, lively look with enhanced colors and sharp details for a fresh, modern feel.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_1c4ce462-f948-43b4-b678-f7dc10ad48f7_c4055583-082b-4798-88e3-8609a33c7ec5.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_1c4ce462-f948-43b4-b678-f7dc10ad48f7_c4055583-082b-4798-88e3-8609a33c7ec5.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_2c57f8f4-4f14-4bca-b963-ca80a82b74a0_2c57f8f4-4f14-4bca-b963-ca80a82b74a0",
+      "category": "food",
+      "instruction": "I want a warm, inviting Minimal Ethereal Style with soft highlights and gentle shadows to make the breakfast look cozy and appealing.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_2c57f8f4-4f14-4bca-b963-ca80a82b74a0_2c57f8f4-4f14-4bca-b963-ca80a82b74a0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_2c57f8f4-4f14-4bca-b963-ca80a82b74a0_2c57f8f4-4f14-4bca-b963-ca80a82b74a0.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_2d97bc5b-7756-402c-9603-351d18fd9a5e_2d97bc5b-7756-402c-9603-351d18fd9a5e",
+      "category": "food",
+      "instruction": "I want a cozy, warm feel with rich colors and a slight vintage style for my food photo.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_2d97bc5b-7756-402c-9603-351d18fd9a5e_2d97bc5b-7756-402c-9603-351d18fd9a5e.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_2d97bc5b-7756-402c-9603-351d18fd9a5e_2d97bc5b-7756-402c-9603-351d18fd9a5e.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_5ed024b0-4dc0-4046-b1da-acd3fed62484_15929a3d-55ed-4c20-902e-df9a556c0231",
+      "category": "food",
+      "instruction": "I want a vivid, fresh style with enhanced radish colors and a crisp, clean wooden texture for a natural feel.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_5ed024b0-4dc0-4046-b1da-acd3fed62484_15929a3d-55ed-4c20-902e-df9a556c0231.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_5ed024b0-4dc0-4046-b1da-acd3fed62484_15929a3d-55ed-4c20-902e-df9a556c0231.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_5fe119f8-f9a7-41e9-b3a8-aa74d36e8287_5fe119f8-f9a7-41e9-b3a8-aa74d36e8287",
+      "category": "food",
+      "instruction": "I want a warm, inviting drink vibe with enhanced clarity and depth, like a cozy autumn evening feel.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_5fe119f8-f9a7-41e9-b3a8-aa74d36e8287_5fe119f8-f9a7-41e9-b3a8-aa74d36e8287.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_5fe119f8-f9a7-41e9-b3a8-aa74d36e8287_5fe119f8-f9a7-41e9-b3a8-aa74d36e8287.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00065",
+      "category": "food",
+      "instruction": "I want a dreamy haze style, making the tacos look soft and inviting with a cozy glow around them.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00065.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00065.png",
+      "crop_mode": "left",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00086",
+      "category": "food",
+      "instruction": "I want a vintage fantasy style, giving the sushi a nostalgic, faded look with soft, warm tones.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00086.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00086.png",
+      "crop_mode": "left",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00156",
+      "category": "food",
+      "instruction": "I want a cozy, warm feel with soft, inviting colors to highlight the homemade charm of these dumplings.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00156.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00156.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00132",
+      "category": "food",
+      "instruction": "I want a cozy, warm Hamada Hideki style with soft, natural tones for my pancakes.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00132.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00132.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00181",
+      "category": "food",
+      "instruction": "I want a bold, vivid look with enhanced textures and colors for a striking food presentation.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00181.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00181.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00219",
+      "category": "food",
+      "instruction": "I want a vivid, appetizing look with enhanced textures and colors to make the dish pop. Like a food magazine style.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00219.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00219.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00241",
+      "category": "food",
+      "instruction": "I want a dreamy haze style, making the food look softer and more inviting for a cozy feel.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00241.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00241.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00303",
+      "category": "food",
+      "instruction": "I want a cozy, warm feel with enhanced texture for these homemade treats, like a vintage family recipe style.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00303.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00303.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00309",
+      "category": "food",
+      "instruction": "I want a warm, inviting glow on the meat to make it look more appetizing and cozy.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00309.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00309.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00312",
+      "category": "food",
+      "instruction": "I want a warm, inviting glow on these pastries, making them look freshly baked and cozy.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00312.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00312.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00320",
+      "category": "food",
+      "instruction": "I want a warm, inviting glow to highlight the shrimp's texture, making it look more appetizing and cozy.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00320.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00320.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00326",
+      "category": "food",
+      "instruction": "I want a dreamy haze style, making the pastry look soft and inviting with a gentle glow around it.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00326.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00326.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00361",
+      "category": "food",
+      "instruction": "I want a cozy, warm feel with enhanced bread texture. Like a rustic, inviting kitchen vibe.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00361.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00361.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00377",
+      "category": "food",
+      "instruction": "I want a vivid, appetizing look with enhanced colors and sharp details for a food magazine cover.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00377.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00377.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00430",
+      "category": "food",
+      "instruction": "I want a vivid, appetizing look with enhanced meat textures and steam. Make it pop like a gourmet magazine photo.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00430.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00430.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_9bc3dbb0-8aed-4f32-b179-a3ed5ce6e959_1d313304-783b-4e96-ba26-323e42ace176",
+      "category": "food",
+      "instruction": "I aim for a vintage fantasy style, adding a nostalgic charm to the scene, perfect for a timeless recipe book cover.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_9bc3dbb0-8aed-4f32-b179-a3ed5ce6e959_1d313304-783b-4e96-ba26-323e42ace176.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_9bc3dbb0-8aed-4f32-b179-a3ed5ce6e959_1d313304-783b-4e96-ba26-323e42ace176.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_fg_8f8dd4f1-c18e-40f2-a58b-1118366c251a_6be3cd64-3fe8-463a-ad72-e4aa619f2c34",
+      "category": "food",
+      "instruction": "I desire a moody, artistic vibe where the burger feels almost painted, with deep contrasts and bold colors.",
+      "source_path": "MMart-Bench/data/src_image/food_fg_8f8dd4f1-c18e-40f2-a58b-1118366c251a_6be3cd64-3fe8-463a-ad72-e4aa619f2c34.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_fg_8f8dd4f1-c18e-40f2-a58b-1118366c251a_6be3cd64-3fe8-463a-ad72-e4aa619f2c34.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00178",
+      "category": "food",
+      "instruction": "I aim for a moody, cold-toned look with grainy texture to give the dish an artistic, edgy aesthetic.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00178.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00178.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00248",
+      "category": "food",
+      "instruction": "Create a cozy, intimate dining vibe by softening the background and highlighting the food's texture.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00248.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00248.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00562",
+      "category": "food",
+      "instruction": "I desire a cool, crisp style to emphasize the steak's texture, perfect for a gourmet magazine feature.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00562.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00562.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00533",
+      "category": "food",
+      "instruction": "I want a warm, inviting bread scene with enhanced textures and depth, like a cozy kitchen vibe.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00533.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00533.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00192",
+      "category": "food",
+      "instruction": "I want a cozy, warm glow style to make the salmon look extra appetizing and inviting.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00192.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00192.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00217",
+      "category": "food",
+      "instruction": "I want a cozy, warm feel with enhanced food textures. Comfort food style, inviting and homely.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00217.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00217.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "food_final_fg_00234",
+      "category": "food",
+      "instruction": "I want a vibrant, warm glow style to make the food look more appetizing and inviting.",
+      "source_path": "MMart-Bench/data/src_image/food_final_fg_00234.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/food_final_fg_00234.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_2c09c148-ce7b-40a2-b6ef-2be3dbd5e56d_6d76025c-abf3-44c9-8f27-754df5db6d0a",
+      "category": "landscape",
+      "instruction": "I want a vibrant, artistic look with bold colors and enhanced textures for a striking visual impact.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_2c09c148-ce7b-40a2-b6ef-2be3dbd5e56d_6d76025c-abf3-44c9-8f27-754df5db6d0a.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_2c09c148-ce7b-40a2-b6ef-2be3dbd5e56d_6d76025c-abf3-44c9-8f27-754df5db6d0a.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_3fd6657a-8e59-4252-9f08-1564b96ad412_3fd6657a-8e59-4252-9f08-1564b96ad412",
+      "category": "landscape",
+      "instruction": "I aim for a cozy, earthy style, making the cacti pop while deepening the red rocks' richness and warmth.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_3fd6657a-8e59-4252-9f08-1564b96ad412_3fd6657a-8e59-4252-9f08-1564b96ad412.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_3fd6657a-8e59-4252-9f08-1564b96ad412_3fd6657a-8e59-4252-9f08-1564b96ad412.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_9a8edddd-ee49-4601-a5f5-f6632f82a54d_9c1c8a3b-38a9-4cd0-acd2-ff51bd72c34d",
+      "category": "landscape",
+      "instruction": "I want a warm, inviting sunset glow style to enhance the serene mood and make the scene feel more magical.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_9a8edddd-ee49-4601-a5f5-f6632f82a54d_9c1c8a3b-38a9-4cd0-acd2-ff51bd72c34d.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_9a8edddd-ee49-4601-a5f5-f6632f82a54d_9c1c8a3b-38a9-4cd0-acd2-ff51bd72c34d.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_1b8386ea-75cb-415b-842c-565202436a73_1b8386ea-75cb-415b-842c-565202436a73",
+      "category": "landscape",
+      "instruction": "I aimed for a vintage fantasy style with faded tones, grainy texture, and a nostalgic, old-film feel.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_1b8386ea-75cb-415b-842c-565202436a73_1b8386ea-75cb-415b-842c-565202436a73.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_1b8386ea-75cb-415b-842c-565202436a73_1b8386ea-75cb-415b-842c-565202436a73.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_7b04ca86-e951-4edd-8590-6e7e20531b37_9e70ff54-ff8b-4df8-8522-a6264c005b94",
+      "category": "landscape",
+      "instruction": "I desire a melancholy blues style, emphasizing cold tones and shadows to evoke a somber, reflective mood in the landscape.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_7b04ca86-e951-4edd-8590-6e7e20531b37_9e70ff54-ff8b-4df8-8522-a6264c005b94.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_7b04ca86-e951-4edd-8590-6e7e20531b37_9e70ff54-ff8b-4df8-8522-a6264c005b94.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00131",
+      "category": "landscape",
+      "instruction": "Make it feel like a futuristic, icy world with sharp contrasts and a cold, metallic blue glow for a sci-fi mood.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00131.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00131.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00132",
+      "category": "landscape",
+      "instruction": "Make the scene more dramatic with enhanced contrasts and colors for a striking, cinematic look.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00132.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00132.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00194",
+      "category": "landscape",
+      "instruction": "I aim for a minimal ethereal style, emphasizing tranquility with a clean, soft filter and spacious composition.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00194.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00194.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00281",
+      "category": "landscape",
+      "instruction": "Make the scene more vibrant with deeper blues and greens, emphasizing the river's flow for a lively, nature-focused style.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00281.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00281.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00356",
+      "category": "landscape",
+      "instruction": "I desire a vivid, nature-inspired style emphasizing the rocks' texture and the scene's serene, earthy tones.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00356.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00356.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00363",
+      "category": "landscape",
+      "instruction": "I desire a cinematic, moody style with deep blues and golden hues to evoke a serene evening vibe.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00363.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00363.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00365",
+      "category": "landscape",
+      "instruction": "I aim for a melancholy blues style, emphasizing cold tones and shadows to evoke a somber mood.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00365.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00365.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00390",
+      "category": "landscape",
+      "instruction": "I aim for a Hamada Hideki style, capturing the road's soft, natural beauty with a gentle, emotional, and youthful feel.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00390.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00390.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00396",
+      "category": "landscape",
+      "instruction": "I aim for a melancholy blues style, emphasizing cooler tones and deeper shadows to evoke a serene, reflective mood.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00396.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00396.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00402",
+      "category": "landscape",
+      "instruction": "I aim for a vibrant, nature-focused style with enhanced greens and blues to emphasize the landscape's beauty.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00402.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00402.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00029",
+      "category": "landscape",
+      "instruction": "I want a vivid, bright blue sky style to make the scene feel more lively and energetic.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00029.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00029.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00268",
+      "category": "landscape",
+      "instruction": "I aim for a dreamy, soft-focus look with hazy halos to create an ethereal, romantic atmosphere in my wedding photos.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00268.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00268.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00279",
+      "category": "landscape",
+      "instruction": "I desire a minimalist ethereal style with soft filters and blank spaces for a tranquil vibe.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00279.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00279.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_0d943444-6e66-4cb7-8747-c90f87acbf40_1ba76386-5e68-4ecf-ab4d-7ef626a7bf2c",
+      "category": "landscape",
+      "instruction": "I want a dreamy, warm glow style to evoke a serene, autumnal mood in this peaceful scene.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_0d943444-6e66-4cb7-8747-c90f87acbf40_1ba76386-5e68-4ecf-ab4d-7ef626a7bf2c.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_0d943444-6e66-4cb7-8747-c90f87acbf40_1ba76386-5e68-4ecf-ab4d-7ef626a7bf2c.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_1cfd518a-a8b4-4ad1-8983-3a8e4bd51c2d_9ebbc8bc-f14d-4823-ac48-49b2181c70b9",
+      "category": "landscape",
+      "instruction": "I want a moody, atmospheric look with deep shadows and rich textures for a dramatic forest vibe.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_1cfd518a-a8b4-4ad1-8983-3a8e4bd51c2d_9ebbc8bc-f14d-4823-ac48-49b2181c70b9.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_1cfd518a-a8b4-4ad1-8983-3a8e4bd51c2d_9ebbc8bc-f14d-4823-ac48-49b2181c70b9.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_3a918899-745c-4ac6-b079-9f26100cdcbc_0e6454e7-c523-4335-a0c0-a38c780305d5",
+      "category": "landscape",
+      "instruction": "I want a dreamy haze style, making the waterfall look softer and more ethereal, perfect for a serene mood.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_3a918899-745c-4ac6-b079-9f26100cdcbc_0e6454e7-c523-4335-a0c0-a38c780305d5.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_3a918899-745c-4ac6-b079-9f26100cdcbc_0e6454e7-c523-4335-a0c0-a38c780305d5.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00397",
+      "category": "landscape",
+      "instruction": "Make it feel like a dreamy haze style, with softer contrasts and a serene, ethereal atmosphere for the landscape.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00397.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00397.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00317",
+      "category": "landscape",
+      "instruction": "Make it look like a dreamy autumn scene with soft, glowing light and rich, earthy tones for a cozy vibe.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00317.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00317.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00150",
+      "category": "landscape",
+      "instruction": "My aim is a melancholy blues style, emphasizing cold light and shadows to evoke a serene, reflective mood.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00150.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00150.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00125",
+      "category": "landscape",
+      "instruction": "I aim for a vintage fantasy style with faded hues and grainy texture to evoke nostalgia and old-world charm.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00125.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00125.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00346",
+      "category": "landscape",
+      "instruction": "I aim for a melancholy blues style, emphasizing cold tones and shadows for a moody, reflective vibe.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00346.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00346.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_9ebe9360-bb6a-4166-a8f8-97b770728218_227bb4a3-b7eb-4796-be3b-74ea1aecb41a",
+      "category": "landscape",
+      "instruction": "I want a vintage fantasy style, adding grain for a nostalgic, old film feel to this misty forest scene.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_9ebe9360-bb6a-4166-a8f8-97b770728218_227bb4a3-b7eb-4796-be3b-74ea1aecb41a.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_9ebe9360-bb6a-4166-a8f8-97b770728218_227bb4a3-b7eb-4796-be3b-74ea1aecb41a.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_9a9beff1-2b64-470c-8e61-a46a745f6862_bf770184-1385-467b-a445-94de043231ed",
+      "category": "landscape",
+      "instruction": "I want a dreamy, soft pink glow over the mountain, giving it a romantic, vintage fantasy style.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_9a9beff1-2b64-470c-8e61-a46a745f6862_bf770184-1385-467b-a445-94de043231ed.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_9a9beff1-2b64-470c-8e61-a46a745f6862_bf770184-1385-467b-a445-94de043231ed.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_7afdc8ed-5b7f-45ad-8f10-0d262f714e9e_968eeff7-1cd2-4bac-8bf0-5a852a876047",
+      "category": "landscape",
+      "instruction": "I wanted a dreamy haze style, making the scene softer and more ethereal, like a serene forest memory.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_7afdc8ed-5b7f-45ad-8f10-0d262f714e9e_968eeff7-1cd2-4bac-8bf0-5a852a876047.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_7afdc8ed-5b7f-45ad-8f10-0d262f714e9e_968eeff7-1cd2-4bac-8bf0-5a852a876047.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_5fc49efa-da05-4af1-8121-d7a7fad15c5d_ee648613-bbb0-4d8e-8603-cad6fadedd75",
+      "category": "landscape",
+      "instruction": "I want a warm, nostalgic feel with soft tones and gentle shadows, like a vintage summer memory.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_5fc49efa-da05-4af1-8121-d7a7fad15c5d_ee648613-bbb0-4d8e-8603-cad6fadedd75.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_5fc49efa-da05-4af1-8121-d7a7fad15c5d_ee648613-bbb0-4d8e-8603-cad6fadedd75.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_6f369ba6-346d-467f-9598-534c1d54b323_6f369ba6-346d-467f-9598-534c1d54b323",
+      "category": "landscape",
+      "instruction": "I want a dreamy haze style with soft, glowing clouds and warm grass for a serene night scene.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_6f369ba6-346d-467f-9598-534c1d54b323_6f369ba6-346d-467f-9598-534c1d54b323.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_6f369ba6-346d-467f-9598-534c1d54b323_6f369ba6-346d-467f-9598-534c1d54b323.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_6fa2cf33-e616-4d78-8420-dd3273835d0e_074f2eba-16d1-482e-93c8-22a1f48333bc",
+      "category": "landscape",
+      "instruction": "I want a moody, vintage fantasy style with muted colors and a nostalgic feel for this forest scene.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_6fa2cf33-e616-4d78-8420-dd3273835d0e_074f2eba-16d1-482e-93c8-22a1f48333bc.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_6fa2cf33-e616-4d78-8420-dd3273835d0e_074f2eba-16d1-482e-93c8-22a1f48333bc.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_0c013da9-c12a-42d4-a913-b8070adf987d_1833ce15-ed7a-474f-8346-9b8870b49cc5",
+      "category": "street",
+      "instruction": "I want a cold, moody blue tone to evoke a winter night's chill and mystery in this scene.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_0c013da9-c12a-42d4-a913-b8070adf987d_1833ce15-ed7a-474f-8346-9b8870b49cc5.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_0c013da9-c12a-42d4-a913-b8070adf987d_1833ce15-ed7a-474f-8346-9b8870b49cc5.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_1a245342-9e48-4861-9479-89f786935c4b_1a245342-9e48-4861-9479-89f786935c4b",
+      "category": "street",
+      "instruction": "I want a vintage fantasy style, giving this scene a nostalgic, timeless charm with warm, faded tones.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_1a245342-9e48-4861-9479-89f786935c4b_1a245342-9e48-4861-9479-89f786935c4b.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_1a245342-9e48-4861-9479-89f786935c4b_1a245342-9e48-4861-9479-89f786935c4b.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_1f1a666e-29ea-413e-bf33-6d7286e525d3_7d19df14-b09a-4066-8a84-59d036cbf814",
+      "category": "street",
+      "instruction": "I aim for a Hamada Hideki style, emphasizing soft, natural tones and a gentle, emotional feel in the bustling night market.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_1f1a666e-29ea-413e-bf33-6d7286e525d3_7d19df14-b09a-4066-8a84-59d036cbf814.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_1f1a666e-29ea-413e-bf33-6d7286e525d3_7d19df14-b09a-4066-8a84-59d036cbf814.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_1f35ce43-5e24-4b42-b9bc-394ff9ded037_d41b22ff-1a98-4137-8138-6077aa6948f7",
+      "category": "street",
+      "instruction": "Make it feel like a cinematic, rainy night with enhanced blues and a subtle, dreamy haze enveloping everything.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_1f35ce43-5e24-4b42-b9bc-394ff9ded037_d41b22ff-1a98-4137-8138-6077aa6948f7.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_1f35ce43-5e24-4b42-b9bc-394ff9ded037_d41b22ff-1a98-4137-8138-6077aa6948f7.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_0f6b50b3-882f-417a-bfda-d8b07e8ceda0_d2dc1587-7bea-40a6-9f2a-f2bac3fc8ee9",
+      "category": "street",
+      "instruction": "I want a vintage fantasy style with grainy texture and faded tones for a nostalgic city vibe.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_0f6b50b3-882f-417a-bfda-d8b07e8ceda0_d2dc1587-7bea-40a6-9f2a-f2bac3fc8ee9.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_0f6b50b3-882f-417a-bfda-d8b07e8ceda0_d2dc1587-7bea-40a6-9f2a-f2bac3fc8ee9.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_1b003c67-d3ab-43d2-ab37-c24d1c31a468_382740d5-e302-4ca3-92ee-4a8c3a651801",
+      "category": "street",
+      "instruction": "I want a moody, vintage fantasy style with a touch of nostalgia and faded tones for this urban scene.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_1b003c67-d3ab-43d2-ab37-c24d1c31a468_382740d5-e302-4ca3-92ee-4a8c3a651801.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_1b003c67-d3ab-43d2-ab37-c24d1c31a468_382740d5-e302-4ca3-92ee-4a8c3a651801.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_1b052154-a6ae-47da-81be-8673affdcdec_5a9be64c-66e4-4a1a-8249-427305b0010c",
+      "category": "street",
+      "instruction": "I want a moody, dark Gothic style to emphasize the statue's solemnity and architectural depth.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_1b052154-a6ae-47da-81be-8673affdcdec_5a9be64c-66e4-4a1a-8249-427305b0010c.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_1b052154-a6ae-47da-81be-8673affdcdec_5a9be64c-66e4-4a1a-8249-427305b0010c.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_1ef5678e-35ec-47c7-88b2-ea7f4cc77689_91b189b3-93f8-44f8-9f9c-760190835c14",
+      "category": "street",
+      "instruction": "I want a moody, atmospheric look with deep blues and subtle highlights for a cinematic feel.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_1ef5678e-35ec-47c7-88b2-ea7f4cc77689_91b189b3-93f8-44f8-9f9c-760190835c14.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_1ef5678e-35ec-47c7-88b2-ea7f4cc77689_91b189b3-93f8-44f8-9f9c-760190835c14.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00007",
+      "category": "street",
+      "instruction": "I want a moody, cinematic city vibe with deep shadows and cool tones for a modern urban feel.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00007.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00007.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00056",
+      "category": "street",
+      "instruction": "I want a Melancholy Blues style, making the scene feel cooler and more reflective at dusk.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00056.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00056.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00158",
+      "category": "street",
+      "instruction": "I want a vibrant, energetic city vibe with bold colors and a lively nightlife feel, like a pop art style.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00158.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00158.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00160",
+      "category": "street",
+      "instruction": "I want a vintage fantasy style, giving the photo a nostalgic, faded look with soft, dreamy tones.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00160.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00160.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00161",
+      "category": "street",
+      "instruction": "I want a vintage fantasy style, giving this street scene a nostalgic, faded charm with soft, dreamy tones.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00161.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00161.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00172",
+      "category": "street",
+      "instruction": "I want a moody, atmospheric alleyway with soft, muted colors and a touch of vintage charm.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00172.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00172.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00184",
+      "category": "street",
+      "instruction": "I want a nostalgic, vintage feel with warm, soft lighting and faded colors for a cozy, old-time charm.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00184.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00184.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00515",
+      "category": "street",
+      "instruction": "I want a vintage fantasy style with grainy texture and faded tones for a nostalgic feel.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00515.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00515.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00543",
+      "category": "street",
+      "instruction": "I want a vintage fantasy style, giving this scene a nostalgic, faded charm with soft, yellowed tones.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00543.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00543.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00548",
+      "category": "street",
+      "instruction": "I want a vintage fantasy style, adding a nostalgic, faded charm to this bustling market scene.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00548.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00548.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00666",
+      "category": "street",
+      "instruction": "I want a moody, cinematic feel with cooler tones and deeper shadows for a more dramatic city vibe.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00666.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00666.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00051",
+      "category": "landscape",
+      "instruction": "I want a dreamy haze style with soft focus and gentle tones to evoke a serene, peaceful mood in this scene.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00051.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00051.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00052",
+      "category": "landscape",
+      "instruction": "I want a dreamy haze style, making the road feel softer and more serene, like a peaceful journey.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00052.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00052.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00096",
+      "category": "landscape",
+      "instruction": "I want a moody, melancholic vibe with deep blues and shadows for a cinematic feel.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00096.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00096.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00203",
+      "category": "landscape",
+      "instruction": "I want a moody, cinematic style with deep shadows and dramatic clouds to evoke a sense of mystery.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00203.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00203.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00293",
+      "category": "landscape",
+      "instruction": "I want a dreamy haze style, making the village feel softer and more serene with gentle light.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00293.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00293.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_1c0ee12f-7d0b-436c-a709-a153b06c81c8_a8a6f0c2-3fb3-48aa-9d52-fa228735372a",
+      "category": "street",
+      "instruction": "I want a warm, vibrant Pop Art style to make the cathedral pop with lively colors and eye-catching contrasts.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_1c0ee12f-7d0b-436c-a709-a153b06c81c8_a8a6f0c2-3fb3-48aa-9d52-fa228735372a.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_1c0ee12f-7d0b-436c-a709-a153b06c81c8_a8a6f0c2-3fb3-48aa-9d52-fa228735372a.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_1e9675da-807b-48f7-b08c-68672bcdd4d7_5404374f-cfb3-44b3-a328-b4e25bb7fc1b",
+      "category": "street",
+      "instruction": "I want a vintage fantasy style, bringing out old film charm and nostalgic vibes in this cityscape.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_1e9675da-807b-48f7-b08c-68672bcdd4d7_5404374f-cfb3-44b3-a328-b4e25bb7fc1b.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_1e9675da-807b-48f7-b08c-68672bcdd4d7_5404374f-cfb3-44b3-a328-b4e25bb7fc1b.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_2a3a22fe-89dd-4aeb-a1a7-016460105572_2a3a22fe-89dd-4aeb-a1a7-016460105572",
+      "category": "street",
+      "instruction": "I want a dreamy haze style, making the scene softer and more romantic with a gentle glow around the locks.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_2a3a22fe-89dd-4aeb-a1a7-016460105572_2a3a22fe-89dd-4aeb-a1a7-016460105572.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_2a3a22fe-89dd-4aeb-a1a7-016460105572_2a3a22fe-89dd-4aeb-a1a7-016460105572.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_2f8d472b-60cc-4ec5-ae53-11f34a8c9016_7beab1b1-ca87-4a88-989c-d5f5973adbfb",
+      "category": "street",
+      "instruction": "I want a dreamy haze style, making the carousel glow softly with a magical, ethereal feel.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_2f8d472b-60cc-4ec5-ae53-11f34a8c9016_7beab1b1-ca87-4a88-989c-d5f5973adbfb.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_2f8d472b-60cc-4ec5-ae53-11f34a8c9016_7beab1b1-ca87-4a88-989c-d5f5973adbfb.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_4d508ac5-d69f-4a94-8085-ff56cfa1a14f_18c2a44a-cd23-4a4b-ab32-3f024edd2f7d",
+      "category": "street",
+      "instruction": "I want a dreamy haze style, softer lights, and a calm, romantic vibe for my Venice night scene.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_4d508ac5-d69f-4a94-8085-ff56cfa1a14f_18c2a44a-cd23-4a4b-ab32-3f024edd2f7d.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_4d508ac5-d69f-4a94-8085-ff56cfa1a14f_18c2a44a-cd23-4a4b-ab32-3f024edd2f7d.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00209",
+      "category": "street",
+      "instruction": "I want a dreamy haze style, making the scene softer and more serene with a gentle glow around everything.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00209.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00209.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00230",
+      "category": "street",
+      "instruction": "I want a moody, cinematic look with cooler tones and deeper shadows for a nighttime vibe, like a film noir style.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00230.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00230.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_0ce42f7b-6787-4b1b-bec1-11a5fc5ec11e_04938d3a-604e-47e7-859f-82e2e5c95f06",
+      "category": "street",
+      "instruction": "My aim was to enhance the building reflections and add depth, making the scene feel more cinematic and vibrant.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_0ce42f7b-6787-4b1b-bec1-11a5fc5ec11e_04938d3a-604e-47e7-859f-82e2e5c95f06.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_0ce42f7b-6787-4b1b-bec1-11a5fc5ec11e_04938d3a-604e-47e7-859f-82e2e5c95f06.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_3fdc71df-1590-403a-80fa-01c1b24f2bb4_6c55ae8a-4a9a-4632-a1ec-28e6c43d7ae9",
+      "category": "street",
+      "instruction": "I aim for a vibrant, lively style emphasizing colors and contrasts to capture the energy of this bustling scene.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_3fdc71df-1590-403a-80fa-01c1b24f2bb4_6c55ae8a-4a9a-4632-a1ec-28e6c43d7ae9.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_3fdc71df-1590-403a-80fa-01c1b24f2bb4_6c55ae8a-4a9a-4632-a1ec-28e6c43d7ae9.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00047",
+      "category": "street",
+      "instruction": "I aim for a melancholy blues style, emphasizing cold tones and shadows to evoke a reflective, urban mood.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00047.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00047.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00126",
+      "category": "street",
+      "instruction": "I desire a soft warm light style, enhancing cozy tones and creating a welcoming, inviting atmosphere in this urban setting.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00126.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00126.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00146",
+      "category": "street",
+      "instruction": "Make it feel like a nostalgic, cinematic moment with soft shadows and a dreamy, ethereal quality.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00146.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00146.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00163",
+      "category": "street",
+      "instruction": "Make it feel like a nostalgic, rainy evening with soft highlights and darker ground for a dreamy look.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00163.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00163.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00014",
+      "category": "street",
+      "instruction": "Make the scene feel nostalgic with muted colors and a slight vintage touch. Retro cityscape style suits my mood.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00014.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00014.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00069",
+      "category": "street",
+      "instruction": "I desire a dramatic, high-contrast style emphasizing the sky's depth and the structure's intricate details for a striking effect.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00069.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00069.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00632",
+      "category": "street",
+      "instruction": "Make it a dreamy, soft Hamada Hideki style with gentle hues and a calm, emotional atmosphere for a serene vibe.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00632.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00632.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_final_fg_00684",
+      "category": "street",
+      "instruction": "I aim for a cinematic, desaturated style that highlights the urban textures while creating a somber, reflective atmosphere.",
+      "source_path": "MMart-Bench/data/src_image/street_final_fg_00684.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_final_fg_00684.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00401",
+      "category": "landscape",
+      "instruction": "I want a dreamy haze style, making the mountains softer and more ethereal, perfect for a serene escape.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00401.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00401.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_final_fg_00369",
+      "category": "landscape",
+      "instruction": "I want a dreamy haze style, making the scene softer and more serene with a gentle glow.",
+      "source_path": "MMart-Bench/data/src_image/scenery_final_fg_00369.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_final_fg_00369.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_0bace5b1-a6c4-4a39-a4e6-2aef48f9e61e_4daec488-dc14-4d1f-b1aa-cf0afbffe03e",
+      "category": "portrait",
+      "instruction": "I want a cozy, warm Hamada Hideki style with soft lighting and gentle tones for a relaxing vibe.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_0bace5b1-a6c4-4a39-a4e6-2aef48f9e61e_4daec488-dc14-4d1f-b1aa-cf0afbffe03e.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_0bace5b1-a6c4-4a39-a4e6-2aef48f9e61e_4daec488-dc14-4d1f-b1aa-cf0afbffe03e.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_1f676525-6916-4270-9608-7f6f4247dca4_1f676525-6916-4270-9608-7f6f4247dca4",
+      "category": "portrait",
+      "instruction": "I aim for a Hamada Hideki style, emphasizing soft, natural tones and a gentle, youthful vibe in the photo.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_1f676525-6916-4270-9608-7f6f4247dca4_1f676525-6916-4270-9608-7f6f4247dca4.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_1f676525-6916-4270-9608-7f6f4247dca4_1f676525-6916-4270-9608-7f6f4247dca4.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_1e009955-3a10-42ed-ad9d-c27270167ffb_764b1fbf-347b-4612-9c72-ff3b733e67a2",
+      "category": "portrait",
+      "instruction": "I desire a Hamada Hideki style, emphasizing soft, natural colors and a gentle, emotional feel.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_1e009955-3a10-42ed-ad9d-c27270167ffb_764b1fbf-347b-4612-9c72-ff3b733e67a2.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_1e009955-3a10-42ed-ad9d-c27270167ffb_764b1fbf-347b-4612-9c72-ff3b733e67a2.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_1abd0450-aea4-4813-b05c-f902dd6afa94_3ee5f1b7-1420-4555-bd73-82b0c4f8e098",
+      "category": "portrait",
+      "instruction": "I desire a burning emotion style, emphasizing vibrant orange-red hues to convey the intensity of the moment.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_1abd0450-aea4-4813-b05c-f902dd6afa94_3ee5f1b7-1420-4555-bd73-82b0c4f8e098.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_1abd0450-aea4-4813-b05c-f902dd6afa94_3ee5f1b7-1420-4555-bd73-82b0c4f8e098.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_0dcc320f-18ca-4f95-9160-bac7de8da464_0dcc320f-18ca-4f95-9160-bac7de8da464",
+      "category": "portrait",
+      "instruction": "I want a nostalgic, vintage fantasy style with faded tones and grainy texture for a timeless feel.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_0dcc320f-18ca-4f95-9160-bac7de8da464_0dcc320f-18ca-4f95-9160-bac7de8da464.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_0dcc320f-18ca-4f95-9160-bac7de8da464_0dcc320f-18ca-4f95-9160-bac7de8da464.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_1e7918d8-8a44-4f82-adfb-0fc3998af941_a8055461-d20f-4a2f-9ac0-6a365e7fa655",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style, making the skateboarder's trick look softer and more ethereal, with a touch of nostalgia.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_1e7918d8-8a44-4f82-adfb-0fc3998af941_a8055461-d20f-4a2f-9ac0-6a365e7fa655.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_1e7918d8-8a44-4f82-adfb-0fc3998af941_a8055461-d20f-4a2f-9ac0-6a365e7fa655.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_final_fg_551_13",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style with softer tones. In the region <box>[0.205, 0.494, 0.607, 0.746]</box>, make faces clearer and skin smoother.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_551_13.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_551_13.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.205078125,
+        0.494140625,
+        0.607421875,
+        0.74609375
+      ]
+    },
+    {
+      "benchmark_id": "portrait_fg_0b419831-770d-4cd2-a7b3-9435802cd51d_8a805375-91d5-4b0a-b1cc-a88f088fd69b",
+      "category": "portrait",
+      "instruction": "I want a warm, cozy glow style to highlight her gentle smile and intricate dress details.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_0b419831-770d-4cd2-a7b3-9435802cd51d_8a805375-91d5-4b0a-b1cc-a88f088fd69b.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_0b419831-770d-4cd2-a7b3-9435802cd51d_8a805375-91d5-4b0a-b1cc-a88f088fd69b.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_0ebcaf42-a867-4c2d-bb66-338ef644737a_e84b26eb-9747-4a63-bc39-cf2ffe36e121",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style, softer focus, and warmer tones to evoke a gentle, romantic feel.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_0ebcaf42-a867-4c2d-bb66-338ef644737a_e84b26eb-9747-4a63-bc39-cf2ffe36e121.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_0ebcaf42-a867-4c2d-bb66-338ef644737a_e84b26eb-9747-4a63-bc39-cf2ffe36e121.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_1af9e7e1-a5cf-46b2-9b72-eb990804aeb2_0bb204f2-1b7e-4b2f-9f0f-d86f3d5b37d1",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style, softer tones, and a calm vibe for a relaxed, serene feel.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_1af9e7e1-a5cf-46b2-9b72-eb990804aeb2_0bb204f2-1b7e-4b2f-9f0f-d86f3d5b37d1.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_1af9e7e1-a5cf-46b2-9b72-eb990804aeb2_0bb204f2-1b7e-4b2f-9f0f-d86f3d5b37d1.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_1c2210c6-ff4e-4e97-b511-8e7e5afbbe71_24cd93e8-9710-403e-b45e-24bb969a6e17",
+      "category": "portrait",
+      "instruction": "I want a moody, cinematic look with cooler tones and deeper shadows for a stylish, modern vibe.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_1c2210c6-ff4e-4e97-b511-8e7e5afbbe71_24cd93e8-9710-403e-b45e-24bb969a6e17.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_1c2210c6-ff4e-4e97-b511-8e7e5afbbe71_24cd93e8-9710-403e-b45e-24bb969a6e17.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_2b8c4c06-1710-4b4a-8b6c-11cc4f0915f5_2b8c4c06-1710-4b4a-8b6c-11cc4f0915f5",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style, softer focus, and gentle tones to evoke a serene, romantic mood.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_2b8c4c06-1710-4b4a-8b6c-11cc4f0915f5_2b8c4c06-1710-4b4a-8b6c-11cc4f0915f5.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_2b8c4c06-1710-4b4a-8b6c-11cc4f0915f5_2b8c4c06-1710-4b4a-8b6c-11cc4f0915f5.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_2bb1198f-df18-4af0-bf89-f43c1d23e200_b60f7d35-cc83-4a88-9432-d92156b82bf6",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style, softer focus, and gentle tones to evoke a romantic, serene mood in this portrait.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_2bb1198f-df18-4af0-bf89-f43c1d23e200_b60f7d35-cc83-4a88-9432-d92156b82bf6.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_2bb1198f-df18-4af0-bf89-f43c1d23e200_b60f7d35-cc83-4a88-9432-d92156b82bf6.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_3d172fd4-ee44-44ec-aaf7-583fd2305fbd_3d172fd4-ee44-44ec-aaf7-583fd2305fbd",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style, making her look softer and more ethereal, perfect for a romantic vibe.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_3d172fd4-ee44-44ec-aaf7-583fd2305fbd_3d172fd4-ee44-44ec-aaf7-583fd2305fbd.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_3d172fd4-ee44-44ec-aaf7-583fd2305fbd_3d172fd4-ee44-44ec-aaf7-583fd2305fbd.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_final_fg_98_4",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style. In the girl region <box>[0.0, 0.291015625, 0.701171875, 0.6875]</box>, soften her features and add a gentle glow.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_98_4.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_98_4.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.0,
+        0.291015625,
+        0.701171875,
+        0.6875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_98_11",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style with softer tones. In the region <box>[0.55078125, 0.421875, 0.884765625, 0.849609375]</box>, make her skin smoother.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_98_11.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_98_11.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.55078125,
+        0.421875,
+        0.884765625,
+        0.849609375
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_274_0",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style with softer tones. In the bride region <box>[0.318359375, 0.365234375, 0.84375, 0.966796875]</box>, enhance her dress details.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_274_0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_274_0.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.318359375,
+        0.365234375,
+        0.84375,
+        0.966796875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_337_0",
+      "category": "portrait",
+      "instruction": "I want a moody, cinematic style with cooler tones. In the region <box>[0.1992, 0.1992, 0.6035, 0.9980]</box>, soften her skin and deepen shadows.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_337_0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_337_0.png",
+      "crop_mode": "right",
+      "has_local_box": true,
+      "box_info": [
+        0.19921875,
+        0.19921875,
+        0.603515625,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_361_4",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style with softer tones. In the region <box>[0.0254, 0.0938, 0.6973, 0.9980]</box>, enhance her dress's colors subtly.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_361_4.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_361_4.png",
+      "crop_mode": "right",
+      "has_local_box": true,
+      "box_info": [
+        0.025390625,
+        0.09375,
+        0.697265625,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1037_2",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style with softer tones. In the region <box>[0.334, 0.061, 0.646, 0.998]</box>, make the person's skin smoother and outfit details pop.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1037_2.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1037_2.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.333984375,
+        0.060546875,
+        0.646484375,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1188_4",
+      "category": "portrait",
+      "instruction": "Dreamy Haze style, softer focus, warmer tones. In the region <box>[0.2832, 0.1152, 0.9980, 0.9980]</box>, enhance skin smoothness and couple's connection.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1188_4.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1188_4.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.283203125,
+        0.115234375,
+        0.998046875,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1346_9",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style with softer tones. In the region <box>[0.171875, 0.072265625, 0.869140625, 0.814453125]</box>, make the couple glow warmly.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1346_9.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1346_9.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.171875,
+        0.072265625,
+        0.869140625,
+        0.814453125
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1377_7",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style with softer tones. In the region <box>[0.126953125, 0.4609375, 0.8828125, 0.998046875]</box>, make the couple glow warmly.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1377_7.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1377_7.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.126953125,
+        0.4609375,
+        0.8828125,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1450_0",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style with softer tones. In the region <box>[0.140625, 0.236328125, 0.875, 0.998046875]</box>, make her skin smoother.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1450_0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1450_0.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.140625,
+        0.236328125,
+        0.875,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1451_0",
+      "category": "portrait",
+      "instruction": "I want a moody, cinematic style with cooler tones. In the region <box>[0.2949, 0.0234, 0.6094, 0.9980]</box>, soften her skin and deepen shadows.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1451_0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1451_0.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.294921875,
+        0.0234375,
+        0.609375,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_fg_0ba587a7-90b6-4925-9468-15dfb2261751_5dd80b7d-0155-4ade-8eeb-ce03235040c3",
+      "category": "portrait",
+      "instruction": "I aim for a Kodak Portra style, capturing natural skin tones and soft contrasts for a timeless feel.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_0ba587a7-90b6-4925-9468-15dfb2261751_5dd80b7d-0155-4ade-8eeb-ce03235040c3.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_0ba587a7-90b6-4925-9468-15dfb2261751_5dd80b7d-0155-4ade-8eeb-ce03235040c3.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_0fc9860b-4905-4f63-8b1a-fe2ec0852c01_3dd28ff8-b3cc-4d26-83db-f16a6db8a30f",
+      "category": "portrait",
+      "instruction": "I desire a soft, dreamy haze style to create a gentle, romantic atmosphere in the photo.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_0fc9860b-4905-4f63-8b1a-fe2ec0852c01_3dd28ff8-b3cc-4d26-83db-f16a6db8a30f.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_0fc9860b-4905-4f63-8b1a-fe2ec0852c01_3dd28ff8-b3cc-4d26-83db-f16a6db8a30f.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_1dc5eca4-fc94-4ed7-a2d5-3f5b5f47571a_1dc5eca4-fc94-4ed7-a2d5-3f5b5f47571a",
+      "category": "portrait",
+      "instruction": "I aim for a modern, edgy look with enhanced contrast and sharpness, emphasizing textures and shadows.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_1dc5eca4-fc94-4ed7-a2d5-3f5b5f47571a_1dc5eca4-fc94-4ed7-a2d5-3f5b5f47571a.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_1dc5eca4-fc94-4ed7-a2d5-3f5b5f47571a_1dc5eca4-fc94-4ed7-a2d5-3f5b5f47571a.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_1dcd3093-92f1-4c73-9cb8-993664c6935f_1d7434ff-4d14-4bd8-8589-653c7ff32889",
+      "category": "portrait",
+      "instruction": "Make it look like a moody, cinematic portrait with deep contrasts and a touch of golden hour glow.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_1dcd3093-92f1-4c73-9cb8-993664c6935f_1d7434ff-4d14-4bd8-8589-653c7ff32889.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_1dcd3093-92f1-4c73-9cb8-993664c6935f_1d7434ff-4d14-4bd8-8589-653c7ff32889.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_1f6b2071-878a-4fc5-adb0-13a83b38e59a_1f6b2071-878a-4fc5-adb0-13a83b38e59a",
+      "category": "portrait",
+      "instruction": "I aim for a dreamy haze style with soft focus and gentle tones to create an ethereal, romantic atmosphere.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_1f6b2071-878a-4fc5-adb0-13a83b38e59a_1f6b2071-878a-4fc5-adb0-13a83b38e59a.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_1f6b2071-878a-4fc5-adb0-13a83b38e59a_1f6b2071-878a-4fc5-adb0-13a83b38e59a.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_2be2bb85-a754-4034-a1df-63a3e8068ec0_6aeadb2b-6cd6-44d1-9fe8-3979b065fbc5",
+      "category": "portrait",
+      "instruction": "I aim for a stylish, modern aesthetic with enhanced contrast and sharper details for a sleek appearance.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_2be2bb85-a754-4034-a1df-63a3e8068ec0_6aeadb2b-6cd6-44d1-9fe8-3979b065fbc5.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_2be2bb85-a754-4034-a1df-63a3e8068ec0_6aeadb2b-6cd6-44d1-9fe8-3979b065fbc5.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_2eb767a7-d7f4-4c77-9090-cefaf1fa1db2_850c8b5b-989d-4c8b-80d1-d04e163034fd",
+      "category": "portrait",
+      "instruction": "Desire a Hamada Hideki style, emphasizing fresh, natural beauty with soft lighting and a gentle, emotional feel.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_2eb767a7-d7f4-4c77-9090-cefaf1fa1db2_850c8b5b-989d-4c8b-80d1-d04e163034fd.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_2eb767a7-d7f4-4c77-9090-cefaf1fa1db2_850c8b5b-989d-4c8b-80d1-d04e163034fd.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_3b0b0c4e-6a00-4328-974d-0b3121b46f09_3b0b0c4e-6a00-4328-974d-0b3121b46f09",
+      "category": "portrait",
+      "instruction": "Make the image more vibrant yet balanced, enhancing details while keeping a soft, natural aesthetic.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_3b0b0c4e-6a00-4328-974d-0b3121b46f09_3b0b0c4e-6a00-4328-974d-0b3121b46f09.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_3b0b0c4e-6a00-4328-974d-0b3121b46f09_3b0b0c4e-6a00-4328-974d-0b3121b46f09.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_final_fg_5_5",
+      "category": "portrait",
+      "instruction": "Make the <box>[0.2324, 0.0723, 0.8281, 0.9980]</box> portrait glow softly, enhancing the overall Japanese style with gentle tones.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_5_5.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_5_5.png",
+      "crop_mode": "right",
+      "has_local_box": true,
+      "box_info": [
+        0.232421875,
+        0.072265625,
+        0.828125,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_471_6",
+      "category": "portrait",
+      "instruction": "Enhance the Japanese style with natural, soft colors. In the region <box>[0.0, 0.0, 0.7734375, 0.998046875]</box>, focus on her facial features and outfit.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_471_6.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_471_6.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.0,
+        0.0,
+        0.7734375,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_477_6",
+      "category": "portrait",
+      "instruction": "Make it Hamada Hideki style, enhancing the girl's youthful charm and natural colors in the <box>[0.0, 0.037109375, 0.998046875, 0.998046875]</box> area.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_477_6.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_477_6.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.0,
+        0.037109375,
+        0.998046875,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_671_4",
+      "category": "portrait",
+      "instruction": "Make the image feel nostalgic with soft lighting. In the region <box>[0.1425, 0.0, 0.8203, 0.6895]</box>, focus on the person's details and mirror clarity.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_671_4.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_671_4.png",
+      "crop_mode": "left",
+      "has_local_box": true,
+      "box_info": [
+        0.142578125,
+        0.0,
+        0.8203125,
+        0.689453125
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_966_7",
+      "category": "portrait",
+      "instruction": "Make it dreamy haze style with soft focus and hazy halo in the <box>[0.0, 0.0, 0.998, 0.998]</box> background for a romantic portrait.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_966_7.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_966_7.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.0,
+        0.0,
+        0.998046875,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1224_1",
+      "category": "portrait",
+      "instruction": "Enhance the Japanese style with natural, soft colors. In the region <box>[0.3066, 0.0527, 0.6074, 0.9980]</box>, soften her features and dress.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1224_1.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1224_1.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.306640625,
+        0.052734375,
+        0.607421875,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_fg_0db70353-e340-422b-a8d6-624e2d275200_9ffd50a6-f544-41a2-8476-45083ea1d1ec",
+      "category": "portrait",
+      "instruction": "I want a sleek, modern look with enhanced details and a cool, sophisticated vibe for my outfit.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_0db70353-e340-422b-a8d6-624e2d275200_9ffd50a6-f544-41a2-8476-45083ea1d1ec.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_0db70353-e340-422b-a8d6-624e2d275200_9ffd50a6-f544-41a2-8476-45083ea1d1ec.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_1d90945f-0736-4394-8369-7cec5b7e682d_b60acb5e-c8b4-4369-9fcd-ab0104c2e06c",
+      "category": "portrait",
+      "instruction": "I wanted a Hamada Hideki style, soft and natural, enhancing her youthful glow and subtle emotions.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_1d90945f-0736-4394-8369-7cec5b7e682d_b60acb5e-c8b4-4369-9fcd-ab0104c2e06c.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_1d90945f-0736-4394-8369-7cec5b7e682d_b60acb5e-c8b4-4369-9fcd-ab0104c2e06c.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1202_2",
+      "category": "portrait",
+      "instruction": "I want a vintage fantasy style with warmer skin tones and darker ground. In the region <box>[0.5527, 0.1289, 0.9102, 0.9980]</box>, enhance the dress details.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1202_2.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1202_2.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.552734375,
+        0.12890625,
+        0.91015625,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_fg_4ce8df24-8a7b-4abb-9a42-40f895b638ce_303e44a2-725d-45a2-94e4-51e3edeade3b",
+      "category": "portrait",
+      "instruction": "I want a moody, blue-toned look with soft highlights to evoke a calm, evening vibe. Melancholy blues style.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_4ce8df24-8a7b-4abb-9a42-40f895b638ce_303e44a2-725d-45a2-94e4-51e3edeade3b.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_4ce8df24-8a7b-4abb-9a42-40f895b638ce_303e44a2-725d-45a2-94e4-51e3edeade3b.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_3e59d367-b927-4989-9eab-95e3e24299ee_3c530c5a-9c7b-4b12-9fd2-da0313ae0b63",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style, making her look soft and ethereal, perfect for a fairy tale vibe.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_3e59d367-b927-4989-9eab-95e3e24299ee_3c530c5a-9c7b-4b12-9fd2-da0313ae0b63.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_3e59d367-b927-4989-9eab-95e3e24299ee_3c530c5a-9c7b-4b12-9fd2-da0313ae0b63.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_3df21c22-a122-4f70-a16f-b28e6914b6ca_67e815c6-6123-4b92-a5c4-f2640da4c9a8",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style, softer focus, and gentle tones to capture our wedding day's romantic essence.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_3df21c22-a122-4f70-a16f-b28e6914b6ca_67e815c6-6123-4b92-a5c4-f2640da4c9a8.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_3df21c22-a122-4f70-a16f-b28e6914b6ca_67e815c6-6123-4b92-a5c4-f2640da4c9a8.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_2fb1f5e3-87c5-418d-85a2-a0b7fe9eb3c8_0ca24acd-ae8b-4e88-8379-a668b7444195",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style, making our wedding photo softer, warmer, and more romantic with gentle tones.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_2fb1f5e3-87c5-418d-85a2-a0b7fe9eb3c8_0ca24acd-ae8b-4e88-8379-a668b7444195.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_2fb1f5e3-87c5-418d-85a2-a0b7fe9eb3c8_0ca24acd-ae8b-4e88-8379-a668b7444195.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1376_5",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style with softer tones. In the dress region <box>[0.2539, 0.3008, 0.8242, 0.9980]</box>, enhance texture and flow.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1376_5.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1376_5.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.25390625,
+        0.30078125,
+        0.82421875,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1366_3",
+      "category": "portrait",
+      "instruction": "I want a vintage fantasy style with softer skin and brighter eyes in the <box>[0.22265625, 0.0, 0.904296875, 0.998046875]</box> person region.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1366_3.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1366_3.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.22265625,
+        0.0,
+        0.904296875,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1032_3",
+      "category": "portrait",
+      "instruction": "Make it feel vintage fantasy-like. In the region <box>[0.04296875, 0.0, 0.998046875, 0.998046875]</box>, deepen her hair color and soften her features.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1032_3.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1032_3.png",
+      "crop_mode": "left",
+      "has_local_box": true,
+      "box_info": [
+        0.04296875,
+        0.0,
+        0.998046875,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1065_0",
+      "category": "portrait",
+      "instruction": "I want a vintage fantasy style with softer skin and brighter eyes in the <box>[0.2949, 0.1035, 0.8926, 0.9980]</box> person region.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1065_0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1065_0.png",
+      "crop_mode": "right",
+      "has_local_box": true,
+      "box_info": [
+        0.294921875,
+        0.103515625,
+        0.892578125,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1074_1",
+      "category": "portrait",
+      "instruction": "I want a vintage fantasy style with warmer tones and softer skin. In the region <box>[0.0175, 0.0390, 0.9082, 0.9980]</box>, enhance her smile.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1074_1.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1074_1.png",
+      "crop_mode": "right",
+      "has_local_box": true,
+      "box_info": [
+        0.017578125,
+        0.0390625,
+        0.908203125,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1150_3",
+      "category": "portrait",
+      "instruction": "Enhance the vintage fantasy style. In the region <box>[0.3515625, 0.115234375, 0.998046875, 0.998046875]</box>, deepen the apple colors and soften her features.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1150_3.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1150_3.png",
+      "crop_mode": "left",
+      "has_local_box": true,
+      "box_info": [
+        0.3515625,
+        0.115234375,
+        0.998046875,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1202_0",
+      "category": "portrait",
+      "instruction": "Make it feel like a nostalgic film. Enhance the dress's texture in <box>[0.2695, 0.2168, 0.6074, 0.9980]</box> and add graininess for a classic look.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1202_0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1202_0.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.26953125,
+        0.216796875,
+        0.607421875,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1219_2",
+      "category": "portrait",
+      "instruction": "Make the beach scene dreamy with hazy tones and enhance facial features in the <box>[0.0, 0.09375, 0.998046875, 0.998046875]</box> person area.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1219_2.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1219_2.png",
+      "crop_mode": "left",
+      "has_local_box": true,
+      "box_info": [
+        0.0,
+        0.09375,
+        0.998046875,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1254_0",
+      "category": "portrait",
+      "instruction": "Make it feel like a classic film with smooth skin and muted colors in the <box>[0.109375, 0.109375, 0.87890625, 0.998046875]</box> region.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1254_0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1254_0.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.109375,
+        0.109375,
+        0.87890625,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1254_3",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style with softer tones. In the region <box>[0.15625, 0.041015625, 0.92578125, 0.998046875]</box>, smooth her skin and enhance flowers.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1254_3.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1254_3.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.15625,
+        0.041015625,
+        0.92578125,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_125_2",
+      "category": "portrait",
+      "instruction": "Make the scene cozier with muted colors and enhanced facial details in the <box>[0.201171875, 0.060546875, 0.91015625, 0.998046875]</box> people area.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_125_2.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_125_2.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.201171875,
+        0.060546875,
+        0.91015625,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1331_0",
+      "category": "portrait",
+      "instruction": "I want a vintage fantasy style with softer skin and warmer tones in the <box>[0.0, 0.390625, 0.5703125, 0.998046875]</box> person region.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1331_0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1331_0.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.0,
+        0.390625,
+        0.5703125,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1351_1",
+      "category": "portrait",
+      "instruction": "I want a vintage film style with softer skin tones and a dreamy haze in the <box>[0.0742, 0.0, 0.6543, 0.9980]</box> dress area.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1351_1.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1351_1.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.07421875,
+        0.0,
+        0.654296875,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_170_0",
+      "category": "portrait",
+      "instruction": "I want a Melancholy Blues style with cooler tones and deeper shadows. In the region <box>[0.1777, 0.3457, 0.8184, 0.9980]</box>, enhance facial features and eyes.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_170_0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_170_0.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.177734375,
+        0.345703125,
+        0.818359375,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_557_0",
+      "category": "portrait",
+      "instruction": "I want a dreamy haze style with softer tones. In the region <box>[0.078125, 0.193359375, 0.8203125, 0.998046875]</box>, make her skin glow.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_557_0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_557_0.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.078125,
+        0.193359375,
+        0.8203125,
+        0.998046875
+      ]
+    },
+    {
+      "benchmark_id": "portrait_fg_0a046932-8b4b-4a40-bfdf-526b42db2abe",
+      "category": "portrait",
+      "instruction": "Can you give this photo a more moody and contemplative feel? I'd like the colors to be less vibrant, more subdued and gentle. Please soften the overall image to reduce the sharpness and give it a calm, film-like quality.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_0a046932-8b4b-4a40-bfdf-526b42db2abe.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_0a046932-8b4b-4a40-bfdf-526b42db2abe.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_10956475-64a7-4694-9af4-ecf3e9b5e5e0",
+      "category": "portrait",
+      "instruction": "Can you make this photo feel warmer and more romantic, like it was taken during a beautiful sunset? I want the colors to be richer and the whole image to have a soft, dreamy glow. Please make the sky look more dramatic and less washed out, so it adds to the intimate mood.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_10956475-64a7-4694-9af4-ecf3e9b5e5e0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_10956475-64a7-4694-9af4-ecf3e9b5e5e0.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_21e18b32-d45a-4c66-acdf-ccfb9b1d8a96",
+      "category": "portrait",
+      "instruction": "Could you give this a really warm and dreamy atmosphere? I want it to feel like we're glowing in the perfect golden sunset light, making the whole scene more romantic.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_21e18b32-d45a-4c66-acdf-ccfb9b1d8a96.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_21e18b32-d45a-4c66-acdf-ccfb9b1d8a96.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_30408b08-c233-493a-bf26-5b66707db97d",
+      "category": "portrait",
+      "instruction": "Can you make the colors more vibrant and full of life? I want the sky to be a much deeper, richer blue, and make the pink in her jacket really pop. Also, brighten up the darker areas a bit so you can see the details on the DJ deck, but tone down the harshness of the sunlight.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_30408b08-c233-493a-bf26-5b66707db97d.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_30408b08-c233-493a-bf26-5b66707db97d.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_3a40eae3-1c63-4d3e-bb55-5915366f23dc",
+      "category": "portrait",
+      "instruction": "I'm going for a moody, romantic atmosphere. Please infuse the image with a warm, sunny feel. The sky is a bit too bright, so could you reduce that glare? I'd like more contrast to make the scene pop, giving it a rich, almost film-like quality.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_3a40eae3-1c63-4d3e-bb55-5915366f23dc.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_3a40eae3-1c63-4d3e-bb55-5915366f23dc.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_4a454064-9a33-412f-89d7-77d70df90f58",
+      "category": "portrait",
+      "instruction": "Give this a warm, cinematic glow. I want the image to be less hazy and have stronger contrast, making it look more dramatic and high-end.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_4a454064-9a33-412f-89d7-77d70df90f58.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_4a454064-9a33-412f-89d7-77d70df90f58.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_536800df-4f10-4541-9917-b4a7f261d211",
+      "category": "portrait",
+      "instruction": "Make this photo feel more like a classic portrait. The overall lighting should be warmer and a bit darker. Let's reduce the intensity of the vibrant colors to create a more harmonious and gentle palette. The whole image should have a richer, more dramatic mood.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_536800df-4f10-4541-9917-b4a7f261d211.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_536800df-4f10-4541-9917-b4a7f261d211.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_585a2ed7-cec3-4e46-8177-183dfca5a200",
+      "category": "portrait",
+      "instruction": "Give this a strong, warm, retro film style. The whole image should have a cozy, amber tone, but make the colors feel saturated and punchy. It needs to look more gritty and textured, so add some grain. I want a powerful, high-impact portrait with a timeless feel.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_585a2ed7-cec3-4e46-8177-183dfca5a200.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_585a2ed7-cec3-4e46-8177-183dfca5a200.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_881b30fe-afcc-4a10-ac88-6a1139e32261",
+      "category": "portrait",
+      "instruction": "Make the red scarf pop with vibrant color, and give the whole photo a moody, dramatic feel.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_881b30fe-afcc-4a10-ac88-6a1139e32261.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_881b30fe-afcc-4a10-ac88-6a1139e32261.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_920dab47-4bff-4066-9e9f-ba250315ffcb",
+      "category": "portrait",
+      "instruction": "I'm looking for a moody, low-saturation style. Please give the image a warm yellow tint, especially in the shadows, and make the colors feel more unified and less jarring. It should have a soft, matte texture, almost like an old movie still.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_920dab47-4bff-4066-9e9f-ba250315ffcb.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_920dab47-4bff-4066-9e9f-ba250315ffcb.png",
+      "crop_mode": "rightd",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_9a179a89-4a92-4140-84c3-583ca799ca08",
+      "category": "portrait",
+      "instruction": "The original feels a bit hazy and yellow. Could you clean it up? Make her white dress look actually white and not yellowish. I want her to be the main focus, so brighten her up and make the whole picture feel more vibrant and full of depth.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_9a179a89-4a92-4140-84c3-583ca799ca08.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_9a179a89-4a92-4140-84c3-583ca799ca08.png",
+      "crop_mode": "right",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_be04cc1a-13d4-420a-8660-253a54db95a7",
+      "category": "portrait",
+      "instruction": "I'd like this to have a warm, cozy winter vibe. Please enhance the colors to be richer and give my skin a healthy glow. Make it look brighter and more vibrant overall.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_be04cc1a-13d4-420a-8660-253a54db95a7.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_be04cc1a-13d4-420a-8660-253a54db95a7.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_1bee1523-a7ab-4cd3-bb85-5449ed69ec19",
+      "category": "portrait",
+      "instruction": "The original is too dark and cool. Please lift the shadows to reveal more details, increase the overall brightness, and add a warm glow to everything. Make the scene look more enchanting and less flat.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_1bee1523-a7ab-4cd3-bb85-5449ed69ec19.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_1bee1523-a7ab-4cd3-bb85-5449ed69ec19.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_2ac3030c-908a-4dfb-8130-7a5ca0e35890",
+      "category": "portrait",
+      "instruction": "Apply a vintage film filter to make the picture feel cozy and nostalgic.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_2ac3030c-908a-4dfb-8130-7a5ca0e35890.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_2ac3030c-908a-4dfb-8130-7a5ca0e35890.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_2c2a5e49-95f0-48f6-9ff2-109f756fe6fd",
+      "category": "portrait",
+      "instruction": "I want a cool, high-tech look with richer colors and a softer background.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_2c2a5e49-95f0-48f6-9ff2-109f756fe6fd.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_2c2a5e49-95f0-48f6-9ff2-109f756fe6fd.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_3b661e21-2235-4052-97c6-95dac92e8eb6",
+      "category": "portrait",
+      "instruction": "Can you brighten up the whole photo, especially the dark areas, but don't let the highlights on my shirt get too bright. I want the colors to be richer and warmer, making my skin look more vibrant. The overall image should feel more textured and have a classic, premium look.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_3b661e21-2235-4052-97c6-95dac92e8eb6.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_3b661e21-2235-4052-97c6-95dac92e8eb6.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_3e67038b-1793-400b-964a-4948688770f8",
+      "category": "portrait",
+      "instruction": "Make the whole picture brighter and bring out the colors.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_3e67038b-1793-400b-964a-4948688770f8.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_3e67038b-1793-400b-964a-4948688770f8.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_4ddee0ef-339b-4908-a357-2e4feb36e0f2",
+      "category": "portrait",
+      "instruction": "Make the overall photo warmer and brighter. I want the colors to be more intense, but in a stylish, desaturated green kind of way. Increase the contrast and make the details really pop.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_4ddee0ef-339b-4908-a357-2e4feb36e0f2.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_4ddee0ef-339b-4908-a357-2e4feb36e0f2.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_final_fg_00aba96b-465e-4150-a37f-c4b3347d058e",
+      "category": "portrait",
+      "instruction": "Make this photo feel more dreamy and melancholic. I'd like the colors to be less saturated, especially the background, giving it a calm and cool palette. The overall lighting should be softer. Please also make the person <box>0.329688 0.213008 0.843333 0.603398</box> the main focus by making her features, like her eyes and lips, a bit more defined.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_00aba96b-465e-4150-a37f-c4b3347d058e.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_00aba96b-465e-4150-a37f-c4b3347d058e.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.329688,
+        0.213008,
+        0.843333,
+        0.603398
+      ]
+    },
+    {
+      "benchmark_id": "portrait_fg_02b3d167-b341-492a-8a6b-36d91a0142fb",
+      "category": "portrait",
+      "instruction": "Let's make this portrait more moody and intense. I want deeper shadows and stronger contrast overall. Cool down the entire photo to give it a serious, serene atmosphere, but make the colors on the blanket stay vibrant. It should feel crisp and clear, drawing all the attention to her.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_02b3d167-b341-492a-8a6b-36d91a0142fb.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_02b3d167-b341-492a-8a6b-36d91a0142fb.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_final_fg_04784c78-41b5-4e92-8764-a2dc9ce80c77",
+      "category": "portrait",
+      "instruction": "I want a vibrant, late-summer atmosphere. Make it feel warm and rich, and really bring out the person <box>0.347393 0.147656 0.496357 0.737974</box> by making them the bright focus against the dark, moody greenery.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_04784c78-41b5-4e92-8764-a2dc9ce80c77.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_04784c78-41b5-4e92-8764-a2dc9ce80c77.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.347393,
+        0.147656,
+        0.496357,
+        0.737974
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_14ec95ec-7a80-41f8-9998-9724009e7db7",
+      "category": "portrait",
+      "instruction": "Could you make the whole picture feel colder, with more of a blue tone? I want to bring out the details in the dark areas, but don't let the bright sparks get too blown out. Also, please make the person welding <box>0.000000 0.000000 0.678984 0.642858</box> a little clearer.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_14ec95ec-7a80-41f8-9998-9724009e7db7.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_14ec95ec-7a80-41f8-9998-9724009e7db7.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.0,
+        0.0,
+        0.678984,
+        0.642858
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_16cefbc5-c4bf-45c7-92cb-4a20af170fd0",
+      "category": "portrait",
+      "instruction": "Give it a cinematic film look, with warm tones that make the child <box>0.192593 0.214109 0.893345 0.733259</box> glow.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_16cefbc5-c4bf-45c7-92cb-4a20af170fd0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_16cefbc5-c4bf-45c7-92cb-4a20af170fd0.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.192593,
+        0.214109,
+        0.893345,
+        0.733259
+      ]
+    },
+    {
+      "benchmark_id": "portrait_fg_1aecd2be-d724-4d70-b7e1-3a15a7175eca",
+      "category": "portrait",
+      "instruction": "I'm looking for a bright and airy portrait style. Make the overall image feel cleaner and more professional. Please soften the background to make the subject stand out, and give her skin a flawless, smooth look while making her eyes and teeth brighter.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_1aecd2be-d724-4d70-b7e1-3a15a7175eca.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_1aecd2be-d724-4d70-b7e1-3a15a7175eca.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_1b96c088-7656-4361-a4d2-58d53c9c7bc5",
+      "category": "portrait",
+      "instruction": "Can you give this photo a warm, romantic feel, almost like it was taken at sunset? Please brighten it up overall, but especially make the couple <box>0.311888 0.268359 0.859988 0.652463</box> pop. I'd like their skin to look smoother and their smiles to be whiter, making the moment feel more joyful.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_1b96c088-7656-4361-a4d2-58d53c9c7bc5.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_1b96c088-7656-4361-a4d2-58d53c9c7bc5.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1c59f8c7-1dfa-495b-985d-f0ec8b6e225f",
+      "category": "portrait",
+      "instruction": "Make the image much warmer and brighter, and lighten the person <box>0.000000 0.161016 0.763867 0.906117</box>.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1c59f8c7-1dfa-495b-985d-f0ec8b6e225f.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1c59f8c7-1dfa-495b-985d-f0ec8b6e225f.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.0,
+        0.161016,
+        0.763867,
+        0.906117
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_1d99015f-e465-415a-a25e-7a06652e2b62",
+      "category": "portrait",
+      "instruction": "I want a moody, cinematic portrait style. Please make the subject <box>0.099379 0.245833 0.743759 0.941667</box> pop with a spotlight effect. Give the whole image that cool blue-green tint in the shadows, but keep his skin tone looking a bit warmer. It should feel like a shot from a movie.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_1d99015f-e465-415a-a25e-7a06652e2b62.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_1d99015f-e465-415a-a25e-7a06652e2b62.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.099379,
+        0.245833,
+        0.743759,
+        0.941667
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_2852bdce-a669-48a2-bdef-7aafded0e79c",
+      "category": "portrait",
+      "instruction": "I want to highlight the player <box>0.346221 0.096875 0.842179 0.904773</box> with a warm, hazy light effect. Make the whole scene brighter and crisper, and give it a more professional, stylized feel, almost like a magazine shot.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_2852bdce-a669-48a2-bdef-7aafded0e79c.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_2852bdce-a669-48a2-bdef-7aafded0e79c.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.346221,
+        0.096875,
+        0.842179,
+        0.904773
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_2a54bf7c-b434-463a-be39-a04ca2658ebc",
+      "category": "portrait",
+      "instruction": "Make it darker with richer colors. The subject <box>0.121851 0.005078 0.792211 0.692870</box> should pop against a blurry background.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_2a54bf7c-b434-463a-be39-a04ca2658ebc.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_2a54bf7c-b434-463a-be39-a04ca2658ebc.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.121851,
+        0.005078,
+        0.792211,
+        0.69287
+      ]
+    },
+    {
+      "benchmark_id": "portrait_fg_2f02b837-ce02-48f2-8cfd-27fbea5ed644",
+      "category": "portrait",
+      "instruction": "Make this portrait feel more intense and powerful. I want a crisp, dramatic, and story-telling mood.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_2f02b837-ce02-48f2-8cfd-27fbea5ed644.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_2f02b837-ce02-48f2-8cfd-27fbea5ed644.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_fg_38e43fef-8f77-49c1-905a-d15941b8bc77",
+      "category": "portrait",
+      "instruction": "Can we make the dancer really pop? Please brighten her up and make her skin tones warmer and richer. At the same time, darken the background until it's almost black and increase the overall contrast for a more powerful look. I want her to be the only thing the eye is drawn to.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_38e43fef-8f77-49c1-905a-d15941b8bc77.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_38e43fef-8f77-49c1-905a-d15941b8bc77.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "portrait_final_fg_3a2a0a3b-fc8b-47f2-be85-061e4c294c1c",
+      "category": "portrait",
+      "instruction": "Make the photo warmer and add a faded, matte finish. Tone down the bright greens and yellows in the field, but keep the person <box>0.247396 0.155078 0.686198 0.693880</box> looking sharp.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_3a2a0a3b-fc8b-47f2-be85-061e4c294c1c.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_3a2a0a3b-fc8b-47f2-be85-061e4c294c1c.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.247396,
+        0.155078,
+        0.686198,
+        0.69388
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_3ff6227d-17c2-4c0b-a56c-c313c5978c98",
+      "category": "portrait",
+      "instruction": "The photo is a bit too bright and blown out. Can you darken the overall image, especially the highlights on the person <box>0.000000 0.000000 0.873684 0.893670</box>, while also lifting the shadows to see more detail?",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_3ff6227d-17c2-4c0b-a56c-c313c5978c98.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_3ff6227d-17c2-4c0b-a56c-c313c5978c98.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.0,
+        0.0,
+        0.873684,
+        0.89367
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_45e9d613-64b0-4909-b2ab-e84d2961916c",
+      "category": "portrait",
+      "instruction": "Give this a cinematic, urban vibe. Make the whole scene brighter and more textured, especially by lifting the shadows. Also, add some warmth and make the dancer <box>0.214411 0.108984 1.000000 1.000000</box> look super sharp.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_45e9d613-64b0-4909-b2ab-e84d2961916c.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_45e9d613-64b0-4909-b2ab-e84d2961916c.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.214411,
+        0.108984,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_4d9c8347-e75b-4038-a5d6-700ba02fef43",
+      "category": "portrait",
+      "instruction": "Create a warm, nostalgic sunset mood, adding a soft glow to highlight the boy <box>0.166406 0.269271 0.688456 1.000000</box>.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_4d9c8347-e75b-4038-a5d6-700ba02fef43.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_4d9c8347-e75b-4038-a5d6-700ba02fef43.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.166406,
+        0.269271,
+        0.688456,
+        1.0
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_5f576d58-f844-477b-b647-e01f741fde27",
+      "category": "portrait",
+      "instruction": "I want a cinematic, high-contrast style, and make the subject <box>0.000000 0.152734 0.603250 0.879066</box> the clear focus.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_5f576d58-f844-477b-b647-e01f741fde27.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_5f576d58-f844-477b-b647-e01f741fde27.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.0,
+        0.152734,
+        0.60325,
+        0.879066
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_68b7761b-a239-443c-89f4-29710ac6616a",
+      "category": "portrait",
+      "instruction": "Make the overall image more dramatic and punchy. I want much stronger contrast and more vibrant colors. Turn the foliage in the background a rich orange. Also, can you make the subject <box>0.305800 0.180078 0.678576 0.902274</box> stand out by increasing its clarity and texture, while making the background a little darker and softer?",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_68b7761b-a239-443c-89f4-29710ac6616a.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_68b7761b-a239-443c-89f4-29710ac6616a.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.3058,
+        0.180078,
+        0.678576,
+        0.902274
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_6c442a77-7077-4bc0-ae71-1070669d9be7",
+      "category": "portrait",
+      "instruction": "Add more texture and clarity to the whole picture, especially the craftsman <box>0.000000 0.125391 0.860238 0.816485</box>. Make the overall mood warmer.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_6c442a77-7077-4bc0-ae71-1070669d9be7.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_6c442a77-7077-4bc0-ae71-1070669d9be7.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.0,
+        0.125391,
+        0.860238,
+        0.816485
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_7be13803-a8c6-4ca1-9de9-d203fa1a189f",
+      "category": "portrait",
+      "instruction": "Give this a moody, cinematic film look, making the person stand out more.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_7be13803-a8c6-4ca1-9de9-d203fa1a189f.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_7be13803-a8c6-4ca1-9de9-d203fa1a189f.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.0,
+        0.166667,
+        1.0,
+        0.730693
+      ]
+    },
+    {
+      "benchmark_id": "portrait_final_fg_84aecd4c-5ba4-4ffc-85f0-5c3a83f9892c",
+      "category": "portrait",
+      "instruction": "Can you give this a bright and airy, almost film-like style? I want a soft, gentle glow, and make the gold of my dress <box>0.132396 0.107813 0.793386 0.813010</box> look richer. The background should be less distracting and not so green.",
+      "source_path": "MMart-Bench/data/src_image/portrait_final_fg_84aecd4c-5ba4-4ffc-85f0-5c3a83f9892c.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_final_fg_84aecd4c-5ba4-4ffc-85f0-5c3a83f9892c.png",
+      "crop_mode": "center",
+      "has_local_box": true,
+      "box_info": [
+        0.132396,
+        0.107813,
+        0.793386,
+        0.81301
+      ]
+    },
+    {
+      "benchmark_id": "portrait_fg_9e9353f8-2490-4f2b-8594-a41d9a35a55c",
+      "category": "portrait",
+      "instruction": "Could you apply a vintage film look? Warm up the whole picture, but reduce the overall saturation for a more classic feel. I want the oranges and browns in his armor and beard to be rich and deep, though. Make the image crisper and darken the shadows and corners to create a more focused, moody portrait.",
+      "source_path": "MMart-Bench/data/src_image/portrait_fg_9e9353f8-2490-4f2b-8594-a41d9a35a55c.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/portrait_fg_9e9353f8-2490-4f2b-8594-a41d9a35a55c.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_0f7d1c8c-c091-4eef-a898-9a82271cf0b0",
+      "category": "landscape",
+      "instruction": "Give this a really warm, cinematic sunset vibe with deep shadows.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_0f7d1c8c-c091-4eef-a898-9a82271cf0b0.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_0f7d1c8c-c091-4eef-a898-9a82271cf0b0.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_13ac64c9-2a92-49f4-9d66-ffccf5c424ef",
+      "category": "landscape",
+      "instruction": "This feels a bit too dark and flat. Could you give it a more powerful and majestic mood? I want it to feel like a crisp, cold morning, bringing out the amazing colors in the sky and revealing the texture in the shadows.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_13ac64c9-2a92-49f4-9d66-ffccf5c424ef.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_13ac64c9-2a92-49f4-9d66-ffccf5c424ef.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_2adc824f-2982-4b21-8061-01ef47744a75",
+      "category": "landscape",
+      "instruction": "Let's get rid of the overall warm, muddy look. I want a cleaner, high-contrast style. Cool down the colors significantly, making the river look more like ice or silver. Increase the contrast so the bright parts are brighter and the darks are deeper, which should make the patterns stand out more clearly.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_2adc824f-2982-4b21-8061-01ef47744a75.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_2adc824f-2982-4b21-8061-01ef47744a75.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_2add9146-605e-499d-a6fd-25e0c5c31dca",
+      "category": "landscape",
+      "instruction": "Please brighten up the whole picture, especially the dark trees in the foreground so I can see them better. The bright area in the sky is too washed out; can you tone it down to bring back the detail in the sunbeams and make the colors pop more?",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_2add9146-605e-499d-a6fd-25e0c5c31dca.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_2add9146-605e-499d-a6fd-25e0c5c31dca.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_2b07214c-6d54-414a-8ad1-af96ac7e480c",
+      "category": "landscape",
+      "instruction": "I want a moody sunset feel, with deep shadows and muted greens.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_2b07214c-6d54-414a-8ad1-af96ac7e480c.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_2b07214c-6d54-414a-8ad1-af96ac7e480c.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_2bd55371-3d7e-476d-8a0f-986c73ef2bdd",
+      "category": "landscape",
+      "instruction": "Let's make this feel more epic. Can we lift the darkness from the rocks to make them stand out, and calm down the bright light from the sunset? I'm looking for a rich, high-impact look that makes the whole view more immersive and powerful.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_2bd55371-3d7e-476d-8a0f-986c73ef2bdd.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_2bd55371-3d7e-476d-8a0f-986c73ef2bdd.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_2c263d4c-e4d6-4933-aa33-b6f2c89e0ce2",
+      "category": "landscape",
+      "instruction": "Make the overall picture brighter and the colors more vibrant.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_2c263d4c-e4d6-4933-aa33-b6f2c89e0ce2.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_2c263d4c-e4d6-4933-aa33-b6f2c89e0ce2.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_2f4b8b27-e166-489d-afd9-b1aa3a3c1609",
+      "category": "landscape",
+      "instruction": "Make the photo feel more vibrant and full of life. Boost the green in the hills and bring out the details hidden in the shadows to give it a fresh, clear look.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_2f4b8b27-e166-489d-afd9-b1aa3a3c1609.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_2f4b8b27-e166-489d-afd9-b1aa3a3c1609.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_34e6a84b-dd55-4b99-a2f3-d2d4678fda8d",
+      "category": "landscape",
+      "instruction": "Give this a 'vibrant nature' look. Enhance the natural beauty by making the colors richer, especially the yellows in the canopy. Increase the overall brightness and add a bit more contrast to make the whole scene feel more crisp and clear.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_34e6a84b-dd55-4b99-a2f3-d2d4678fda8d.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_34e6a84b-dd55-4b99-a2f3-d2d4678fda8d.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_3a4c6235-7b61-431a-82fe-d8bb8cb7013c",
+      "category": "landscape",
+      "instruction": "I'm looking for a warm, nostalgic atmosphere for this photo. Please enhance the feeling of a tranquil, sunny day. The overall mood should be peaceful and cozy, with a rich, golden light that makes the field glow.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_3a4c6235-7b61-431a-82fe-d8bb8cb7013c.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_3a4c6235-7b61-431a-82fe-d8bb8cb7013c.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_3bb5be0a-b70a-46d9-8e2b-d868da59c93b",
+      "category": "landscape",
+      "instruction": "I want to make this photo more dramatic. Could you increase the overall contrast to add depth, and make the colors more vivid? Please balance the light so the foreground isn't lost in shadow and the highlights in the sky are clear.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_3bb5be0a-b70a-46d9-8e2b-d868da59c93b.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_3bb5be0a-b70a-46d9-8e2b-d868da59c93b.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_3e6b0136-47e6-43bb-8eef-4a26a0d22f30",
+      "category": "landscape",
+      "instruction": "Apply a rich, earthy filter. I want the image to feel more dynamic, with stronger colors, darker shadows, and a clean, sharp finish that makes the winding road the focus.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_3e6b0136-47e6-43bb-8eef-4a26a0d22f30.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_3e6b0136-47e6-43bb-8eef-4a26a0d22f30.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_49a23a71-3e75-4e44-8294-817e82cbc675",
+      "category": "landscape",
+      "instruction": "Let's give this a fantasy movie look. Make the image much darker overall, with a strong contrast. Add a blueish tint to the dark areas and make the jungle greens look more enchanting and less yellow.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_49a23a71-3e75-4e44-8294-817e82cbc675.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_49a23a71-3e75-4e44-8294-817e82cbc675.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_4baf2095-8605-4053-bb5c-71ce58fc02aa",
+      "category": "landscape",
+      "instruction": "Give this a 'vivid' or 'rich landscape' filter vibe. I want the image to be punchier, with stronger colors and more striking light and shadows.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_4baf2095-8605-4053-bb5c-71ce58fc02aa.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_4baf2095-8605-4053-bb5c-71ce58fc02aa.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_4cd44f00-0650-4abf-8214-31474913c37e",
+      "category": "landscape",
+      "instruction": "This photo feels a bit too dark. Let's make it feel more fresh and clear. I'm looking for a brighter, more open atmosphere that really shows off the reflections in the water and makes the whole scene feel more serene.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_4cd44f00-0650-4abf-8214-31474913c37e.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_4cd44f00-0650-4abf-8214-31474913c37e.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_4d8f5732-c9c3-42ad-ad0f-0fa8541e7b78",
+      "category": "landscape",
+      "instruction": "I want to transform this into a really dramatic and epic scene. Give it a powerful, warm sunrise atmosphere, making the fog glow with golden light. The mood should be breathtaking and full of warmth, not dark and flat.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_4d8f5732-c9c3-42ad-ad0f-0fa8541e7b78.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_4d8f5732-c9c3-42ad-ad0f-0fa8541e7b78.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_7cea5970-68b5-476c-b23f-39be89f22114",
+      "category": "landscape",
+      "instruction": "Give this a dramatic, fantasy landscape vibe. I'm looking for a style that really enhances the colors, especially adding a beautiful purplish glow to the sky and making the whole scene look more intense and moody. Lift the shadows so you can see more detail in the trees.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_7cea5970-68b5-476c-b23f-39be89f22114.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_7cea5970-68b5-476c-b23f-39be89f22114.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_8ec4281b-7c8e-4183-8978-0776fcddeeda",
+      "category": "landscape",
+      "instruction": "This photo feels a bit plain. Can you work some magic on the foreground? I'd love for it to be a field of bright pink flowers instead of grass. Make the colors rich and the texture more defined to create a stunning, imaginative landscape.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_8ec4281b-7c8e-4183-8978-0776fcddeeda.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_8ec4281b-7c8e-4183-8978-0776fcddeeda.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "scenery_fg_8f72e74c-3a6e-4b60-9c89-484386ff7653",
+      "category": "landscape",
+      "instruction": "Give this photo a moody, cinematic film look. I'm thinking of a style with deep, desaturated greens and a bit of a vintage feel, maybe darken the edges to focus on the house in the middle.",
+      "source_path": "MMart-Bench/data/src_image/scenery_fg_8f72e74c-3a6e-4b60-9c89-484386ff7653.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/scenery_fg_8f72e74c-3a6e-4b60-9c89-484386ff7653.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_01b24e4d-a4c2-423d-a43d-af610bed6053",
+      "category": "street",
+      "instruction": "Let's go for a really atmospheric, gritty sci-fi look. Transform the colors to a palette of intense reds and deep, cold blacks. The whole image should feel sharper, darker, and more powerful.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_01b24e4d-a4c2-423d-a43d-af610bed6053.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_01b24e4d-a4c2-423d-a43d-af610bed6053.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_0e2c4817-ce40-464e-b1f4-785ee69cf41a",
+      "category": "street",
+      "instruction": "Make it feel like a hopeful, golden hour evening, with a soft, dreamy glow.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_0e2c4817-ce40-464e-b1f4-785ee69cf41a.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_0e2c4817-ce40-464e-b1f4-785ee69cf41a.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_1b0db076-c288-4794-86d8-27c029745de7",
+      "category": "street",
+      "instruction": "Give this a cinematic, cyberpunk vibe. I want the city lights to glow with a warm, intense orange, and make the reflections on the wet street really pop. Make the whole scene feel more dramatic and less hazy.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_1b0db076-c288-4794-86d8-27c029745de7.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_1b0db076-c288-4794-86d8-27c029745de7.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_1c4b02f4-4faa-49fd-bb68-7d1eefb70c20",
+      "category": "street",
+      "instruction": "Make this picture feel like a scene from a sci-fi movie, like Blade Runner. I want a dark, moody atmosphere with intense, glowing neon lights. Shift the warm colors to cool blues and pinks, and really increase the contrast between the bright signs and the dark shadows of the street.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_1c4b02f4-4faa-49fd-bb68-7d1eefb70c20.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_1c4b02f4-4faa-49fd-bb68-7d1eefb70c20.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_2b513267-1912-4d0a-a7c5-24d30b824bc9",
+      "category": "street",
+      "instruction": "Make the photo feel more magical and lively. Light up the city part to show its texture and architecture, and fill the sky with a warm, glowing twilight effect. The overall image should be sharper, with richer, more saturated colors.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_2b513267-1912-4d0a-a7c5-24d30b824bc9.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_2b513267-1912-4d0a-a7c5-24d30b824bc9.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_3aa6fa88-4bc9-4043-86fa-7ef7b358ed25",
+      "category": "street",
+      "instruction": "Shift the colors to a cool blue and make everything more vivid and sharp.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_3aa6fa88-4bc9-4043-86fa-7ef7b358ed25.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_3aa6fa88-4bc9-4043-86fa-7ef7b358ed25.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    },
+    {
+      "benchmark_id": "street_fg_4e5b2b77-e0b9-4377-b6e8-736f0034bab8",
+      "category": "street",
+      "instruction": "Could you balance the light in this shot? Lift the shadows so the street doesn't look so gloomy, but keep the highlights in the sky controlled. Let's make the colors richer and more vivid to give it a warm, polished feel that really shows off that beautiful reflection.",
+      "source_path": "MMart-Bench/data/src_image/street_fg_4e5b2b77-e0b9-4377-b6e8-736f0034bab8.png",
+      "gt_path": "MMart-Bench/data/tgt_image_crop/street_fg_4e5b2b77-e0b9-4377-b6e8-736f0034bab8.png",
+      "crop_mode": "center",
+      "has_local_box": false,
+      "box_info": null
+    }
+  ]
+}

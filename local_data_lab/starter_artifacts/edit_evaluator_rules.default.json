@@ -1,0 +1,86 @@
+{
+  "version": "2026-03-26",
+  "label": "DreamCatcher Public Bootstrap Evaluator Rules",
+  "dimensions": {
+    "visual_quality": {
+      "label": "Visual Quality",
+      "default_weight": 0.28,
+      "description": "General visual coherence, naturalness, and absence of obvious artifacts."
+    },
+    "instruction_alignment": {
+      "label": "Instruction Alignment",
+      "default_weight": 0.26,
+      "description": "Whether the edit followed the requested change."
+    },
+    "attribute_preservation": {
+      "label": "Attribute Preservation",
+      "default_weight": 0.24,
+      "description": "Whether identity, pose, geometry, or protected content survived the edit."
+    },
+    "tone_safety": {
+      "label": "Tone Safety",
+      "default_weight": 0.12,
+      "description": "Whether contrast, highlight rolloff, and color rendering remain plausible."
+    },
+    "group_consistency": {
+      "label": "Group Consistency",
+      "default_weight": 0.10,
+      "description": "Whether the candidate would still fit beside neighboring images in a set."
+    }
+  },
+  "tool_overrides": {
+    "retouch": {
+      "instruction_alignment": 0.28,
+      "attribute_preservation": 0.28,
+      "visual_quality": 0.20,
+      "tone_safety": 0.14,
+      "group_consistency": 0.10
+    },
+    "replaceObject": {
+      "instruction_alignment": 0.34,
+      "attribute_preservation": 0.26,
+      "visual_quality": 0.18,
+      "tone_safety": 0.08,
+      "group_consistency": 0.14
+    },
+    "replaceBg": {
+      "instruction_alignment": 0.26,
+      "attribute_preservation": 0.30,
+      "visual_quality": 0.20,
+      "tone_safety": 0.08,
+      "group_consistency": 0.16
+    },
+    "relight": {
+      "instruction_alignment": 0.20,
+      "attribute_preservation": 0.24,
+      "visual_quality": 0.18,
+      "tone_safety": 0.24,
+      "group_consistency": 0.14
+    },
+    "enhance": {
+      "instruction_alignment": 0.08,
+      "attribute_preservation": 0.28,
+      "visual_quality": 0.26,
+      "tone_safety": 0.22,
+      "group_consistency": 0.16
+    },
+    "compare": {
+      "instruction_alignment": 0.18,
+      "attribute_preservation": 0.28,
+      "visual_quality": 0.20,
+      "tone_safety": 0.18,
+      "group_consistency": 0.16
+    }
+  },
+  "public_sources": [
+    "EditHF-1M",
+    "DEAR",
+    "EditBench",
+    "MIT-Adobe FiveK",
+    "PPR10K"
+  ],
+  "notes": [
+    "These rules are a bootstrap prior, not a learned evaluator checkpoint.",
+    "As DreamCatcher accumulates local compare winners, this file should be replaced by a learned local scorer or reranker."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "manifest_version": "2026-04-09",
+  "status": "partially_populated",
+  "samples": [
+    {
+      "sample_id": "bloom_branch_midtone_001",
+      "raw_path": "benchmark/samples/single_raw/bloom_branch_midtone_001/IMG_9781.CR3",
+      "benchmark_result_path": "outputs/_benchmark_results_staging/single_raw/bloom_branch_midtone_001.json"
+    },
+    {
+      "sample_id": "bloom_closeup_shade_001",
+      "raw_path": "benchmark/samples/single_raw/bloom_closeup_shade_001/IMG_9863.CR3",
+      "benchmark_result_path": "outputs/_benchmark_results_staging/single_raw/bloom_closeup_shade_001.json"
+    },
+    {
+      "sample_id": "bloom_walkway_daylight_001",
+      "raw_path": "benchmark/samples/single_raw/bloom_walkway_daylight_001/IMG_9701.CR3",
+      "benchmark_result_path": "outputs/_benchmark_results_staging/single_raw/bloom_walkway_daylight_001.json"
+    },
+    {
+      "sample_id": "blossom_macro_rw2_001",
+      "raw_path": "benchmark/samples/single_raw/blossom_macro_rw2_001/P1030045.RW2",
+      "benchmark_result_path": "outputs/_benchmark_results_staging/single_raw/blossom_macro_rw2_001.json"
+    },
+    {
+      "sample_id": "campus_walk_detail_001",
+      "raw_path": "benchmark/samples/single_raw/campus_walk_detail_001/IMG_0161.CR3",
+      "benchmark_result_path": "outputs/_benchmark_results_staging/single_raw/campus_walk_detail_001.json"
+    },
+    {
+      "sample_id": "day_portrait_blossom_001",
+      "raw_path": "benchmark/samples/single_raw/day_portrait_blossom_001/IMG_0094.CR3",
+      "benchmark_result_path": "outputs/_benchmark_results_staging/single_raw/day_portrait_blossom_001.json"
+    },
+    {
+      "sample_id": "night_portrait_blossom_001",
+      "raw_path": "benchmark/samples/single_raw/night_portrait_blossom_001/IMG_0014.CR3",
+      "benchmark_result_path": "outputs/_benchmark_results_staging/single_raw/night_portrait_blossom_001.json"
+    },
+    {
+      "sample_id": "street_backlight_rw2_001",
+      "raw_path": "benchmark/samples/single_raw/street_backlight_rw2_001/P1029958.RW2",
+      "benchmark_result_path": "outputs/_benchmark_results_staging/single_raw/street_backlight_rw2_001.json"
+    }
+  ]
+}

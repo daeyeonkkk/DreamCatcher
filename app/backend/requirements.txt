@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+requests
+pyyaml
+pytest
+httpx
+Pillow
+numpy
+tifffile
+rawpy
+opencv-python-headless
+python-multipart

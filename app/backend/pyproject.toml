@@ -1,0 +1,24 @@
+[project]
+name = "dreamcatcher-backend"
+version = "0.1.0"
+description = "DreamCatcher FastAPI backend and RAW processing support."
+requires-python = ">=3.11,<3.15"
+dependencies = [
+    "fastapi>=0.136.1,<0.137.0",
+    "uvicorn>=0.46.0,<0.47.0",
+    "pydantic>=2.13.4,<2.14.0",
+    "requests>=2.33.1,<2.34.0",
+    "pyyaml>=6.0.3,<7.0.0",
+    "httpx>=0.28.1,<0.29.0",
+    "pillow>=12.2.0,<13.0.0",
+    "numpy>=2.4.4,<2.5.0",
+    "tifffile>=2026.3.3,<2026.5.0",
+    "rawpy>=0.27.0,<0.28.0",
+    "opencv-python-headless>=4.13.0.92,<4.14.0",
+    "python-multipart>=0.0.27,<0.0.28",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3,<10.0.0",
+]

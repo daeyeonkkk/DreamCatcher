@@ -1,0 +1,208 @@
+version: '2026-03-26'
+bundle_label: DreamCatcher Local Data Lab Runtime Bundle
+source_profile: dreamcatcher_local_data_lab_2026
+generated_at: '2026-03-30T07:42:53.659985+00:00'
+bundle_notes:
+- Export only compact artifacts into seed_bundle/runtime_priors.
+- Keep raw corpora, full checkpoints, and long-running experiment outputs under local_data_lab
+  only.
+artifacts:
+- artifact_id: edit_evaluator_rules
+  label: Edit Evaluator Rules
+  kind: evaluator_rules
+  bundle_path: seed_bundle/runtime_priors/evaluator/edit_evaluator_rules.default.json
+  source_relpath: local_data_lab/starter_artifacts/edit_evaluator_rules.default.json
+  tool_scopes:
+  - replaceBg
+  - relight
+  - replaceObject
+  - retouch
+  - enhance
+  - compare
+  source_datasets:
+  - edithf_1m
+  - dear
+  - editbench
+  training_tracks:
+  - edit_evaluator_bootstrap
+  notes: Public-bootstrap compare and evaluator dimensions before local ranking data
+    accumulates.
+  generated_at: '2026-03-30T07:42:53.635980+00:00'
+  sha256: 2a792f91598303d20d8f48e812108c5fcb04c3852e0d43ab57f305491aef424e
+  size_bytes: 2563
+- artifact_id: reference_bank_seed
+  label: Reference Bank Seed
+  kind: reference_bank
+  bundle_path: seed_bundle/runtime_priors/reference_bank/reference_bank.seed.json
+  source_relpath: local_data_lab/starter_artifacts/reference_bank.seed.json
+  tool_scopes:
+  - replaceBg
+  - relight
+  - replaceObject
+  - retouch
+  - enhance
+  - finish
+  - compare
+  source_datasets:
+  - fivek
+  - ppr10k
+  - mmart_ppr10k
+  training_tracks:
+  - retouch_reference_bank_seed
+  notes: Small public exemplar bank for early retrieval and style anchoring.
+  generated_at: '2026-03-30T07:42:53.637979+00:00'
+  sha256: 00673c16e94860dc2d9ff5954eed4c1506cfd00292015aa9cca4eea38780e81b
+  size_bytes: 1826
+- artifact_id: mmart_bench_seed
+  label: MMArt-Bench Seed
+  kind: benchmark_pack
+  bundle_path: seed_bundle/runtime_priors/benchmarks/mmart_bench.seed.json
+  source_relpath: local_data_lab/starter_artifacts/mmart_bench.seed.json
+  tool_scopes:
+  - compare
+  - retouch
+  - replaceBg
+  - replaceObject
+  - relight
+  - finish
+  source_datasets:
+  - mmart_bench
+  - editbench
+  training_tracks:
+  - benchmark_seed_bootstrap
+  notes: Compact public benchmark seed for compare-mode regression and evaluator coverage.
+  generated_at: '2026-03-30T07:42:53.640981+00:00'
+  sha256: 021ad850d93baea5566f3bc759c3c8f70ee9e365409101e066622c1594498c5d
+  size_bytes: 150495
+  record_count: 253
+  summary_text: food 50, landscape 58, portrait 102, street 43
+- artifact_id: mmart_ppr10k_reference_pack
+  label: MMArt-PPR10k Reference Pack
+  kind: reference_bank
+  bundle_path: seed_bundle/runtime_priors/reference_bank/mmart_ppr10k.reference_pack.json
+  source_relpath: local_data_lab/starter_artifacts/mmart_ppr10k.reference_pack.json
+  tool_scopes:
+  - retouch
+  - replaceBg
+  - replaceObject
+  - relight
+  - compare
+  - finish
+  source_datasets:
+  - mmart_ppr10k
+  training_tracks:
+  - mmart_ppr10k_reference_pack
+  notes: Compact Lightroom-style retouch reference pack built from the staged MMArt-PPR10k
+    subset.
+  generated_at: '2026-03-30T07:42:53.642982+00:00'
+  sha256: 3b6f740fd208ca94b7f2e10a6177f66f7d413b0739f590dc7d210673bcd348e9
+  size_bytes: 469331
+  record_count: 300
+  summary_text: exp -0.40..1.15 | hl -77..-41
+- artifact_id: dear_rendering_seed
+  label: DEAR Rendering Seed
+  kind: evaluator_rules
+  bundle_path: seed_bundle/runtime_priors/evaluator/dear_rendering.seed.json
+  source_relpath: local_data_lab/starter_artifacts/dear_rendering.seed.json
+  tool_scopes:
+  - retouch
+  - enhance
+  - finish
+  - compare
+  source_datasets:
+  - dear
+  - fivek
+  training_tracks:
+  - dear_rendering_seed
+  notes: Compact global rendering and tonal guardrail seed built from the staged DEAR
+    subset.
+  generated_at: '2026-03-30T07:42:53.649984+00:00'
+  sha256: 9873fb6aaaf6b7bcb97ac19e5768e7e25bd828557424e0336c35ee1b3b90eadf
+  size_bytes: 719969
+  record_count: 996
+  summary_text: exp -0.50..1.17 | temp 3650..5979
+- artifact_id: local_compare_learning_seed
+  label: Local Compare Learning Seed
+  kind: evaluator_rules
+  bundle_path: seed_bundle/runtime_priors/evaluator/local_compare_learning.seed.json
+  source_relpath: local_data_lab/starter_artifacts/local_compare_learning.seed.json
+  tool_scopes:
+  - retouch
+  - enhance
+  - compare
+  - finish
+  source_datasets:
+  - personal_compare_winners
+  training_tracks:
+  - local_compare_learning_seed
+  notes: Compact local reranker prior built from accepted compare winners.
+  generated_at: '2026-03-30T07:42:53.658984+00:00'
+  sha256: 063496d1d7022faa401ebeb5aea59e4e317953d404754497be25fd18014f63a2
+  size_bytes: 570
+  record_count: 0
+- artifact_id: golden_quality_calibration_seed
+  label: Golden Quality Calibration Seed
+  kind: evaluator_rules
+  bundle_path: seed_bundle/runtime_priors/evaluator/golden_quality_calibration.seed.json
+  source_relpath: seed_bundle/runtime_priors/evaluator/golden_quality_calibration.seed.json
+  tool_scopes:
+  - compare
+  - finish
+  - enhance
+  - relight
+  - removeBg
+  - replaceBg
+  - replaceObject
+  - expandCanvas
+  - retouch
+  - rawprep
+  source_datasets:
+  - personal_golden_sessions
+  - mmart_ppr10k
+  - raw_frontier_eval
+  training_tracks:
+  - golden_score_calibration
+  notes: Seed profile for calibrating Qwen verdicts and confidence against human-approved golden sessions.
+  generated_at: '2026-05-11T00:00:00+00:00'
+  sha256: 1801e849d9d155e5a1a10ce2d9dc3bf6316007feaa9ac2ebed8e6f3ccc113f14
+  size_bytes: 5671
+  record_count: 70
+- artifact_id: judge_evidence_packet_schema
+  label: Judge Evidence Packet Schema
+  kind: evaluator_schema
+  bundle_path: seed_bundle/runtime_priors/evaluator/judge_evidence_packet_v1.schema.json
+  source_relpath: seed_bundle/runtime_priors/evaluator/judge_evidence_packet_v1.schema.json
+  tool_scopes:
+  - compare
+  - retouch
+  - removeBg
+  - replaceBg
+  - replaceObject
+  - expandCanvas
+  - rawprep
+  training_tracks:
+  - golden_score_calibration
+  notes: Contract for the evidence packet sent to the local Qwen judge.
+  generated_at: '2026-05-11T00:00:00+00:00'
+  sha256: 7f7264b256bebb897437708c033669809af2e459552f2a8553c68edb99daf3db
+  size_bytes: 1914
+- artifact_id: golden_calibration_schema
+  label: Golden Calibration Schema
+  kind: evaluator_schema
+  bundle_path: seed_bundle/runtime_priors/evaluator/golden_calibration_v1.schema.json
+  source_relpath: seed_bundle/runtime_priors/evaluator/golden_calibration_v1.schema.json
+  tool_scopes:
+  - compare
+  - retouch
+  - removeBg
+  - replaceBg
+  - replaceObject
+  - expandCanvas
+  - rawprep
+  training_tracks:
+  - golden_score_calibration
+  notes: Contract for calibrated verdict, confidence, replay cases, and golden adjustments.
+  generated_at: '2026-05-11T00:00:00+00:00'
+  sha256: 789e28d2fee829dda9660c03a3770c8ebf9a16bae9c907ef78e876aada79d0f7
+  size_bytes: 1523
+missing_required_sources: []

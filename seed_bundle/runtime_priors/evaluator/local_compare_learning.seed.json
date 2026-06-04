@@ -1,0 +1,20 @@
+{
+  "version": "2026-03-30",
+  "label": "DreamCatcher Local Compare Learning Seed",
+  "generated_at": "2026-03-30T04:42:22.741432+00:00",
+  "decision_count": 0,
+  "scan_roots": [],
+  "collection_summary": {
+    "discovered_files": 0,
+    "unique_decisions": 0,
+    "duplicate_files": 0,
+    "skipped_files": [],
+    "tool_counts": {},
+    "winner_role_counts": {}
+  },
+  "tool_stats": {},
+  "notes": [
+    "Built from locally accepted compare winners only.",
+    "This stays compact and ships to runtime as a lightweight compare reranker prior."
+  ]
+}

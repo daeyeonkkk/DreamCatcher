@@ -1,0 +1,46 @@
+version: 1
+checked_at: '2026-05-11'
+scope: RunPod template and model download refs for the DreamCatcher bootstrap contract.
+runpod_template:
+  primary_image: runpod/comfyui:1.4.1-cuda12.8
+  primary_digest: sha256:1f9de5f6c1183211b7fb43c626c48a11c5ff9bda6acde77781fa1f104aac3469
+  floating_compatibility_track: runpod/comfyui:cuda12.8
+  fallback_image: runpod/comfyui:1.3.0-cuda12.8
+  fallback_digest: sha256:e113ad943f89641463dce451a180dc3fb545d88a6030a0823040b556c320fdf0
+  experimental_image: runpod/comfyui:1.4.1-cuda13.0
+  experimental_digest: sha256:d49c7b0f8eb3fbf44725d210b2b0a86bdd8a972da7e32e5e73b0efafdebe3718
+  gpu_server: RTX PRO 6000
+  gpu_vram: 96GB
+  container_disk_gb: 80
+  volume_disk_default_gb: 400
+  volume_disk_full_frontier_qwen_gb: 500
+  network_volume_baseline: false
+  persistent_model_cache: false
+  prewarmed_image:
+    status: optional_runtime_prewarm_after_repeated_smoke
+    dockerfile: runpod/prewarm/Dockerfile.runtime
+    build_script_windows: runpod/build_prewarmed_image.ps1
+    model_weights_baked_by_default: false
+    source_of_truth: Product/DreamCatcher.zip
+  policy_note: Use the pinned CUDA 12.8 image on RTX PRO 6000 96GB. Use 80GB Container Disk and 400GB Volume Disk by default, or 500GB Volume Disk when Full Frontier plus Qwen judge is enabled. Keep Network Volume and persistent model cache disabled by default. Try CUDA 13 only after a live smoke on the target host driver.
+huggingface_refs:
+  qwen_image_edit_comfyui: 83ae44f23af827155718b906c7dcc195a37c60b4
+  qwen_image_comfyui: c232bcb51c1523899c62d6dcaa960b2627668de5
+  qwen_image_edit_2511_lightning: d74eba145674fd7e31b949324e148e21e7118abd
+  flux2_dev_comfyui: 03d6521e6f6a47396b3f951cbea50f7e6c2f482e
+  flux2_klein_9b_fp8: 902d9d510b51533e07729f19211414a3648b77d2
+  flux2_klein_9b_comfy_companions: 23fbc8aa8b621f29f2249cd1bd9c47e5d0eebd83
+  flux_text_encoders: 6af2a98e3f615bdfa612fbd85da93d1ed5f69ef5
+  flux1_fill_dev: 358293da0354175698b67ec8299acf928313a78a
+  qwen_image_layered_comfyui: 5d93d59c0e34488b94dee03ad33337f7ee997f97
+  qwen_image_2512_lightning: a52649c9d0f6e1a248bff13f0df33bb8a2abdb52
+  birefnet_dis5k: 8d0803f8dee999ceb31c20092bb53b6021aeec13
+  z_image_turbo: 2f862278568d3f0a83167a16e5f11094da6dee72
+  omnigen2_comfyui_repackaged: a81dac8cc06b983eb865d1c345fa12c00616fb7d
+  qwen3_6_35b_a3b_fp8_judge: 61a5771f218894aaacf97551e24a25b866750fc2
+  longcat_image_edit_turbo: 6a7262de5549f0bf0ec54c08ef7d283ef41f3214
+  qwen_image_2512_status: frontier_bootstrap_supported_fp8_e4m3fn
+  longcat_status: frontier_research_workflow_needed
+custom_node_refs:
+  freeze_status: pending_live_runpod_smoke
+  note: Custom node refs remain intentionally unfrozen until the next green RunPod ComfyUI smoke captures exact installed commits.

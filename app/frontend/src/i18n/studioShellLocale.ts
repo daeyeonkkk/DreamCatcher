@@ -1,0 +1,28 @@
+export const studioShellLocale = {
+  layout: {
+    hideRail: '작업 도구 숨기기',
+    showRail: '작업 도구 열기',
+    hideInspector: '오른쪽 보드 숨기기',
+    showInspector: '오른쪽 보드 열기',
+  },
+  runpod: {
+    title: 'Ephemeral RunPod',
+    frontier: 'Frontier',
+    template: 'Template',
+    outputs: 'outputs 회수',
+    terminate: '회수 후 종료',
+    gpu: 'GPU',
+    vram: 'VRAM 목표',
+    sessionPolicy: 'Frontier Stack',
+    advancedOps: '고급 운영',
+    recoverOutputs: '/workspace/DreamCatcher/outputs 회수 후 Pod stop/terminate',
+    loading: 'RunPod 정책 확인 중',
+    unavailable: 'RunPod 정책 대기 중',
+    cuda13Lab: 'CUDA 13은 live smoke 전까지 실험용',
+    comfyAdmin: 'Comfy admin은 필요할 때만 8188 공개',
+    executableSets: '실행 모델',
+    researchSets: '연구 추적',
+    bootstrapScope: 'Full Frontier bootstrap',
+    minVram: '최소 권장',
+  },
+} as const;

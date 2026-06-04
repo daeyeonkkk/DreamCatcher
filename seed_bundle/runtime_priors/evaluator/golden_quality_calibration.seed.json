@@ -1,0 +1,140 @@
+{
+  "schema_version": "golden_quality_calibration_seed_v1",
+  "default_profile": "frontier_default",
+  "policy": "Use golden profiles to calibrate Qwen judge confidence and verdicts. Never auto-apply tuning; queue human approval and replay.",
+  "profiles": [
+    {
+      "profile_id": "frontier_default",
+      "tools": ["compare", "finish", "enhance", "relight"],
+      "sample_count": 24,
+      "required_evidence": ["deterministic_metrics", "golden_context"],
+      "axis_suspicious_below": {
+        "intent_match": 0.62,
+        "technical_quality": 0.62,
+        "aesthetic_quality": 0.58,
+        "subject_preservation": 0.66,
+        "color_naturalness": 0.60
+      },
+      "axis_fail_below": {
+        "intent_match": 0.38,
+        "technical_quality": 0.36,
+        "subject_preservation": 0.42
+      },
+      "metric_signal_confidence_penalties": {
+        "warning": 0.08,
+        "critical": 0.18,
+        "highlight_clip": 0.12,
+        "shadow_crush": 0.12,
+        "detail_loss": 0.16,
+        "color_shift": 0.10
+      },
+      "confidence_cap_when_required_evidence_missing": 0.72,
+      "style_rubric": [
+        "Prefer natural color over dramatic saturation unless user intent says otherwise.",
+        "Do not pass a result that damages subject identity, skin texture, product shape, or readable text.",
+        "Technical metric warnings should make a subjective pass suspicious until reviewed."
+      ],
+      "replay_case_ids": ["golden_frontier_tone_001", "golden_frontier_detail_002", "golden_frontier_color_003"],
+      "notes": ["Initial seed profile; replace sample_count with measured golden outcomes after live smoke."]
+    },
+    {
+      "profile_id": "frontier_mask_edit",
+      "tools": ["removeBg", "replaceBg", "replaceObject", "expandCanvas"],
+      "sample_count": 18,
+      "required_evidence": ["deterministic_metrics", "mask_evidence", "golden_context"],
+      "axis_suspicious_below": {
+        "intent_match": 0.64,
+        "technical_quality": 0.60,
+        "aesthetic_quality": 0.56,
+        "subject_preservation": 0.72,
+        "mask_boundary": 0.70,
+        "color_naturalness": 0.58
+      },
+      "axis_fail_below": {
+        "subject_preservation": 0.48,
+        "mask_boundary": 0.44
+      },
+      "metric_signal_confidence_penalties": {
+        "warning": 0.08,
+        "critical": 0.18,
+        "mask_boundary_failure": 0.18,
+        "subject_damage": 0.20,
+        "color_shift": 0.10
+      },
+      "confidence_cap_when_required_evidence_missing": 0.68,
+      "style_rubric": [
+        "Mask edge damage is release-blocking for people, products, hair, fabric, and text.",
+        "Background generation must not change subject silhouette or visible identity.",
+        "If mask evidence is absent, keep the verdict suspicious even when Qwen likes the image."
+      ],
+      "replay_case_ids": ["golden_mask_hair_001", "golden_mask_product_002", "golden_mask_dress_003"],
+      "notes": ["Mask checker evidence should come from Studio selection or SAM2 when available."]
+    },
+    {
+      "profile_id": "frontier_retouch",
+      "tools": ["retouch"],
+      "sample_count": 16,
+      "required_evidence": ["deterministic_metrics", "operation_context", "user_preference_evidence", "golden_context"],
+      "axis_suspicious_below": {
+        "intent_match": 0.66,
+        "technical_quality": 0.64,
+        "aesthetic_quality": 0.62,
+        "subject_preservation": 0.72,
+        "color_naturalness": 0.64
+      },
+      "axis_fail_below": {
+        "subject_preservation": 0.46,
+        "color_naturalness": 0.42
+      },
+      "metric_signal_confidence_penalties": {
+        "warning": 0.08,
+        "critical": 0.18,
+        "detail_loss": 0.18,
+        "low_detail": 0.12,
+        "color_shift": 0.14,
+        "over_saturation": 0.12
+      },
+      "confidence_cap_when_required_evidence_missing": 0.70,
+      "style_rubric": [
+        "Retouch should preserve believable skin texture and subject identity.",
+        "Aesthetic preference memory is important; missing preference evidence lowers acceptance confidence.",
+        "Denoise/detail tradeoffs need golden replay before preset or code tuning."
+      ],
+      "replay_case_ids": ["golden_retouch_skin_001", "golden_retouch_texture_002", "golden_retouch_color_003"],
+      "notes": ["Human preference memory should be populated from accepted/rejected sessions."]
+    },
+    {
+      "profile_id": "frontier_raw",
+      "tools": ["rawprep"],
+      "sample_count": 12,
+      "required_evidence": ["deterministic_metrics", "raw_evidence", "golden_context"],
+      "axis_suspicious_below": {
+        "technical_quality": 0.66,
+        "aesthetic_quality": 0.56,
+        "subject_preservation": 0.70,
+        "color_naturalness": 0.60
+      },
+      "axis_fail_below": {
+        "technical_quality": 0.42,
+        "subject_preservation": 0.48
+      },
+      "metric_signal_confidence_penalties": {
+        "warning": 0.08,
+        "critical": 0.18,
+        "detail_loss": 0.16,
+        "low_detail": 0.10,
+        "highlight_clip": 0.12,
+        "shadow_crush": 0.12,
+        "raw_ghosting": 0.22
+      },
+      "confidence_cap_when_required_evidence_missing": 0.66,
+      "style_rubric": [
+        "RAW merge decisions must cite alignment, ghost, confidence, and fallback evidence.",
+        "A pretty merged result is suspicious if ghost/confidence evidence is absent.",
+        "Code-level tuning needs golden RAW replay before acceptance."
+      ],
+      "replay_case_ids": ["golden_raw_bracket_001", "golden_raw_ghost_002", "golden_raw_lowlight_003"],
+      "notes": ["TriRaw frontier evidence is expected when RAW diagnostics are present."]
+    }
+  ]
+}
