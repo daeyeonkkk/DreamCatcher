@@ -4,6 +4,18 @@ DreamCatcher는 개인용 프로 사진 편집 Studio입니다. 사용자가 Com
 
 이 저장소는 공개 가능한 소스와 제품 문서를 담은 public repo입니다. 실제 개발 history, 운영용 secret, 실험 산출물, 모델 접근 토큰, 배포 환경 정보는 `DreamCatcher-private`에서 관리합니다.
 
+## 커리어 근거로 읽는 법
+
+| 항목 | 내용 |
+| --- | --- |
+| 프로젝트 유형 | 개인 제품형 프로젝트 |
+| 내 역할 | 풀스택 개발, AI workflow 설계, RunPod 실행 기준, release bundle/검증 기준 정리 |
+| 주력 기술 | Python 3.12, FastAPI, React 19, TypeScript, Vite, React Query, Zustand, ComfyUI, RunPod |
+| 보여주고 싶은 역량 | 모델 호출을 제품 흐름, runtime contract, 품질 검수, 배포 산출물로 연결하는 역량 |
+| 대표 근거 | `PROJECT_FOUNDATION/README.md`, `RUNPOD_VALIDATION_CHECKLIST.md`, `Product/BUILD_MANUAL.md`, backend test와 release preflight |
+
+제가 이 프로젝트에서 강조하고 싶은 부분은 이미지 생성 모델 자체가 아니라, **AI 편집 기능을 반복 실행 가능한 제품/운영 흐름으로 묶는 일**입니다. RunPod pod는 일회성 실행 환경으로 보고, 모델 준비 상태, workflow placeholder, storage contract, output/evidence 회수까지 release gate로 다루는 방향을 잡았습니다.
+
 ## 프로젝트 목표
 
 사진 편집 AI 워크플로는 강력하지만, 실제 사용 단계에서는 모델 weight, custom node, seed workflow, GPU 환경, 결과물 회수, 품질 검수, 납품 패키징이 모두 분리되어 있어 반복 사용이 어렵습니다. DreamCatcher는 이 과정을 "Studio에서 요청하고, backend가 ComfyUI와 RunPod를 조율하며, 검수 evidence를 남기고, 납품 가능한 결과물로 묶는" 제품 경험으로 정리합니다.
